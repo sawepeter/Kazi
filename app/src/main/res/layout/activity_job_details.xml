@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.JobDetailsActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/details_background"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_arrow_back" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/details_background"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_share" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_nav">
+
+            <ImageView
+                android:id="@+id/image_logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/search_background"
+                android:scaleType="centerInside"
+                android:src="@drawable/log" />
+
+            <TextView
+                android:id="@+id/job_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/dmsansbold"
+                android:textAlignment="center"
+                android:layout_below="@+id/image_logo"
+                android:text="Lead Product Designer"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/job_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/job_title"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/dmsansbold"
+                android:text="Nairobi Kenya"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:gravity="center_horizontal" />
+
+            <LinearLayout
+                android:id="@+id/layout_qualification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/qualify_background"
+                android:layout_below="@+id/job_location"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/dmsansbold"
+                    android:text="@string/txt_qualif"
+                    android:layout_marginStart="18dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="18dp" />
+
+                <TextView
+                    android:id="@+id/qualification1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/dmsansboldregular"
+                    android:text="@string/qualification1"
+                    android:textColor="@android:color/black"
+                    android:singleLine="false"
+                    android:textSize="18sp"
+                    app:drawableStartCompat="@drawable/ic_bull"
+                    android:layout_marginLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/qualification2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/dmsansboldregular"
+                    android:text="@string/qualification1"
+                    android:textColor="@android:color/black"
+                    android:singleLine="false"
+                    android:textSize="18sp"
+                    app:drawableStartCompat="@drawable/ic_bull"
+                    android:layout_marginLeft="23dp" />
+
+                <TextView
+                    android:id="@+id/qualification3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/dmsansboldregular"
+                    android:text="@string/qualification1"
+                    android:textColor="@android:color/black"
+                    android:singleLine="false"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="20dp"
+                    app:drawableStartCompat="@drawable/ic_bull"
+                    android:layout_marginLeft="23dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/qualify_background"
+                android:layout_below="@+id/layout_qualification"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/dmsansbold"
+                    android:text="@string/job_desc"
+                    android:layout_marginStart="18dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="18dp" />
+
+                <TextView
+                    android:id="@+id/job_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/dmsansboldregular"
+                    android:text="@string/job_about_desc"
+                    android:textColor="@android:color/black"
+                    android:singleLine="false"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="23dp" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="20dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp">
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/search_background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/log" />
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsansboldregular"
+                android:text="@string/txt_company_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/dmsansbold"
+                android:text="Lead Product Designer"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/job_salary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="@font/dmsansbold"
+                    android:text="$200"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="20dp"
+                    android:layout_height="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/job_salary"
+                    android:layout_toRightOf="@+id/job_salary"
+                    android:background="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/job_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/divider"
+                    android:layout_toRightOf="@+id/divider"
+                    android:fontFamily="@font/dmsansbold"
+                    android:text="Nairobi Kenya"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <com.like.LikeButton
+            android:id="@+id/star_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            app:circle_start_color="@color/colorAccent"
+            app:icon_size="25dp"
+            app:icon_type="heart"
+            app:is_enabled="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/star_button"
+            android:text="24h"
+            android:layout_alignParentRight="true" />
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

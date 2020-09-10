@@ -14,4 +14,7 @@
     <string name="job">Apply for job</string>
     <string name="app">Applications</string>
     <string name="your_applications">Your \nApplications</string>
+    <string name="search">Search</string>
+    <string name="_32">32</string>
+    <string name="job_opportunity">Job Opportunity</string>
 </resources>

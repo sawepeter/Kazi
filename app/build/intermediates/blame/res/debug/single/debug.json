@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_bull.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-hdpi/ic_bull.png"
+    },
+    {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_baseline_filter.png.flat",
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_baseline_filter.png"
     },
@@ -8,8 +12,24 @@
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_like.xml"
     },
     {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_bull.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-mdpi/ic_bull.png"
+    },
+    {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/layout_activity_search.xml.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/layout/activity_search.xml"
+    },
+    {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_share.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_share.png"
+    },
+    {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_right.png.flat",
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_right.png"
+    },
+    {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_arrow_back.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-hdpi/ic_arrow_back.png"
     },
     {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/font_dmsansboldmediumitalic.ttf.flat",
@@ -22,6 +42,10 @@
     {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_right.png.flat",
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-mdpi/ic_right.png"
+    },
+    {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_share.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-mdpi/ic_share.png"
     },
     {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
@@ -52,12 +76,40 @@
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_arrow_back.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_arrow_back.png"
+    },
+    {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_arrow_back.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_arrow_back.png"
+    },
+    {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_share.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-ldpi/ic_share.png"
+    },
+    {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_share.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_share.png"
+    },
+    {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_baseline_filter.png.flat",
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-mdpi/ic_baseline_filter.png"
     },
     {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_job_search.png.flat",
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_job_search.png"
+    },
+    {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_bull.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_bull.png"
+    },
+    {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_arrow_back.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_arrow_back.png"
+    },
+    {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_bull.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_bull.png"
     },
     {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable_job_background.xml.flat",
@@ -80,6 +132,10 @@
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-ldpi/ic_job_search.png"
     },
     {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_bull.xml.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_bull.xml"
+    },
+    {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_like.png.flat",
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_like.png"
     },
@@ -100,6 +156,10 @@
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_bull.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-ldpi/ic_bull.png"
+    },
+    {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_job_search.xml.flat",
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_job_search.xml"
     },
@@ -112,8 +172,16 @@
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/layout_activity_job_details.xml.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/layout/activity_job_details.xml"
+    },
+    {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/font_dmsansboldmedium.ttf.flat",
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/font/dmsansboldmedium.ttf"
+    },
+    {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_arrow_back.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-ldpi/ic_arrow_back.png"
     },
     {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_like.png.flat",
@@ -128,6 +196,10 @@
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
     },
     {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_share.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-hdpi/ic_share.png"
+    },
+    {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable_filter_background.xml.flat",
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/drawable/filter_background.xml"
     },
@@ -140,16 +212,16 @@
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-hdpi/ic_right.png"
     },
     {
-        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable_ic_filter.png.flat",
-        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/drawable/ic_filter.png"
-    },
-    {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/font_dmsansboldregular.ttf.flat",
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/font/dmsansboldregular.ttf"
     },
     {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_arrow_back.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-mdpi/ic_arrow_back.png"
     },
     {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/font_dmsansbold.ttf.flat",
@@ -164,12 +236,28 @@
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-hdpi/ic_baseline_filter.png"
     },
     {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/layout_application_item.xml.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/layout/application_item.xml"
+    },
+    {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable_profile.jpg.flat",
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/drawable/profile.jpg"
     },
     {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/layout_activity_register.xml.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/layout/activity_register.xml"
+    },
+    {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/layout_activity_application.xml.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/layout/activity_application.xml"
+    },
+    {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher_background.png.flat",
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-hdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_share.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_share.png"
     },
     {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_like.png.flat",
@@ -220,12 +308,20 @@
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/layout/job_item.xml"
     },
     {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable_qualify_background.xml.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/drawable/qualify_background.xml"
+    },
+    {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher_background.png.flat",
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_launcher_background.png"
     },
     {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_like.png.flat",
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-mdpi/ic_like.png"
+    },
+    {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_share.xml.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_share.xml"
     },
     {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/layout_activity_dash_board.xml.flat",
@@ -252,8 +348,20 @@
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_arrow_back.xml.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_arrow_back.xml"
+    },
+    {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable_search_background.xml.flat",
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/drawable/search_background.xml"
+    },
+    {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_bull.png.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_bull.png"
+    },
+    {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable_details_background.xml.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/drawable/details_background.xml"
     },
     {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher_background.png.flat",

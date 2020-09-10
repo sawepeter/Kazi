@@ -19,7 +19,11 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.ajira.DashBoard" />
+        <activity android:name="com.example.ajira.activities.RegisterActivity" />
+        <activity android:name="com.example.ajira.activities.SearchActivity" />
+        <activity android:name="com.example.ajira.activities.ApplicationActivity" />
+        <activity android:name="com.example.ajira.activities.JobDetailsActivity" />
+        <activity android:name="com.example.ajira.activities.DashBoardActivity" />
         <activity android:name="com.example.ajira.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -12,4 +12,6 @@
     <string name="job_desc">About the job :</string>
     <string name="job_about_desc">As a product team, we believe in a collaborative working style with a bias towards rapid prototyping, experimentation and a strong curiosity for our customers and their needs.</string>
     <string name="job">Apply for job</string>
+    <string name="app">Applications</string>
+    <string name="your_applications">Your \nApplications</string>
 </resources>

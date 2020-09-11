@@ -117,13 +117,7 @@
                     android:id="@+id/rv_popular_jobs"
                     android:layout_width="match_parent"
                     android:layout_marginTop="10dp"
-                    android:visibility="gone"
                     android:layout_height="200dp"/>
-                <include
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    layout="@layout/job_item"/>
 
             </LinearLayout>
 

@@ -17,4 +17,8 @@
     <string name="search">Search</string>
     <string name="_32">32</string>
     <string name="job_opportunity">Job Opportunity</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="applications">Applications</string>
+    <string name="settings">Settings</string>
 </resources>

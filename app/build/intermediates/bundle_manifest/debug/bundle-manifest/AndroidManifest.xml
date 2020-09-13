@@ -8,6 +8,9 @@
         android:minSdkVersion="16"
         android:targetSdkVersion="29" />
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -20,7 +23,7 @@
         android:theme="@style/AppTheme" >
         <activity android:name="com.example.ajira.activities.RegisterActivity" />
         <activity android:name="com.example.ajira.activities.SearchActivity" />
-        <activity android:name="com.example.ajira.activities.ApplicationActivity" />
+        <activity android:name="com.example.ajira.fragments.ApplicationsFragment" />
         <activity android:name="com.example.ajira.activities.JobDetailsActivity" />
         <activity android:name="com.example.ajira.activities.DashBoardActivity" />
         <activity android:name="com.example.ajira.MainActivity" >
@@ -30,6 +33,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.ajira.com.squareup.picasso"
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -24,6 +24,15 @@ public class JobsResponse {
     @Expose
     private String location;
 
+    public JobsResponse(Integer id, String company, String logo, String job, String salary, String location) {
+        this.id = id;
+        this.company = company;
+        this.logo = logo;
+        this.job = job;
+        this.salary = salary;
+        this.location = location;
+    }
+
     public Integer getId() {
         return id;
     }

@@ -1,17 +1,18 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-26:12
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-28:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/86e1e5d883ec66c1063a0d9a82a27792/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.jd-alexander:LikeButton:0.2.3] /home/devsawe/.gradle/caches/transforms-2/files-2.1/dcd145c49ba2e0d87bf7604f74365f96/jetified-LikeButton-0.2.3/AndroidManifest.xml:2:1-14:12
-MERGED from [com.google.android.material:material:1.2.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/d776e52f087aabc381b0b4907fc988e8/material-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.2.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/fee048776b4040c0a73e83e4303a6cff/material-1.2.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/bf96d2b5a86ecd602a621e7e96856420/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/ffb6a67829fa40d4c0493cb7e147e8f7/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/65b26ec11e574f5d68d3fe93c8217bcb/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.2.0-alpha05] /home/devsawe/.gradle/caches/transforms-2/files-2.1/21fdc8df9724e8c29b66c0160c59aea1/recyclerview-1.2.0-alpha05/AndroidManifest.xml:17:1-24:12
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/003b3e9ca38bd72fe3f9ef229cece401/jetified-circleimageview-3.1.0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/772688a5e00a388ecc6c943d500de6fd/jetified-picasso-2.71828/AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/7c0677be8011741026309ef690a9f4db/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.1.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/12c076570219bdc2a11e9d0df335391a/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/ee9b51f71825564f346013ea1d4d0318/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:17:1-24:12
@@ -25,6 +26,7 @@ MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/devsawe/.gradle
 MERGED from [androidx.loader:loader:1.0.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/2118a7099009bdd29f0289728ee82c0d/loader-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity:1.0.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/f52c60a67eb4c2183a64b296ae574169/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.3.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/ae3468b444d41a56f261ecbb8448fe17/core-1.3.1/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/d2bc5983110492b5d9fde8d6f88a3eac/exifinterface-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/67aa86ef8808cac41aa5afe6d271f3ea/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/098c479f6892902db16f6d5e04f3818b/lifecycle-runtime-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/8cf26fd0d5f767ad6dfe1019ab25b952/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
@@ -34,33 +36,43 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/devsawe/.gradle/
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/7282e00d74c6a6acf53f4bfd68421266/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/73114719268a97e9fd391905563b2ee9/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/1e0614212b25f4ae67724a3587ed8129/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-28:12
 	package
 		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:3:5-32
 		INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml
 		INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-26:12
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-28:12
 		INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-26:12
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-28:12
 		INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:5:22-76
+uses-permission#android.permission.INTERNET
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:6:22-64
 application
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:5:5-24:19
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:7:5-26:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/86e1e5d883ec66c1063a0d9a82a27792/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/86e1e5d883ec66c1063a0d9a82a27792/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
 MERGED from [com.github.jd-alexander:LikeButton:0.2.3] /home/devsawe/.gradle/caches/transforms-2/files-2.1/dcd145c49ba2e0d87bf7604f74365f96/jetified-LikeButton-0.2.3/AndroidManifest.xml:11:5-12:19
 MERGED from [com.github.jd-alexander:LikeButton:0.2.3] /home/devsawe/.gradle/caches/transforms-2/files-2.1/dcd145c49ba2e0d87bf7604f74365f96/jetified-LikeButton-0.2.3/AndroidManifest.xml:11:5-12:19
-MERGED from [com.google.android.material:material:1.2.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/d776e52f087aabc381b0b4907fc988e8/material-1.2.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.2.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/d776e52f087aabc381b0b4907fc988e8/material-1.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.2.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/fee048776b4040c0a73e83e4303a6cff/material-1.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.2.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/fee048776b4040c0a73e83e4303a6cff/material-1.2.1/AndroidManifest.xml:22:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/003b3e9ca38bd72fe3f9ef229cece401/jetified-circleimageview-3.1.0/AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/003b3e9ca38bd72fe3f9ef229cece401/jetified-circleimageview-3.1.0/AndroidManifest.xml:9:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/772688a5e00a388ecc6c943d500de6fd/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/772688a5e00a388ecc6c943d500de6fd/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
 MERGED from [androidx.core:core:1.3.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/ae3468b444d41a56f261ecbb8448fe17/core-1.3.1/AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.3.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/ae3468b444d41a56f261ecbb8448fe17/core-1.3.1/AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/67aa86ef8808cac41aa5afe6d271f3ea/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
@@ -68,51 +80,51 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/devsa
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/ae3468b444d41a56f261ecbb8448fe17/core-1.3.1/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:10:9-41
 	android:roundIcon
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:9:9-54
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:11:9-54
 	android:icon
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:11:9-40
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:13:9-40
 activity#com.example.ajira.activities.RegisterActivity
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:12:9-74
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:14:9-74
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:12:19-62
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:14:19-62
 activity#com.example.ajira.activities.SearchActivity
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:13:9-63
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:15:9-63
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:13:19-60
-activity#com.example.ajira.activities.ApplicationActivity
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:14:9-68
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:15:19-60
+activity#com.example.ajira.fragments.ApplicationsFragment
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:16:9-68
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:14:19-65
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:16:19-65
 activity#com.example.ajira.activities.JobDetailsActivity
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:15:9-67
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:17:9-67
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:15:19-64
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:17:19-64
 activity#com.example.ajira.activities.DashBoardActivity
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:16:9-66
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:18:9-66
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:16:19-63
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:18:19-63
 activity#com.example.ajira.MainActivity
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:17:9-23:20
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:19:9-25:20
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:17:19-47
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:19:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:18:13-22:29
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:19:17-69
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:19:25-66
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:21:17-77
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:21:27-74
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:23:27-74
 uses-sdk
 INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml
@@ -121,8 +133,8 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/devsawe/.gr
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/86e1e5d883ec66c1063a0d9a82a27792/constraintlayout-2.0.1/AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.jd-alexander:LikeButton:0.2.3] /home/devsawe/.gradle/caches/transforms-2/files-2.1/dcd145c49ba2e0d87bf7604f74365f96/jetified-LikeButton-0.2.3/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.jd-alexander:LikeButton:0.2.3] /home/devsawe/.gradle/caches/transforms-2/files-2.1/dcd145c49ba2e0d87bf7604f74365f96/jetified-LikeButton-0.2.3/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.material:material:1.2.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/d776e52f087aabc381b0b4907fc988e8/material-1.2.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.2.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/d776e52f087aabc381b0b4907fc988e8/material-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.2.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/fee048776b4040c0a73e83e4303a6cff/material-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.2.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/fee048776b4040c0a73e83e4303a6cff/material-1.2.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.2.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/bf96d2b5a86ecd602a621e7e96856420/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.2.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/bf96d2b5a86ecd602a621e7e96856420/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/ffb6a67829fa40d4c0493cb7e147e8f7/cardview-1.0.0/AndroidManifest.xml:20:5-44
@@ -133,6 +145,8 @@ MERGED from [androidx.recyclerview:recyclerview:1.2.0-alpha05] /home/devsawe/.gr
 MERGED from [androidx.recyclerview:recyclerview:1.2.0-alpha05] /home/devsawe/.gradle/caches/transforms-2/files-2.1/21fdc8df9724e8c29b66c0160c59aea1/recyclerview-1.2.0-alpha05/AndroidManifest.xml:20:5-22:41
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/003b3e9ca38bd72fe3f9ef229cece401/jetified-circleimageview-3.1.0/AndroidManifest.xml:5:5-7:41
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/003b3e9ca38bd72fe3f9ef229cece401/jetified-circleimageview-3.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/772688a5e00a388ecc6c943d500de6fd/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/772688a5e00a388ecc6c943d500de6fd/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/7c0677be8011741026309ef690a9f4db/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/7c0677be8011741026309ef690a9f4db/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/12c076570219bdc2a11e9d0df335391a/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -159,6 +173,8 @@ MERGED from [androidx.activity:activity:1.0.0] /home/devsawe/.gradle/caches/tran
 MERGED from [androidx.activity:activity:1.0.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/f52c60a67eb4c2183a64b296ae574169/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.3.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/ae3468b444d41a56f261ecbb8448fe17/core-1.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.3.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/ae3468b444d41a56f261ecbb8448fe17/core-1.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/d2bc5983110492b5d9fde8d6f88a3eac/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/d2bc5983110492b5d9fde8d6f88a3eac/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/67aa86ef8808cac41aa5afe6d271f3ea/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/67aa86ef8808cac41aa5afe6d271f3ea/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/098c479f6892902db16f6d5e04f3818b/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
@@ -187,3 +203,11 @@ INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidMani
 		INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml
 		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml
 		INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/772688a5e00a388ecc6c943d500de6fd/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/772688a5e00a388ecc6c943d500de6fd/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/772688a5e00a388ecc6c943d500de6fd/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/772688a5e00a388ecc6c943d500de6fd/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64

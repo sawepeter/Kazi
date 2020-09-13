@@ -1,6 +1,8 @@
 package com.example.ajira.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +13,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
+import com.example.ajira.activities.JobDetailsActivity;
 import com.example.ajira.model.JobsResponse;
 import com.squareup.picasso.Picasso;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +28,7 @@ public class PopularJobsAdapter extends RecyclerView.Adapter<PopularJobsAdapter.
     JobsResponse jobs;
 
     public PopularJobsAdapter(List<JobsResponse> jobsResponseList, Context context) {
+        Log.i("autolog", "PopularJobsAdapter");
         this.jobsResponseList = jobsResponseList;
         this.context = context;
     }
@@ -53,6 +58,7 @@ public class PopularJobsAdapter extends RecyclerView.Adapter<PopularJobsAdapter.
 
     @Override
     public int getItemCount() {
+        Log.i("autolog", "getItemCount");
         return jobsResponseList.size();
     }
 
@@ -67,6 +73,19 @@ public class PopularJobsAdapter extends RecyclerView.Adapter<PopularJobsAdapter.
             jobName = view.findViewById(R.id.jobName);
             job_salary = view.findViewById(R.id.job_salary);
             job_location = view.findViewById(R.id.job_location);
+            view.setOnClickListener(v -> {
+                int pos = getAdapterPosition();
+                if (pos != RecyclerView.NO_POSITION){
+                    JobsResponse clickedData = jobsResponseList.get(pos);
+                    Intent intent = new Intent(v.getContext(), JobDetailsActivity.class);
+                    intent.putExtra("pos", pos);
+                    intent.putExtra("data", (Serializable) jobsResponseList);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    v.getContext().startActivity(intent);
+                    Log.i("TAG", "item position" +clickedData.getJob());
+
+                }
+            });
         }
     }
 

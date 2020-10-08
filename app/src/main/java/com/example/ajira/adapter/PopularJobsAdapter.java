@@ -35,6 +35,7 @@ public class PopularJobsAdapter extends RecyclerView.Adapter<PopularJobsAdapter.
 
     public void setCartModelList(List<JobsResponse> jobsResponseList) {
         this.jobsResponseList = jobsResponseList;
+        notifyDataSetChanged();
     }
 
     @NonNull

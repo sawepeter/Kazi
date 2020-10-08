@@ -3,7 +3,8 @@
     package="com.example.ajira">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,9 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.RegisterActivity"></activity>
+        <activity android:name=".activities.PostJobActivity"></activity>
+        <activity android:name=".activities.RecruiterDashBoard" />
+        <activity android:name=".activities.RegisterActivity" />
         <activity android:name=".activities.SearchActivity" />
-        <activity android:name=".fragments.ApplicationsFragment" />
         <activity android:name=".activities.JobDetailsActivity" />
         <activity android:name=".activities.DashBoardActivity" />
         <activity android:name=".MainActivity">

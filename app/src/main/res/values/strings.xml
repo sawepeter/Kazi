@@ -21,4 +21,33 @@
     <string name="profile">Profile</string>
     <string name="applications">Applications</string>
     <string name="settings">Settings</string>
+    <string name="txt_placeholder">John Doe</string>
+    <string name="job_title">UI/UX Designer</string>
+    <string name="projects">Projects</string>
+    <string name="completed">Completed</string>
+    <string name="experiences">Experiences</string>
+    <string name="skills">Skills</string>
+    <string name="product_designer">Product Designer</string>
+    <string name="register">Register Account</string>
+    <string name="full_name">Full Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="description">Description</string>
+    <string name="reviews">Reviews</string>
+    <string name="company">Company</string>
+    <string name="recruiter">Recruiter</string>
+    <string name="job_seeker">Job Seeker</string>
+    <string name="applicants">Applicants</string>
+    <string name="hired">Hired</string>
+    <string name="lead_product_designer">Lead Product Designer</string>
+    <string name="amount">$200</string>
+    <string name="location">Nairobi Kenya</string>
+    <string name="enter_job_title">Enter Job title</string>
+    <string name="company_name">Company Name</string>
+    <string name="job_description">Job Description</string>
+    <string name="enter_job_location">Enter Job Location</string>
+    <string name="enter_job_role">Enter Job Role</string>
+    <string name="post_job">Post Job</string>
+    <string name="profile">Profile</string>
+
+
 </resources>

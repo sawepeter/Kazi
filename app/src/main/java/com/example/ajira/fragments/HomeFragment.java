@@ -1,12 +1,16 @@
 package com.example.ajira.fragments;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +21,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.ajira.R;
 import com.example.ajira.Utils.Utils;
 import com.example.ajira.activities.DashBoardActivity;
+import com.example.ajira.activities.SearchActivity;
+import com.example.ajira.adapter.NearbyJobsAdapter;
 import com.example.ajira.adapter.PopularJobsAdapter;
 import com.example.ajira.model.JobsResponse;
 import com.example.ajira.network.ApiService;
@@ -35,10 +41,14 @@ public class HomeFragment extends Fragment {
 
     private ApiService apiService;
     PopularJobsAdapter popularJobsAdapter;
-    RecyclerView rv_popular_jobs;
+    NearbyJobsAdapter nearbyJobsAdapter;
+    RecyclerView rv_popular_jobs,rv_nearby;
     List<JobsResponse> jobsResponseList = null;
+    List<JobsResponse> jobsList = null;
     LinearLayout l1;
     ProgressDialog progressDialog;
+    EditText edt_search;
+    ImageView img_filter;
 
     @Nullable
     @Override
@@ -50,15 +60,29 @@ public class HomeFragment extends Fragment {
         progressDialog.show();
 
         jobsResponseList = new ArrayList<>();
+        jobsList = new ArrayList<>();
 
         apiService = RetrofitBuilder.getRetrofitInstance().create(ApiService.class);
 
-        l1 = rootView.findViewById(R.id.l1);
         rv_popular_jobs = rootView.findViewById(R.id.rv_popular_jobs);
+        rv_nearby = rootView.findViewById(R.id.rv_nearby);
+        edt_search = rootView.findViewById(R.id.edt_search);
+        img_filter = rootView.findViewById(R.id.img_filter);
+        edt_search.setOnClickListener(v -> {
+            startActivity(new Intent(getActivity(), SearchActivity.class));
+        });
+
+        img_filter.setOnClickListener(v -> {
+            Toast.makeText(getActivity(), "Filtered !!!", Toast.LENGTH_SHORT).show();
+        });
+
         rv_popular_jobs.setLayoutManager(new LinearLayoutManager(getActivity(), HORIZONTAL, false));
+        rv_nearby.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
 
         popularJobsAdapter = new PopularJobsAdapter(jobsResponseList, getActivity());
+        nearbyJobsAdapter = new NearbyJobsAdapter(jobsResponseList, getActivity());
         rv_popular_jobs.setAdapter(popularJobsAdapter);
+        rv_nearby.setAdapter(nearbyJobsAdapter);
 
         Utils.runAsyncTask(this::getPopularJobs);
 
@@ -80,6 +104,7 @@ public class HomeFragment extends Fragment {
 
                     jobsResponseList = response.body();
                     popularJobsAdapter.setCartModelList(jobsResponseList);
+                    nearbyJobsAdapter.setJobsResponseList(jobsResponseList);
 
                 }else {
                     progressDialog.dismiss();

@@ -32,7 +32,7 @@
             android:fontFamily="@font/dmsansboldregular"
             android:text="@string/search"
             android:textColor="@color/colorPrimary"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textStyle="normal"
             android:gravity="center_horizontal" />
 
@@ -58,6 +58,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:inputType="text"
+            android:textSize="15sp"
             android:layout_weight="2.5"
             android:background="@drawable/search_background"
             android:hint="@string/txt_place_holder"
@@ -92,7 +93,7 @@
             android:fontFamily="@font/dmsansboldregular"
             android:text="@string/_32"
             android:textColor="@color/colorPrimary"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textStyle="normal" />
 
         <TextView
@@ -102,7 +103,7 @@
             android:fontFamily="@font/dmsansboldregular"
             android:text="@string/job_opportunity"
             android:textColor="@color/colorPrimary"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textStyle="normal"
             android:layout_marginLeft="20dp" />
 

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@drawable/shape_filter"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_filter">
 
     <View
         android:id="@+id/divider"
         android:layout_width="50dp"
         android:layout_height="2dp"
-        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:background="@color/colorExtra"/>
+        android:layout_marginTop="20dp"
+        android:background="@color/colorExtra" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,39 +22,39 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
             android:fontFamily="@font/dmsansbold"
             android:text="Set Filters"
+            android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal" />
+            android:textStyle="bold" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginLeft="20dp">
+            android:layout_marginEnd="20dp">
 
             <TextView
                 android:id="@+id/txt_category"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/dmsansbold"
                 android:text="Category"
                 android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/qualify_background"
+                android:layout_below="@+id/txt_category"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/txt_category"/>
+                android:background="@drawable/qualify_background" />
 
         </RelativeLayout>
 
@@ -62,27 +62,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginLeft="20dp">
+            android:layout_marginEnd="20dp">
 
             <TextView
                 android:id="@+id/txt_sub_category"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/dmsansbold"
                 android:text="Sub Category"
                 android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/qualify_background"
+                android:layout_below="@+id/txt_sub_category"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/txt_sub_category"/>
+                android:background="@drawable/qualify_background" />
 
         </RelativeLayout>
 
@@ -90,27 +90,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginLeft="20dp">
+            android:layout_marginEnd="20dp">
 
             <TextView
                 android:id="@+id/txt_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/dmsansbold"
                 android:text="Location"
                 android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/qualify_background"
+                android:layout_below="@+id/txt_location"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/txt_location"/>
+                android:background="@drawable/qualify_background" />
 
         </RelativeLayout>
 
@@ -118,27 +118,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginLeft="20dp">
+            android:layout_marginEnd="20dp">
 
             <TextView
                 android:id="@+id/job_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/dmsansbold"
                 android:text="Job Type"
                 android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/qualify_background"
+                android:layout_below="@+id/job_type"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/job_type"/>
+                android:background="@drawable/qualify_background" />
 
         </RelativeLayout>
 

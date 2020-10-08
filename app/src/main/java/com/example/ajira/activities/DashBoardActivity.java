@@ -70,10 +70,6 @@ public class DashBoardActivity extends AppCompatActivity implements BottomNaviga
             case R.id.Profile:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, profileFragment).commit();
                 return true;
-
-            case R.id.Settings:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, settingsFragment).commit();
-                return true;
         }
         return false;
     }

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".fragments.ApplicationsFragment">
 
     <RelativeLayout
@@ -29,13 +29,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
             android:fontFamily="@font/dmsansboldregular"
+            android:gravity="center_horizontal"
             android:text="@string/app"
+            android:textAlignment="center"
             android:textColor="@color/colorPrimary"
-            android:textSize="20sp"
-            android:textStyle="normal"
-            android:gravity="center_horizontal" />
+            android:textSize="16sp"
+            android:textStyle="normal" />
 
         <ImageView
             android:layout_width="40dp"
@@ -47,38 +47,37 @@
 
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/txt_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/layout_nav"
-        android:fontFamily="@font/dmsansbold"
-        android:singleLine="false"
-        android:text="@string/your_applications"
-        android:textColor="@color/colorPrimary"
-        android:textSize="22sp"
-        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@+id/txt_title"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="20dp">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_nav"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
 
-        <include
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dmsansbold"
+            android:singleLine="false"
+            android:text="@string/your_applications"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_applications"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            layout="@layout/application_item"/>
+            android:layout_marginTop="5dp" />
+
 
     </LinearLayout>
-
 
 
 </RelativeLayout>

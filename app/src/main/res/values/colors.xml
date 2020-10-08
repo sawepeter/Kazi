@@ -6,4 +6,10 @@
     <color name="colorExtra">#E6E4E6</color>
     <color name="colorBg">#c7eafa</color>
     <color name="colorShape">#C0C0C0</color>
+    <color name="colorS">#fafafc</color>
+    <color name="colorH">#f3f4f8</color>
+    <color name="statusBackgroundColor">#f0f4f8</color>
+    <color name="bgColor">#ecf0f1</color>
+    <color name="background">#EFEFEF</color>
+    <color name="background2">#f3f4f8</color>
 </resources>

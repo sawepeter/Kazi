@@ -1,5 +1,6 @@
 package com.example.ajira.network;
 
+import com.example.ajira.model.ApplicationResponse;
 import com.example.ajira.model.JobsResponse;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public interface ApiService {
     @GET()
     Call<JobsResponse> getSearchedJobs();
 
-    @GET()
-    Call<JobsResponse> getMyApplications();
+    @GET("applications")
+    Call<List<ApplicationResponse>> getMyApplications();
 
 }

@@ -69,13 +69,13 @@
 36        </activity>
 37
 38        <provider
-38-->[com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/772688a5e00a388ecc6c943d500de6fd/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+38-->[com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/8129a650efaac5777cf3f1e039302bdd/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
 39            android:name="com.squareup.picasso.PicassoProvider"
-39-->[com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/772688a5e00a388ecc6c943d500de6fd/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+39-->[com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/8129a650efaac5777cf3f1e039302bdd/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
 40            android:authorities="com.example.ajira.com.squareup.picasso"
-40-->[com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/772688a5e00a388ecc6c943d500de6fd/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+40-->[com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/8129a650efaac5777cf3f1e039302bdd/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
 41            android:exported="false" />
-41-->[com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/772688a5e00a388ecc6c943d500de6fd/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+41-->[com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/8129a650efaac5777cf3f1e039302bdd/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
 42    </application>
 43
 44</manifest>

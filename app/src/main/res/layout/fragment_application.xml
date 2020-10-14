@@ -8,6 +8,12 @@
     tools:context=".fragments.ApplicationsFragment">
 
     <RelativeLayout
+        android:id="@+id/image_bg"
+        android:layout_width="match_parent"
+        android:background="@drawable/profile_background"
+        android:layout_height="100dp"/>
+
+    <RelativeLayout
         android:id="@+id/layout_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,7 +57,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/layout_nav"
+        android:layout_below="@+id/image_bg"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
@@ -63,7 +69,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/dmsansbold"
-            android:singleLine="false"
             android:text="@string/your_applications"
             android:textColor="@color/colorPrimary"
             android:textSize="16sp"

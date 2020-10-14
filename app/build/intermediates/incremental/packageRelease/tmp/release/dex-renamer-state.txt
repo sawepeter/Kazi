@@ -1,0 +1,4 @@
+#Mon Sep 14 14:50:53 EAT 2020
+base.0=/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

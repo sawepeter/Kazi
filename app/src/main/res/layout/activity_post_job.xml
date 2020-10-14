@@ -7,12 +7,19 @@
     tools:context=".activities.PostJobActivity">
 
     <RelativeLayout
+        android:id="@+id/image_bg"
+        android:layout_width="match_parent"
+        android:background="@drawable/profile_background"
+        android:layout_height="150dp"/>
+
+
+    <RelativeLayout
         android:id="@+id/layout_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp">
 
         <ImageView
@@ -24,6 +31,16 @@
             android:background="@drawable/details_background"
             android:scaleType="centerInside"
             android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="Post A Job"/>
 
         <ImageView
             android:id="@+id/image_share"
@@ -45,7 +62,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_below="@+id/layout_nav"
+        android:layout_below="@+id/image_bg"
         android:orientation="vertical">
 
 

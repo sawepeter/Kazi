@@ -13,7 +13,7 @@
     <string name="job_about_desc">As a product team, we believe in a collaborative working style with a bias towards rapid prototyping, experimentation and a strong curiosity for our customers and their needs.</string>
     <string name="job">Apply for job</string>
     <string name="app">Applications</string>
-    <string name="your_applications">Your \nApplications</string>
+    <string name="your_applications">Your Applications</string>
     <string name="search">Search</string>
     <string name="_32">32</string>
     <string name="job_opportunity">Job Opportunity</string>
@@ -47,7 +47,4 @@
     <string name="enter_job_location">Enter Job Location</string>
     <string name="enter_job_role">Enter Job Role</string>
     <string name="post_job">Post Job</string>
-    <string name="profile">Profile</string>
-
-
 </resources>

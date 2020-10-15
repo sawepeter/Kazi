@@ -1088,6 +1088,7 @@
     <string description="a11y string to indicate this button changes the input mode to a text field [CHAR_LIMIT=NONE]" name="mtrl_picker_toggle_to_text_input_mode">Switch to text input mode</string>
     <string description="a11y string to indicate this button switches the user to choosing a year [CHAR_LIMIT=NONE]" name="mtrl_picker_toggle_to_year_selection">Tap to switch to selecting a year</string>
     <string name="not_set">Not set</string>
+    <string name="password">Password</string>
     <string name="password_toggle_content_description">Show password</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
@@ -1103,7 +1104,8 @@
     <string name="projects">Projects</string>
     <string name="qualification1">Bachelor\'s degree or equivalent practical experience</string>
     <string name="recruiter">Recruiter</string>
-    <string name="register">Register Account</string>
+    <string name="register">Register</string>
+    <string name="register_here">Register Here</string>
     <string name="reviews">Reviews</string>
     <string name="search">Search</string>
     <string name="search_menu_title">Search</string>
@@ -1118,6 +1120,7 @@
     <string name="txt_place_holder">What are you looking for?</string>
     <string name="txt_placeholder">John Doe</string>
     <string name="txt_qualif">Qualifications :</string>
+    <string name="username">UserName</string>
     <string name="v7_preference_off">OFF</string>
     <string name="v7_preference_on">ON</string>
     <string name="vertical_form_stepper_form_confirm_button">Confirm data</string>

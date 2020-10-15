@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.ajira.activities.DashBoardActivity;
 import com.example.ajira.activities.RecruiterDashBoard;
+import com.example.ajira.activities.RegisterActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,12 +27,18 @@ public class MainActivity extends AppCompatActivity {
         btn_Start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, DashBoardActivity.class));
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                intent.putExtra("userType", "employee");
+                startActivity(intent);
             }
         });
 
         btn_Recruiter.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, RecruiterDashBoard.class));
+            Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+            intent.putExtra("userType", "employer");
+            startActivity(intent);
         });
     }
+
+
 }

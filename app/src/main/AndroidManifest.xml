@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.PostJobActivity"></activity>
+        <activity android:name=".activities.LoginActivity"></activity>
+        <activity android:name=".activities.PostJobActivity" />
         <activity android:name=".activities.RecruiterDashBoard" />
         <activity android:name=".activities.RegisterActivity" />
         <activity android:name=".activities.SearchActivity" />

@@ -8,6 +8,27 @@
     android:orientation="vertical"
     tools:context=".activities.JobDetailsActivity">
 
+    <RelativeLayout
+        android:id="@+id/image_bg"
+        android:layout_width="match_parent"
+        android:background="@drawable/profile_background"
+        android:layout_height="150dp"/>
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/dmsansbold"
+        android:text="@string/register_here"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal" />
+
 
     <RelativeLayout
         android:id="@+id/layout_nav"
@@ -34,30 +55,14 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        android:layout_below="@+id/image_bg">
 
-
-        <TextView
-            android:id="@+id/txt_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:textAlignment="center"
-            android:fontFamily="@font/dmsansbold"
-            android:text="@string/register"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:gravity="center_horizontal" />
 
 
         <LinearLayout
             android:id="@+id/layout_qualification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_title"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
@@ -66,7 +71,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/ful_Name"
+                android:id="@+id/user_Name"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
@@ -74,31 +79,13 @@
                 android:drawableEnd="@drawable/ic_baseline_person_24"
                 android:drawableRight="@drawable/ic_baseline_person_24"
                 android:fontFamily="@font/dmsansbold"
-                android:hint="@string/full_name"
+                android:hint="@string/username"
                 android:paddingStart="20dp"
                 android:paddingLeft="20dp"
                 android:paddingEnd="20dp"
                 android:textColor="@color/colorPrimary"
                 android:textSize="15sp"
                 android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/Email"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/details_background"
-                android:drawableEnd="@drawable/ic_baseline_email_24"
-                android:drawableRight="@drawable/ic_baseline_email_24"
-                android:fontFamily="@font/dmsansbold"
-                android:hint="@string/email_address"
-                android:paddingStart="20dp"
-                android:paddingLeft="20dp"
-                android:paddingEnd="20dp"
-                android:textColor="@color/colorPrimary"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                tools:ignore="RtlSymmetry" />
 
             <EditText
                 android:id="@+id/password"
@@ -109,7 +96,26 @@
                 android:drawableEnd="@drawable/ic_baseline_lock_24"
                 android:drawableRight="@drawable/ic_baseline_lock_24"
                 android:fontFamily="@font/dmsansbold"
-                android:hint="@string/email_address"
+                android:hint="@string/password"
+                android:paddingStart="20dp"
+                android:paddingLeft="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+            <EditText
+                android:id="@+id/userType"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/details_background"
+                android:drawableEnd="@drawable/ic_baseline_lock_24"
+                android:drawableRight="@drawable/ic_baseline_lock_24"
+                android:fontFamily="@font/dmsansbold"
+                android:visibility="gone"
+                android:hint="UserType"
                 android:paddingStart="20dp"
                 android:paddingLeft="20dp"
                 android:paddingEnd="20dp"
@@ -121,7 +127,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_Start"
+            android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layout_qualification"

@@ -28,7 +28,7 @@
     <string name="experiences">Experiences</string>
     <string name="skills">Skills</string>
     <string name="product_designer">Product Designer</string>
-    <string name="register">Register Account</string>
+    <string name="register">Register</string>
     <string name="full_name">Full Name</string>
     <string name="email_address">Email Address</string>
     <string name="description">Description</string>
@@ -47,4 +47,7 @@
     <string name="enter_job_location">Enter Job Location</string>
     <string name="enter_job_role">Enter Job Role</string>
     <string name="post_job">Post Job</string>
+    <string name="username">UserName</string>
+    <string name="password">Password</string>
+    <string name="register_here">Register Here</string>
 </resources>

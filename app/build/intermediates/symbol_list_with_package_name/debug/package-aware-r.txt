@@ -1776,7 +1776,6 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id Company_name
-id Email
 id FUNCTION
 id Home
 id Job_description
@@ -1869,6 +1868,7 @@ id bounce
 id btn_Recruiter
 id btn_Start
 id btn_apply
+id btn_register
 id buttonPanel
 id cancel_button
 id center
@@ -1961,7 +1961,6 @@ id forever
 id fragment_container
 id fragment_container_view_tag
 id fragment_recruiter
-id ful_Name
 id full
 id ghost_view
 id ghost_view_holder
@@ -2244,6 +2243,8 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userType
+id user_Name
 id vertical
 id vertical_line
 id vertical_line_subtitle
@@ -2539,6 +2540,7 @@ string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string not_set
+string password
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -2553,6 +2555,7 @@ string projects
 string qualification1
 string recruiter
 string register
+string register_here
 string reviews
 string search
 string search_menu_title
@@ -2567,6 +2570,7 @@ string txt_company_name
 string txt_place_holder
 string txt_placeholder
 string txt_qualif
+string username
 string v7_preference_off
 string v7_preference_on
 string vertical_form_stepper_form_confirm_button

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/Home"
+        android:id="@+id/nyumbani"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_home_24"
         android:title="@string/home" />
 
     <item
-        android:id="@+id/Applications"
+        android:id="@+id/active_applications"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_insert_drive_file_24"
         android:title="@string/applications" />
 
     <item
-        android:id="@+id/Profile"
+        android:id="@+id/recruiter_profile"
         android:enabled="true"
         android:icon="@drawable/ic_person"
         android:title="@string/profile" />

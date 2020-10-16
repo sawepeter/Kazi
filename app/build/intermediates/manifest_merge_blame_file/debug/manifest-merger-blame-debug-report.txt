@@ -18,7 +18,7 @@
 12-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:6:22-64
 13
 14    <application
-14-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:8:5-28:19
+14-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:8:5-29:19
 15        android:allowBackup="true"
 15-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:9:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -35,47 +35,50 @@
 22        android:testOnly="true"
 23        android:theme="@style/AppTheme" >
 23-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:14:9-40
-24        <activity android:name="com.example.ajira.activities.PostJobActivity" />
-24-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:15:9-73
-24-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:15:19-61
-25        <activity android:name="com.example.ajira.activities.RecruiterDashBoard" />
-25-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:16:9-67
-25-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:16:19-64
-26        <activity android:name="com.example.ajira.activities.RegisterActivity" />
-26-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:17:9-65
-26-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:17:19-62
-27        <activity android:name="com.example.ajira.activities.SearchActivity" />
-27-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:18:9-63
-27-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:18:19-60
-28        <activity android:name="com.example.ajira.activities.JobDetailsActivity" />
-28-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:19:9-67
-28-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:19:19-64
-29        <activity android:name="com.example.ajira.activities.DashBoardActivity" />
-29-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:20:9-66
-29-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:20:19-63
-30        <activity android:name="com.example.ajira.MainActivity" >
-30-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:21:9-27:20
-30-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:21:19-47
-31            <intent-filter>
-31-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:22:13-26:29
-32                <action android:name="android.intent.action.MAIN" />
-32-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:23:17-69
-32-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:23:25-66
-33
-34                <category android:name="android.intent.category.LAUNCHER" />
-34-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:25:17-77
-34-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:25:27-74
-35            </intent-filter>
-36        </activity>
-37
-38        <provider
-38-->[com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/8129a650efaac5777cf3f1e039302bdd/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
-39            android:name="com.squareup.picasso.PicassoProvider"
-39-->[com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/8129a650efaac5777cf3f1e039302bdd/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
-40            android:authorities="com.example.ajira.com.squareup.picasso"
-40-->[com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/8129a650efaac5777cf3f1e039302bdd/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
-41            android:exported="false" />
-41-->[com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/8129a650efaac5777cf3f1e039302bdd/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
-42    </application>
-43
-44</manifest>
+24        <activity android:name="com.example.ajira.activities.LoginActivity" />
+24-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:15:9-71
+24-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:15:19-59
+25        <activity android:name="com.example.ajira.activities.PostJobActivity" />
+25-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:16:9-64
+25-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:16:19-61
+26        <activity android:name="com.example.ajira.activities.RecruiterDashBoard" />
+26-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:17:9-67
+26-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:17:19-64
+27        <activity android:name="com.example.ajira.activities.RegisterActivity" />
+27-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:18:9-65
+27-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:18:19-62
+28        <activity android:name="com.example.ajira.activities.SearchActivity" />
+28-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:19:9-63
+28-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:19:19-60
+29        <activity android:name="com.example.ajira.activities.JobDetailsActivity" />
+29-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:20:9-67
+29-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:20:19-64
+30        <activity android:name="com.example.ajira.activities.DashBoardActivity" />
+30-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:21:9-66
+30-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:21:19-63
+31        <activity android:name="com.example.ajira.MainActivity" >
+31-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:22:9-28:20
+31-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:22:19-47
+32            <intent-filter>
+32-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:23:13-27:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:24:17-69
+33-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:24:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:26:17-77
+35-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:26:27-74
+36            </intent-filter>
+37        </activity>
+38
+39        <provider
+39-->[com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/8129a650efaac5777cf3f1e039302bdd/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+40            android:name="com.squareup.picasso.PicassoProvider"
+40-->[com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/8129a650efaac5777cf3f1e039302bdd/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+41            android:authorities="com.example.ajira.com.squareup.picasso"
+41-->[com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/8129a650efaac5777cf3f1e039302bdd/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+42            android:exported="false" />
+42-->[com.squareup.picasso:picasso:2.71828] /home/devsawe/.gradle/caches/transforms-2/files-2.1/8129a650efaac5777cf3f1e039302bdd/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+43    </application>
+44
+45</manifest>

@@ -1775,7 +1775,6 @@ id Applications
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
-id Company_name
 id FUNCTION
 id Home
 id Job_description
@@ -1842,6 +1841,7 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_text
 id actions
+id active_applications
 id activity_chooser_view_content
 id add
 id alertTitle
@@ -1865,9 +1865,11 @@ id blocking
 id bottom
 id bottom_navigation
 id bounce
+id btn_Post
 id btn_Recruiter
 id btn_Start
 id btn_apply
+id btn_login
 id btn_register
 id buttonPanel
 id cancel_button
@@ -1993,9 +1995,10 @@ id invisible
 id italic
 id item_touch_helper_previous_elevation
 id jobName
+id job_age
 id job_desc
 id job_location
-id job_role
+id job_payAmount
 id job_salary
 id job_status
 id job_title
@@ -2019,6 +2022,7 @@ id lin_item_background
 id line1
 id line3
 id linear
+id link_register
 id listMode
 id list_item
 id list_item_section_sub_title
@@ -2069,6 +2073,7 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id nyumbani
 id off
 id on
 id outline
@@ -2102,6 +2107,7 @@ id qualification3
 id radio
 id ratio
 id recruiter_navigation
+id recruiter_profile
 id rectangles
 id recycler_view
 id restart
@@ -2320,6 +2326,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_dash_board
 layout activity_job_details
+layout activity_login
 layout activity_main
 layout activity_post_job
 layout activity_recruiter
@@ -2502,6 +2509,7 @@ string job_seeker
 string job_title
 string lead_product_designer
 string location
+string login_here
 string material_slider_range_end
 string material_slider_range_start
 string mtrl_badge_numberless_content_description

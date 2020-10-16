@@ -42,12 +42,13 @@
     <string name="amount">$200</string>
     <string name="location">Nairobi Kenya</string>
     <string name="enter_job_title">Enter Job title</string>
-    <string name="company_name">Company Name</string>
+    <string name="company_name">Enter Company Name</string>
     <string name="job_description">Job Description</string>
     <string name="enter_job_location">Enter Job Location</string>
-    <string name="enter_job_role">Enter Job Role</string>
+    <string name="enter_job_role">Enter job salary</string>
     <string name="post_job">Post Job</string>
     <string name="username">UserName</string>
     <string name="password">Password</string>
     <string name="register_here">Register Here</string>
+    <string name="login_here">Login Here</string>
 </resources>

@@ -47,6 +47,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentEnd="true"
+            android:visibility="gone"
             android:layout_alignParentRight="true"
             android:background="@drawable/details_background"
             android:scaleType="centerInside"
@@ -84,7 +85,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/Company_name"
+                android:id="@+id/job_companyName"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
@@ -135,7 +136,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/job_role"
+                android:id="@+id/job_age"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
@@ -155,7 +156,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_Start"
+        android:id="@+id/btn_Post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/layout1"

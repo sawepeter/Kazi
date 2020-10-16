@@ -1020,14 +1020,14 @@
     <string name="chip_text">Chip text</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
     <string name="company">Company</string>
-    <string name="company_name">Company Name</string>
+    <string name="company_name">Job Payment Amount</string>
     <string name="completed">Completed</string>
     <string name="copy">Copy</string>
     <string name="desc">Find your dream job is now much \neasier and faster like never before</string>
     <string name="description">Description</string>
     <string name="email_address">Email Address</string>
     <string name="enter_job_location">Enter Job Location</string>
-    <string name="enter_job_role">Enter Job Role</string>
+    <string name="enter_job_role">Enter Age Bracket(E.g 18)</string>
     <string name="enter_job_title">Enter Job title</string>
     <string name="error_icon_content_description">Error</string>
     <string name="expand_button_title">Advanced</string>
@@ -1050,6 +1050,7 @@
     <string name="job_title">UI/UX Designer</string>
     <string name="lead_product_designer">Lead Product Designer</string>
     <string name="location">Nairobi Kenya</string>
+    <string name="login_here">Login Here</string>
     <string description="Content description for the thumb with the maximum value in a Range slider. [CHAR_LIMIT=NONE]" name="material_slider_range_end">Range end, </string>
     <string description="Content description for the thumb with the minimum value in a Range slider. [CHAR_LIMIT=NONE]" name="material_slider_range_start">Range start, </string>
     <string description="Content description for new notification (no number count) [CHAR_LIMIT=NONE]" name="mtrl_badge_numberless_content_description">New notification</string>

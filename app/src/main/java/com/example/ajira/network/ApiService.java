@@ -39,7 +39,7 @@ public interface ApiService {
     @GET("applications")
     Call<List<ApplicationResponse>> getMyApplications();
 
-    @POST("/users/register")
+    @POST("users/register")
     @FormUrlEncoded
     Call<User> RegisterUser(@Field("username") String username,
                             @Field("password") String password,
@@ -52,7 +52,7 @@ public interface ApiService {
     //api to add to do list
     @POST("/create/jobs")
     @Headers("content-type: application/json")
-    Call<JobPostResponse> createJobList(@Header("Authorization")  String token, @Body JobPostRequest jobPostRequest);
+    Call<JobPostResponse> createJobList(@Header("Authorization") String token, @Body JobPostResponse jobPostResponse);
 
     @GET("/user/profiles")
     Call<List<WorkerProfile>> getUserProfiles();
@@ -68,8 +68,6 @@ public interface ApiService {
 
     @GET("/jobs")
     Call<List<JobPostResponse>> getAllJobs();
-
-
 
 
 }

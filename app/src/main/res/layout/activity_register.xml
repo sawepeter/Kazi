@@ -97,6 +97,7 @@
                 android:drawableRight="@drawable/ic_baseline_lock_24"
                 android:fontFamily="@font/dmsansbold"
                 android:hint="@string/password"
+                android:inputType="textPassword"
                 android:paddingStart="20dp"
                 android:paddingLeft="20dp"
                 android:paddingEnd="20dp"
@@ -138,6 +139,22 @@
             android:background="@drawable/shape_button"
             android:text="@string/register"
             android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/link_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/dmsansbold"
+            android:text="@string/login_here"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal" />
 
 
     </RelativeLayout>

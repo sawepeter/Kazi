@@ -89,6 +89,8 @@ public class LoginActivity extends AppCompatActivity {
                                 editor.putString("username", username);
                                 editor.apply();
 
+                                Log.e("TAG", "token" +token);
+
                                 startActivity(new Intent(LoginActivity.this, DashBoardActivity.class));
 
                                 Toast.makeText(LoginActivity.this, "Successful Login", Toast.LENGTH_SHORT).show();

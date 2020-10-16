@@ -51,4 +51,9 @@
     <string name="password">Password</string>
     <string name="register_here">Register Here</string>
     <string name="login_here">Login Here</string>
+    <string name="available_users">Available Users</string>
+    <string name="gardener">Gardener</string>
+    <string name="hire">Hire</string>
+    <string name="my_jobs">My Jobs</string>
+    <string name="myjobs">MyJobs</string>
 </resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ApplicationsFragment">
+
+    <RelativeLayout
+        android:id="@+id/image_bg"
+        android:layout_width="match_parent"
+        android:background="@drawable/profile_background"
+        android:layout_height="80dp"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone"
+            android:background="@drawable/details_background"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dmsansboldregular"
+            android:gravity="center_horizontal"
+            android:text="@string/my_jobs"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_profile" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/image_bg"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_my_jobs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

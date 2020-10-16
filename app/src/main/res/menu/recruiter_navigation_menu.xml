@@ -10,7 +10,7 @@
         android:id="@+id/active_applications"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_insert_drive_file_24"
-        android:title="@string/applications" />
+        android:title="@string/myjobs" />
 
     <item
         android:id="@+id/recruiter_profile"

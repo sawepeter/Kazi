@@ -47,6 +47,7 @@ public class PostJobActivity extends AppCompatActivity {
 
         dialog = new ProgressDialog(PostJobActivity.this);
         dialog.setMessage("Logging ...");
+        dialog.show();
 
         image_back = findViewById(R.id.image_back);
         btn_Post = findViewById(R.id.btn_Post);

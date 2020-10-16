@@ -121,4 +121,35 @@ public class HomeFragment extends Fragment {
 
 
     }
+
+    //fetching data for counter values
+    public void getJobs() {
+        Call<List<JobsResponse>> call = apiService.getJobPopular();
+        call.enqueue(new Callback<List<JobsResponse>>() {
+            @Override
+            public void onResponse(Call<List<JobsResponse>> call, Response<List<JobsResponse>> response) {
+                if (response.isSuccessful()){
+                    progressDialog.dismiss();
+
+                    Log.e("TAG", "Response successful" +response.code() + response.message());
+
+                    jobsResponseList = response.body();
+                    popularJobsAdapter.setCartModelList(jobsResponseList);
+                    nearbyJobsAdapter.setJobsResponseList(jobsResponseList);
+
+                }else {
+                    progressDialog.dismiss();
+                    Log.e("TAG", "response unsuccessful" + response.code() + response.message());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<JobsResponse>> call, Throwable t) {
+                progressDialog.dismiss();
+                Log.e("TAG", "Failed " + t.getMessage());
+            }
+        });
+
+
+    }
 }

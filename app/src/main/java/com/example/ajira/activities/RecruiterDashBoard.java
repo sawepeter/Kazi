@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.ajira.R;
-import com.example.ajira.fragments.ActiveApplications;
+import com.example.ajira.fragments.MyJobsFragment;
 import com.example.ajira.fragments.RecruiterHomeFragment;
 import com.example.ajira.fragments.RecruiterProfile;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -35,7 +35,7 @@ public class RecruiterDashBoard extends AppCompatActivity implements BottomNavig
 
     RecruiterProfile recruiterProfile = new RecruiterProfile();
     RecruiterHomeFragment recruiterHomeFragment = new RecruiterHomeFragment();
-    ActiveApplications activeApplications = new ActiveApplications();
+    MyJobsFragment myJobsFragment = new MyJobsFragment();
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -45,7 +45,7 @@ public class RecruiterDashBoard extends AppCompatActivity implements BottomNavig
                 return true;
 
             case R.id.active_applications:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_recruiter, activeApplications).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_recruiter, myJobsFragment).commit();
                 return true;
 
             case R.id.recruiter_profile:

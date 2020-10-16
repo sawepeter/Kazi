@@ -74,7 +74,7 @@ public class MyJobsFragment extends Fragment {
                 if (response.isSuccessful()) {
                     dialog.dismiss();
                     jobPostResponseList = response.body();
-                    Log.e("TAG", "list "+jobPostResponseList.get(0).getJobTitle());
+                    Log.e("TAG", "list "+jobPostResponseList.get(0).getJobTitle() +jobPostResponseList.size());
                     myJobsAdapter.setJobPostResponseList(jobPostResponseList);
 
                 } else {

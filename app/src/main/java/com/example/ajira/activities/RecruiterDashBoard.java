@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.ajira.R;
 import com.example.ajira.fragments.MyJobsFragment;
@@ -42,14 +43,17 @@ public class RecruiterDashBoard extends AppCompatActivity implements BottomNavig
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nyumbani:
+                postJob.setVisibility(View.VISIBLE);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_recruiter, recruiterHomeFragment).commitAllowingStateLoss();
                 return true;
 
             case R.id.active_applications:
+                postJob.setVisibility(View.GONE);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_recruiter, myJobsFragment).commit();
                 return true;
 
             case R.id.recruiter_profile:
+                postJob.setVisibility(View.GONE);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_recruiter, recruiterProfile).commit();
                 return true;
         }

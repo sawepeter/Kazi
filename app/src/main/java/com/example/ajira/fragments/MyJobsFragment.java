@@ -17,13 +17,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
 import com.example.ajira.Utils.Utils;
-import com.example.ajira.activities.PostJobActivity;
 import com.example.ajira.adapter.MyJobsAdapter;
 import com.example.ajira.model.JobPostResponse;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -50,14 +48,11 @@ public class MyJobsFragment extends Fragment {
         apiService = RetrofitBuilder.getAjiraBackendInstance().create(ApiService.class);
         sharedpreferences = getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         token = sharedpreferences.getString("token", "");
-        Log.e("TAG", "token" +token);
+        Log.e("TAG", "token" + token);
 
-        jobPostResponseList = new ArrayList<>();
+        //jobPostResponseList = new ArrayList<>();
         rv_my_jobs = rootView.findViewById(R.id.rv_my_jobs);
-        linearLayoutManager = new LinearLayoutManager(getActivity());
-        rv_my_jobs.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
-        myJobsAdapter = new MyJobsAdapter(jobPostResponseList,getActivity());
-        rv_my_jobs.setAdapter(myJobsAdapter);
+
         dialog = new ProgressDialog(getActivity());
         dialog.setMessage("Loading Data ...");
         dialog.show();
@@ -74,16 +69,22 @@ public class MyJobsFragment extends Fragment {
             public void onResponse(Call<List<JobPostResponse>> call, Response<List<JobPostResponse>> response) {
                 if (response.isSuccessful()) {
                     dialog.dismiss();
+
                     jobPostResponseList = response.body();
-                    Log.e("TAG", "list "+jobPostResponseList.get(0).getJobTitle() +jobPostResponseList.size());
-                    myJobsAdapter.setJobPostResponseList(jobPostResponseList);
+
+                    LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+                    layoutManager.setOrientation(RecyclerView.VERTICAL);
+                    rv_my_jobs.setLayoutManager(layoutManager);
+
+                    myJobsAdapter = new MyJobsAdapter(getActivity(),jobPostResponseList);
+                    rv_my_jobs.setAdapter(myJobsAdapter);
 
                 } else {
                     dialog.dismiss();
                     Log.e("TAG", "Response unsuccessful" + response.code() + response.message());
                 }
-            }
 
+            }
             @Override
             public void onFailure(Call<List<JobPostResponse>> call, Throwable t) {
                 dialog.dismiss();

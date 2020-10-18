@@ -1696,6 +1696,7 @@ drawable ic_age_limit
 drawable ic_arrow_back
 drawable ic_arrow_down_24dp
 drawable ic_baseline_add_24
+drawable ic_baseline_attach_money_24
 drawable ic_baseline_email_24
 drawable ic_baseline_filter
 drawable ic_baseline_home_24
@@ -1706,7 +1707,9 @@ drawable ic_baseline_person_24
 drawable ic_baseline_settings_24
 drawable ic_baseline_star_24
 drawable ic_bull
+drawable ic_desktop_pc
 drawable ic_done
+drawable ic_employee
 drawable ic_error
 drawable ic_job_search
 drawable ic_launcher_background
@@ -1763,6 +1766,7 @@ drawable search_background
 drawable shape_background
 drawable shape_button
 drawable shape_filter
+drawable shape_hire
 drawable star_off
 drawable star_on
 drawable test_custom_background
@@ -2083,6 +2087,7 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id number_of_applicants
 id nyumbani
 id off
 id on
@@ -2375,6 +2380,7 @@ layout fragment_recruiter_home
 layout fragment_settings
 layout image_frame
 layout job_item
+layout kazi_item
 layout layout_experience
 layout layout_skills
 layout likeview
@@ -2459,6 +2465,7 @@ menu recruiter_navigation_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+string _2_active
 string _32
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -2487,6 +2494,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string active_applications
 string amount
 string app
 string app_name
@@ -2532,6 +2540,7 @@ string job_description
 string job_opportunity
 string job_seeker
 string job_title
+string jobtitle
 string john_doe
 string lead_product_designer
 string location

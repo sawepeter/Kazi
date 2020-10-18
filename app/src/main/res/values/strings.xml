@@ -62,4 +62,7 @@
     <string name="john_doe">John Doe</string>
     <string name="flower_gardener">Flower Gardener</string>
     <string name="years_old">Years Old</string>
+    <string name="jobtitle">Job Title</string>
+    <string name="active_applications">Job Salary</string>
+    <string name="_2_active">Ksh 5000</string>
 </resources>

@@ -21,13 +21,13 @@ import java.util.List;
 
 public class MyJobsAdapter extends RecyclerView.Adapter<MyJobsAdapter.MyViewHolder> {
 
-    List<JobPostResponse> jobPostResponseList = new ArrayList<>();
     private Context context;
+    private List<JobPostResponse> jobPostResponseList;
     JobPostResponse jobPostResponse;
 
-    public MyJobsAdapter(List<JobPostResponse> jobPostResponseList, Context context) {
-        this.jobPostResponseList = jobPostResponseList;
+    public MyJobsAdapter(Context context, List<JobPostResponse> jobPostResponseList) {
         this.context = context;
+        this.jobPostResponseList = jobPostResponseList;
     }
 
     public void setJobPostResponseList(List<JobPostResponse> jobPostResponseList) {
@@ -37,10 +37,9 @@ public class MyJobsAdapter extends RecyclerView.Adapter<MyJobsAdapter.MyViewHold
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.my_jobs_item, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.kazi_item, null);
         context = parent.getContext();
-        return new MyJobsAdapter.MyViewHolder(view);
+        return new MyViewHolder(view);
     }
 
     @Override
@@ -60,7 +59,7 @@ public class MyJobsAdapter extends RecyclerView.Adapter<MyJobsAdapter.MyViewHold
 
     class MyViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView job_title, job_description, job_salary, job_location;
+        private TextView job_title, job_description, job_salary, job_location,number_of_applicants;
 
         public MyViewHolder(@NonNull View view) {
             super(view);
@@ -68,6 +67,7 @@ public class MyJobsAdapter extends RecyclerView.Adapter<MyJobsAdapter.MyViewHold
             job_description = view.findViewById(R.id.job_description);
             job_location = view.findViewById(R.id.job_location);
             job_salary = view.findViewById(R.id.job_salary);
+            number_of_applicants = view.findViewById(R.id.number_of_applicants);
 
           /*  view.setOnClickListener(v -> {
                 int pos = getAdapterPosition();
@@ -82,7 +82,7 @@ public class MyJobsAdapter extends RecyclerView.Adapter<MyJobsAdapter.MyViewHold
 
                 }
             });*/
-            }
         }
     }
+}
 

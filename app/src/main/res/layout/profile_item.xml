@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="8dp"
     android:orientation="vertical">
 
     <LinearLayout
@@ -9,12 +10,12 @@
         android:background="@drawable/circularbordersolid"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="5dp">
+        android:padding="2dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/logo_image"
-            android:layout_width="150dp"
-            android:layout_height="90dp"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_profile" />
 
@@ -56,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:gravity="center"
-                android:padding="8dp">
+                android:padding="2dp">
 
                 <ImageView
                     android:layout_width="35dp"
@@ -95,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:gravity="center"
-                android:padding="8dp">
+                android:padding="2dp">
 
                 <ImageView
                     android:layout_width="35dp"
@@ -141,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:gravity="center"
-                android:padding="8dp">
+                android:padding="2dp">
 
                 <ImageView
                     android:layout_width="35dp"
@@ -180,7 +181,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:gravity="center"
-                android:padding="5dp">
+                android:padding="0dp">
 
                 <Button
                     android:id="@+id/btn_hire"
@@ -188,12 +189,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
-
-                    android:background="@drawable/shape_button"
+                    android:background="@drawable/shape_hire"
                     android:fontFamily="@font/dmsansbold"
                     android:text="@string/hire"
                     android:textColor="@android:color/white"
-                    android:textSize="15sp" />
+                    android:textSize="13sp" />
 
 
             </LinearLayout>

@@ -27,6 +27,7 @@ public class RecruiterDashBoard extends AppCompatActivity implements BottomNavig
         postJob = findViewById(R.id.postJob);
         recruiter_navigation = findViewById(R.id.recruiter_navigation);
         recruiter_navigation.setOnNavigationItemSelectedListener(this);
+        recruiter_navigation.setSelectedItemId(R.id.nyumbani);
 
         postJob.setOnClickListener(v -> {
             startActivity(new Intent(RecruiterDashBoard.this, PostJobActivity.class));
@@ -39,7 +40,7 @@ public class RecruiterDashBoard extends AppCompatActivity implements BottomNavig
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.nyumbani:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_recruiter, recruiterHomeFragment).commitAllowingStateLoss();
                 return true;

@@ -5,8 +5,8 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="5dp"
     android:layout_marginEnd="5dp"
-    android:orientation="vertical"
-    android:layout_marginRight="5dp">
+    android:layout_marginRight="5dp"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -28,13 +28,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_marginBottom="15dp"
             android:visibility="gone"
             app:circle_start_color="@color/colorAccent"
             app:icon_size="15dp"
             app:icon_type="heart"
-            app:is_enabled="true"
-            android:layout_alignParentRight="true" />
+            app:is_enabled="true" />
 
     </RelativeLayout>
 
@@ -59,34 +59,39 @@
                 android:id="@+id/skill_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
                 android:layout_marginTop="10dp"
                 android:drawablePadding="10dp"
-                android:layout_alignParentStart="true"
                 android:fontFamily="@font/dmsansboldregular"
                 android:text="@string/gardener"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_alignParentLeft="true" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/worker_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="10dp"
                 android:drawablePadding="10dp"
-               android:layout_alignParentEnd="true"
                 android:fontFamily="@font/dmsansboldregular"
                 android:text="@string/gardener"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true" />
-
+                android:textStyle="bold" />
 
 
         </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/darker_gray" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -98,18 +103,18 @@
                 android:id="@+id/rating_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:drawablePadding="10dp"
                 android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/ic_baseline_star_24"
+                android:drawableLeft="@drawable/ic_baseline_star_24"
+                android:drawablePadding="10dp"
                 android:fontFamily="@font/dmsansbold"
                 android:text="5.0(10)"
                 android:textColor="@color/colorPrimary"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                android:drawableLeft="@drawable/ic_baseline_star_24"
-                app:drawableStartCompat="@drawable/ic_baseline_star_24"
-                android:drawableStart="@drawable/ic_baseline_star_24"
-                android:layout_alignParentLeft="true" />
+                app:drawableStartCompat="@drawable/ic_baseline_star_24" />
 
             <TextView
                 android:id="@+id/worker_age"
@@ -125,25 +130,17 @@
 
         </RelativeLayout>
 
-
-
-        <View
+        <Button
+            android:id="@+id/btn_hire"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray"/>
-
-
-            <Button
-                android:id="@+id/btn_hire"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_button"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"
-                android:fontFamily="@font/dmsansbold"
-                android:text="@string/hire"
-                android:textColor="@android:color/white"
-                android:textSize="15sp" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_button"
+            android:fontFamily="@font/dmsansbold"
+            android:text="@string/hire"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
 
 
     </LinearLayout>

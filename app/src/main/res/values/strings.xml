@@ -53,7 +53,13 @@
     <string name="login_here">Login Here</string>
     <string name="available_users">Available Users</string>
     <string name="gardener">Gardener</string>
-    <string name="hire">Hire</string>
+    <string name="hire">Hire Me</string>
     <string name="my_jobs">My Jobs</string>
     <string name="myjobs">MyJobs</string>
+    <string name="user_ratings">User Ratings</string>
+    <string name="user_location">Location</string>
+    <string name="nyeri">Nyeri</string>
+    <string name="john_doe">John Doe</string>
+    <string name="flower_gardener">Flower Gardener</string>
+    <string name="years_old">Years Old</string>
 </resources>

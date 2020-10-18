@@ -1104,6 +1104,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color grey
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -1678,6 +1679,8 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable circle_step_done
+drawable circular_grey_bordersolid
+drawable circularbordersolid
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1689,6 +1692,7 @@ drawable figma
 drawable filter_background
 drawable heart_off
 drawable heart_on
+drawable ic_age_limit
 drawable ic_arrow_back
 drawable ic_arrow_down_24dp
 drawable ic_baseline_add_24
@@ -1696,6 +1700,7 @@ drawable ic_baseline_email_24
 drawable ic_baseline_filter
 drawable ic_baseline_home_24
 drawable ic_baseline_insert_drive_file_24
+drawable ic_baseline_location_on_24
 drawable ic_baseline_lock_24
 drawable ic_baseline_person_24
 drawable ic_baseline_settings_24
@@ -1763,6 +1768,7 @@ drawable star_on
 drawable test_custom_background
 drawable thumb_off
 drawable thumb_on
+drawable tickinsidecircle
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 font dmsansbold
@@ -1790,6 +1796,7 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id UserName
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -2422,6 +2429,7 @@ layout preference_widget_seekbar
 layout preference_widget_seekbar_material
 layout preference_widget_switch
 layout preference_widget_switch_compat
+layout profile_item
 layout recycler_section_header
 layout search_item
 layout select_dialog_item_material
@@ -2508,6 +2516,7 @@ string experiences
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string flower_gardener
 string full_name
 string gardener
 string hide_bottom_view_on_scroll_behavior
@@ -2523,6 +2532,7 @@ string job_description
 string job_opportunity
 string job_seeker
 string job_title
+string john_doe
 string lead_product_designer
 string location
 string login_here
@@ -2566,6 +2576,7 @@ string mtrl_picker_toggle_to_year_selection
 string my_jobs
 string myjobs
 string not_set
+string nyeri
 string password
 string password_toggle_content_description
 string path_password_eye
@@ -2596,6 +2607,8 @@ string txt_company_name
 string txt_place_holder
 string txt_placeholder
 string txt_qualif
+string user_location
+string user_ratings
 string username
 string v7_preference_off
 string v7_preference_on
@@ -2610,6 +2623,7 @@ string vertical_form_stepper_form_down_previous
 string vertical_form_stepper_form_info_will_be_lost
 string vertical_form_stepper_form_last_step
 string vertical_form_stepper_form_sending_data_message
+string years_old
 string your_applications
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

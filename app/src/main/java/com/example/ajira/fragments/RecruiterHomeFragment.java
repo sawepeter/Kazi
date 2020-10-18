@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.icu.text.ListFormatter;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,9 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
 import com.example.ajira.Utils.Utils;
-import com.example.ajira.adapter.PopularJobsAdapter;
 import com.example.ajira.adapter.UsersAdapter;
-import com.example.ajira.model.JobsResponse;
 import com.example.ajira.model.WorkerProfile;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
@@ -34,8 +33,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL;
-
 public class RecruiterHomeFragment extends Fragment {
 
     TextView txt_welcome;
@@ -45,7 +42,7 @@ public class RecruiterHomeFragment extends Fragment {
     ImageView image_back;
     RecyclerView rv_users;
     UsersAdapter usersAdapter;
-    List<WorkerProfile> workerProfileList = null;
+    private List<WorkerProfile> workerProfileList = null;
     ProgressDialog progressDialog;
     ApiService apiService;
 
@@ -53,13 +50,13 @@ public class RecruiterHomeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_recruiter_home,container,false);
+        View rootView = inflater.inflate(R.layout.fragment_recruiter_home, container, false);
 
-        progressDialog  = new ProgressDialog(getActivity());
+        progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading jobs Data");
         progressDialog.show();
 
-        workerProfileList = new ArrayList<>();
+        /*workerProfileList = new ArrayList<>();*/
 
         apiService = RetrofitBuilder.getAjiraBackendInstance().create(ApiService.class);
 
@@ -67,7 +64,6 @@ public class RecruiterHomeFragment extends Fragment {
         rv_users = rootView.findViewById(R.id.rv_users);
         image_back = rootView.findViewById(R.id.image_back);
 
-        rv_users.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
 
         sharedpreferences = getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         username = sharedpreferences.getString("userName", "");
@@ -77,9 +73,8 @@ public class RecruiterHomeFragment extends Fragment {
             getActivity().finish();
         });
 
-        txt_welcome.setText("Hello " +username);
+        txt_welcome.setText("Hello " + username);
 
-        usersAdapter = new UsersAdapter(workerProfileList, getActivity());
 
         Utils.runAsyncTask(this::getWorkerProfile);
         return rootView;
@@ -91,15 +86,21 @@ public class RecruiterHomeFragment extends Fragment {
         call.enqueue(new Callback<List<WorkerProfile>>() {
             @Override
             public void onResponse(Call<List<WorkerProfile>> call, Response<List<WorkerProfile>> response) {
-                if (response.isSuccessful()){
+                if (response.isSuccessful()) {
                     progressDialog.dismiss();
 
-                    Log.e("TAG", "Response successful" +response.code() + response.message());
-
                     workerProfileList = response.body();
-                    usersAdapter.setWorkerProfileList(workerProfileList);
 
-                }else {
+                    LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+                    layoutManager.setOrientation(RecyclerView.VERTICAL);
+                    rv_users.setLayoutManager(layoutManager);
+
+                    usersAdapter = new UsersAdapter(getActivity(),workerProfileList);
+                    rv_users.setAdapter(usersAdapter);
+
+                    Log.e("TAG  successful", "Response successful " + workerProfileList.size() + response.code() + response.message());
+
+                } else {
                     progressDialog.dismiss();
                     Log.e("TAG", "response unsuccessful" + response.code() + response.message());
                 }

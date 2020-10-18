@@ -115,14 +115,13 @@
                 android:id="@+id/worker_age"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/dmsansbold"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/dmsansbold"
                 android:text="18 years old"
                 android:textColor="@color/colorPrimary"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                android:layout_alignParentRight="true" />
+                android:textStyle="bold" />
 
         </RelativeLayout>
 

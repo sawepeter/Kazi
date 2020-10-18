@@ -1,4 +1,4 @@
-#Fri Oct 16 06:05:54 EAT 2020
+#Sun Oct 18 13:09:07 EAT 2020
 base.0=/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

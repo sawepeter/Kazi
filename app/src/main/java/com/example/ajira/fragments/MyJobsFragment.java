@@ -50,6 +50,7 @@ public class MyJobsFragment extends Fragment {
         apiService = RetrofitBuilder.getAjiraBackendInstance().create(ApiService.class);
         sharedpreferences = getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         token = sharedpreferences.getString("token", "");
+        Log.e("TAG", "token" +token);
 
         jobPostResponseList = new ArrayList<>();
         rv_my_jobs = rootView.findViewById(R.id.rv_my_jobs);

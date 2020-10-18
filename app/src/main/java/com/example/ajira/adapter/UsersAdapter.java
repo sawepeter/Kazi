@@ -28,13 +28,13 @@ import java.util.List;
 
 public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.MyViewHolder> {
 
-    List<WorkerProfile> workerProfileList = new ArrayList<>();
     private Context context;
+    private List<WorkerProfile> workerProfileList;
     WorkerProfile workerProfile;
 
-    public UsersAdapter(List<WorkerProfile> workerProfileList, Context context) {
-        this.workerProfileList = workerProfileList;
+    public UsersAdapter(Context context, List<WorkerProfile> workerProfileList) {
         this.context = context;
+        this.workerProfileList = workerProfileList;
     }
 
     public void setWorkerProfileList(List<WorkerProfile> workerProfileList) {
@@ -44,19 +44,18 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.MyViewHolder
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.workers_item, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.workers_item, null);
         context = parent.getContext();
-        return new UsersAdapter.MyViewHolder(view);
+        return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        workerProfile = workerProfileList.get(position);
-        holder.skill_name.setText(workerProfile.getSkillName());
-        holder.rating_count.setText(workerProfile.getUserId());
-        holder.worker_age.setText(workerProfile.getAge());
-        holder.worker_location.setText(workerProfile.getLocation());
+        Log.i("autolog ", "onBindViewHolder");
+        holder.skill_name.setText(workerProfileList.get(position).getSkillName());
+        //holder.rating_count.setText(workerProfileList.get(position).getUserId());
+        holder.worker_age.setText(workerProfileList.get(position).getAge());
+        holder.worker_location.setText(workerProfileList.get(position).getLocation());
         /*Picasso.get().load(workerProfile.getLogo()).placeholder(R.drawable.placeholder).fit().centerCrop().into(holder.logo_image);*/
         holder.btn_hire.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,10 +68,11 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.MyViewHolder
 
     @Override
     public int getItemCount() {
+        Log.i("autolog", "getItemCount");
         return workerProfileList.size();
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder {
 
         private TextView skill_name, rating_count, worker_age, worker_location;
         private ImageView logo_image;
@@ -85,6 +85,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.MyViewHolder
             rating_count = view.findViewById(R.id.rating_count);
             worker_age = view.findViewById(R.id.worker_age);
             btn_hire = view.findViewById(R.id.btn_hire);
+            worker_location = view.findViewById(R.id.worker_location);
 
           /*  view.setOnClickListener(v -> {
                 int pos = getAdapterPosition();
@@ -99,7 +100,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.MyViewHolder
 
                 }
             });*/
-            }
         }
     }
+}
 

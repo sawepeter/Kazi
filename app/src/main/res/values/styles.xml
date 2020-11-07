@@ -14,4 +14,10 @@
         <item name="android:textAlignment" tools:targetApi="jelly_bean_mr1">center</item>
     </style>
 
+    <style name="successDataDetailsRows">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/oxygen_bold</item>
+    </style>
+
 </resources>

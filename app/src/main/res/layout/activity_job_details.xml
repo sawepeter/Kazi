@@ -33,6 +33,7 @@
             android:layout_height="30dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:visibility="gone"
             android:background="@drawable/details_background"
             android:scaleType="centerInside"
             android:src="@drawable/ic_share" />
@@ -48,195 +49,201 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/image_logo"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/search_background"
-                android:scaleType="centerInside"
-                android:src="@drawable/log" />
-
-            <TextView
-                android:id="@+id/job_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/image_logo"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/dmsansbold"
-                android:gravity="center_horizontal"
-                android:text="Lead Product Designer"
-                android:textAlignment="center"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/job_location"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/job_title"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/dmsansbold"
-                android:gravity="center_horizontal"
-                android:text="Nairobi Kenya"
-                android:textAlignment="center"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:textStyle="normal" />
-
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/chipGroup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="20dp"
-                android:visibility="gone"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/job_location"
-                android:layout_marginEnd="24dp">
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chip6"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/description" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chip7"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/company" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chip8"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/reviews" />
-
-            </com.google.android.material.chip.ChipGroup>
 
             <LinearLayout
-                android:id="@+id/layout_qualification"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/chipGroup"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/shape_background"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="@dimen/padding_normal">
+
+                <ImageView
+                    android:layout_width="152dp"
+                    android:layout_height="152dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_suitcase"
+                    tools:ignore="VectorDrawableCompat" />
 
                 <TextView
+                    android:id="@+id/job_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="18dp"
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/dmsansbold"
-                    android:text="@string/txt_qualif"
+                    android:gravity="center_horizontal"
+                    android:text="Lead Product Designer"
+                    android:textAlignment="center"
                     android:textColor="@color/colorPrimary"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/qualification1"
+                    android:id="@+id/job_location"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginRight="5dp"
-                    android:fontFamily="@font/dmsansboldregular"
-                    android:singleLine="false"
-                    android:text="@string/qualification1"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="15sp"
-                    app:drawableStartCompat="@drawable/ic_bull" />
-
-                <TextView
-                    android:id="@+id/qualification2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="23dp"
-                    android:layout_marginLeft="23dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginRight="5dp"
-                    android:fontFamily="@font/dmsansboldregular"
-                    android:singleLine="false"
-                    android:text="@string/qualification1"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="15sp"
-                    app:drawableStartCompat="@drawable/ic_bull" />
-
-                <TextView
-                    android:id="@+id/qualification3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="23dp"
-                    android:layout_marginLeft="23dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginBottom="20dp"
-                    android:fontFamily="@font/dmsansboldregular"
-                    android:singleLine="false"
-                    android:text="@string/qualification1"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="15sp"
-                    app:drawableStartCompat="@drawable/ic_bull" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/layout_qualification"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="100dp"
-                android:background="@drawable/shape_background"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="18dp"
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/dmsansbold"
-                    android:text="@string/job_desc"
+                    android:gravity="center_horizontal"
+                    android:text="Nairobi Kenya"
+                    android:textAlignment="center"
                     android:textColor="@color/colorPrimary"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
 
-                <TextView
-                    android:id="@+id/job_desc"
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/divider" />
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="23dp"
-                    android:layout_marginLeft="23dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginBottom="30dp"
-                    android:fontFamily="@font/dmsansboldregular"
-                    android:singleLine="false"
-                    android:text="@string/job_about_desc"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="15sp" />
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="horizontal"
+                    android:weightSum="1.5">
 
+                    <TextView
+                        style="@style/successDataDetailsRows"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_normal"
+                        android:layout_weight="0.5"
+                        android:text="Employer Name"
+                        android:layout_marginRight="@dimen/margin_normal" />
+
+                    <TextView
+                        android:id="@+id/textViewEmployerName"
+                        style="@style/successDataDetailsRows"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        tools:text="Name" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="horizontal"
+                    android:weightSum="1.5">
+
+                    <TextView
+                        style="@style/successDataDetailsRows"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_normal"
+                        android:layout_weight="0.5"
+                        android:text="Job Type"
+                        android:layout_marginRight="@dimen/margin_normal" />
+
+                    <TextView
+                        android:id="@+id/textViewJobType"
+                        style="@style/successDataDetailsRows"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        tools:text="Description" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="horizontal"
+                    android:weightSum="1.5">
+
+                    <TextView
+                        style="@style/successDataDetailsRows"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_normal"
+                        android:layout_weight="0.5"
+                        android:text="Phone No"
+                        android:layout_marginRight="@dimen/margin_normal" />
+
+                    <TextView
+                        android:id="@+id/textViewPhone"
+                        style="@style/successDataDetailsRows"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        tools:text="Interval" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="horizontal"
+                    android:weightSum="1.5">
+
+                    <TextView
+                        style="@style/successDataDetailsRows"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_normal"
+                        android:layout_weight="0.5"
+                        android:text="Job Pay"
+                        android:layout_marginRight="@dimen/margin_normal" />
+
+                    <TextView
+                        android:id="@+id/textViewJobPay"
+                        style="@style/successDataDetailsRows"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        tools:text="Start Date" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="horizontal"
+                    android:weightSum="1.5">
+
+                    <TextView
+                        style="@style/successDataDetailsRows"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_normal"
+                        android:layout_weight="0.5"
+                        android:text="DeadLine"
+                        android:layout_marginRight="@dimen/margin_normal" />
+
+                    <TextView
+                        android:id="@+id/textViewJobDeadline"
+                        style="@style/successDataDetailsRows"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        tools:text="End Date" />
+
+                </LinearLayout>
 
             </LinearLayout>
+
 
         </RelativeLayout>
 

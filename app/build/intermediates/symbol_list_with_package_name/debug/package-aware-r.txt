@@ -1058,6 +1058,7 @@ color colorPrimary
 color colorPrimaryDark
 color colorS
 color colorShape
+color dashboard
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1100,6 +1101,7 @@ color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
 color dim_foreground_material_light
+color divider
 color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
@@ -1297,6 +1299,7 @@ dimen action_bar_size
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
 dimen appcompat_dialog_background_inset
+dimen card_view_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -1358,6 +1361,7 @@ dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
 dimen dot_padding_right
 dimen dot_size
+dimen fab_margin
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -1370,10 +1374,13 @@ dimen hint_alpha_material_dark
 dimen hint_alpha_material_light
 dimen hint_pressed_alpha_material_dark
 dimen hint_pressed_alpha_material_light
+dimen item_offset
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
 dimen line_width
+dimen margin_normal
+dimen margin_small
 dimen material_emphasis_disabled
 dimen material_emphasis_high_type
 dimen material_emphasis_medium
@@ -1557,6 +1564,11 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen padding_average
+dimen padding_empty_bottom
+dimen padding_medium
+dimen padding_normal
+dimen padding_small
 dimen preference_dropdown_padding_start
 dimen preference_icon_minWidth
 dimen preference_seekbar_padding_horizontal
@@ -1693,6 +1705,7 @@ drawable filter_background
 drawable heart_off
 drawable heart_on
 drawable ic_age_limit
+drawable ic_alarm
 drawable ic_arrow_back
 drawable ic_arrow_down_24dp
 drawable ic_baseline_add_24
@@ -1715,6 +1728,7 @@ drawable ic_job_search
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_like
+drawable ic_location
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -1723,6 +1737,7 @@ drawable ic_person
 drawable ic_profile
 drawable ic_right
 drawable ic_share
+drawable ic_suitcase
 drawable ic_work
 drawable job_background
 drawable like_background
@@ -1781,6 +1796,7 @@ font dmsansboldmedium
 font dmsansboldmediumitalic
 font dmsansboldregular
 font dmsansitalic
+font oxygen_regular
 id ALT
 id Applications
 id BOTTOM_END
@@ -1986,6 +2002,7 @@ id group_divider
 id groups
 id hardware
 id hideable
+id holder
 id home
 id homeAsUp
 id honorRequest
@@ -2229,6 +2246,11 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textViewJobTitle
+id textViewLocation
+id textViewPay
+id textViewPhone
+id textViewThree
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -2257,7 +2279,6 @@ id transition_transform
 id triangle
 id txt_category
 id txt_desc
-id txt_holder
 id txt_jobs_count
 id txt_location
 id txt_sub_category
@@ -2437,6 +2458,7 @@ layout preference_widget_switch
 layout preference_widget_switch_compat
 layout profile_item
 layout recycler_section_header
+layout row_all_jobs
 layout search_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
@@ -2511,6 +2533,7 @@ string clear_text_end_icon_content_description
 string company
 string company_name
 string completed
+string contact
 string copy
 string desc
 string description
@@ -2538,6 +2561,7 @@ string job_about_desc
 string job_desc
 string job_description
 string job_opportunity
+string job_pay
 string job_seeker
 string job_title
 string jobtitle
@@ -2584,6 +2608,7 @@ string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string my_jobs
 string myjobs
+string no
 string not_set
 string nyeri
 string password
@@ -3358,6 +3383,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style textViewJobs
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

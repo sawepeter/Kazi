@@ -1,7 +1,9 @@
 package com.example.ajira.fragments;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -47,8 +50,10 @@ public class HomeFragment extends Fragment {
     List<JobsResponse> jobsList = null;
     LinearLayout l1;
     ProgressDialog progressDialog;
-    EditText edt_search;
-    ImageView img_filter;
+    TextView txt_welcome;
+    public static final String MyPREFERENCES = "MyPrefs";
+    SharedPreferences sharedpreferences;
+
 
     @Nullable
     @Override
@@ -58,6 +63,8 @@ public class HomeFragment extends Fragment {
         progressDialog  = new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading jobs Data");
         progressDialog.show();
+        sharedpreferences = getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
 
         jobsResponseList = new ArrayList<>();
         jobsList = new ArrayList<>();
@@ -65,62 +72,23 @@ public class HomeFragment extends Fragment {
         apiService = RetrofitBuilder.getRetrofitInstance().create(ApiService.class);
 
         rv_popular_jobs = rootView.findViewById(R.id.rv_popular_jobs);
+        txt_welcome = rootView.findViewById(R.id.txt_welcome);
+        txt_welcome.setText("Hello " +sharedpreferences.getString("username", ""));
         rv_nearby = rootView.findViewById(R.id.rv_nearby);
-        edt_search = rootView.findViewById(R.id.edt_search);
-        img_filter = rootView.findViewById(R.id.img_filter);
-        edt_search.setOnClickListener(v -> {
-            startActivity(new Intent(getActivity(), SearchActivity.class));
-        });
 
-        img_filter.setOnClickListener(v -> {
-            Toast.makeText(getActivity(), "Filtered !!!", Toast.LENGTH_SHORT).show();
-        });
-
-        rv_popular_jobs.setLayoutManager(new LinearLayoutManager(getActivity(), HORIZONTAL, false));
+        rv_popular_jobs.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
         rv_nearby.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
 
         allJobsAdapter = new AllJobsAdapter(jobsResponseList, getActivity());
         //nearbyJobsAdapter = new NearbyJobsAdapter(jobsResponseList, getActivity());
         rv_popular_jobs.setAdapter(allJobsAdapter);
-        rv_nearby.setAdapter(nearbyJobsAdapter);
+       // rv_nearby.setAdapter(nearbyJobsAdapter);
 
-        Utils.runAsyncTask(this::getPopularJobs);
+        Utils.runAsyncTask(this::getAllJobs);
 
         return rootView;
 
     }
-
-    //fetching data for counter values
-    public void getPopularJobs() {
-        Call<List<JobsResponse>> call = apiService.getJobPopular();
-        call.enqueue(new Callback<List<JobsResponse>>() {
-            @Override
-            public void onResponse(Call<List<JobsResponse>> call, Response<List<JobsResponse>> response) {
-                if (response.isSuccessful()){
-                    progressDialog.dismiss();
-
-                    Log.e("TAG", "Response successful" +response.code() + response.message());
-
-                    jobsResponseList = response.body();
-                    allJobsAdapter.setCartModelList(jobsResponseList);
-                    nearbyJobsAdapter.setJobsResponseList(jobsResponseList);
-
-                }else {
-                    progressDialog.dismiss();
-                    Log.e("TAG", "response unsuccessful" + response.code() + response.message());
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<JobsResponse>> call, Throwable t) {
-                progressDialog.dismiss();
-                Log.e("TAG", "Failed " + t.getMessage());
-            }
-        });
-
-
-    }
-
 
     //fetching all displayed jobs
     public void getAllJobs() {
@@ -134,8 +102,7 @@ public class HomeFragment extends Fragment {
                     Log.e("TAG", "Response successful" +response.code() + response.message());
 
                     jobsResponseList = response.body();
-                    allJobsAdapter.setCartModelList(jobsResponseList);
-                    nearbyJobsAdapter.setJobsResponseList(jobsResponseList);
+                    allJobsAdapter.setJobsResponseList(jobsResponseList);
 
                 }else {
                     progressDialog.dismiss();
@@ -152,4 +119,5 @@ public class HomeFragment extends Fragment {
 
 
     }
+
 }

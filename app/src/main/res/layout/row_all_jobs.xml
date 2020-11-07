@@ -27,7 +27,7 @@
 
             <ImageView
                 android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_height="30dp"
                 android:contentDescription="@null"
                 app:srcCompat="@drawable/ic_suitcase"
                 tools:ignore="VectorDrawableCompat" />
@@ -53,7 +53,7 @@
             android:weightSum="4">
 
             <TextView
-                android:id="@+id/"
+                android:id="@+id/holder"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -120,7 +120,7 @@
             android:padding="@dimen/padding_small">
 
             <TextView
-                android:id="@+id/textViewDeadline"
+                android:id="@+id/textViewLocation"
                 style="@style/textViewJobs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -129,10 +129,10 @@
                 android:layout_marginLeft="@dimen/margin_small" />
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_alignParentEnd="true"
-                app:srcCompat="@drawable/ic_alarm"
+                app:srcCompat="@drawable/ic_location"
                 android:layout_alignParentRight="true"
                 tools:ignore="VectorDrawableCompat" />
 

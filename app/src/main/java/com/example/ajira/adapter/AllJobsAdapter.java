@@ -34,7 +34,7 @@ public class AllJobsAdapter extends RecyclerView.Adapter<AllJobsAdapter.MyViewHo
         this.context = context;
     }
 
-    public void setCartModelList(List<AllJobsResponse> jobsResponseList) {
+    public void setJobsResponseList(List<AllJobsResponse> jobsResponseList) {
         this.jobsResponseList = jobsResponseList;
         notifyDataSetChanged();
     }
@@ -53,7 +53,7 @@ public class AllJobsAdapter extends RecyclerView.Adapter<AllJobsAdapter.MyViewHo
         jobs = jobsResponseList.get(position);
         holder.textViewJobTitle.setText(jobs.getJobTitle());
         holder.textViewPhone.setText(jobs.getEmployerPhone());
-        holder.textViewDeadline.setText(jobs.getJobDeadline());
+        holder.textViewLocation.setText(jobs.getJobLocation());
         holder.textViewPay.setText(jobs.getJobAmount());
     }
 
@@ -65,13 +65,13 @@ public class AllJobsAdapter extends RecyclerView.Adapter<AllJobsAdapter.MyViewHo
 
     class MyViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView textViewJobTitle, textViewPhone, textViewDeadline, textViewPay;
+        private TextView textViewJobTitle, textViewPhone, textViewLocation, textViewPay;
 
         public MyViewHolder(@NonNull View view) {
             super(view);
             textViewJobTitle = view.findViewById(R.id.textViewJobTitle);
             textViewPhone = view.findViewById(R.id.textViewPhone);
-            textViewDeadline = view.findViewById(R.id.textViewDeadline);
+            textViewLocation = view.findViewById(R.id.textViewLocation);
             textViewPay = view.findViewById(R.id.textViewPay);
             //passes data to the next step
           /*  view.setOnClickListener(v -> {

@@ -65,4 +65,7 @@
     <string name="jobtitle">Job Title</string>
     <string name="active_applications">Job Salary</string>
     <string name="_2_active">Ksh 5000</string>
+    <string name="contact">Contact :</string>
+    <string name="no">0725632415</string>
+    <string name="job_pay">Job Pay</string>
 </resources>

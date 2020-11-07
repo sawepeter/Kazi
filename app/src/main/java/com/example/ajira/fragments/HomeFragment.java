@@ -20,10 +20,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
 import com.example.ajira.Utils.Utils;
-import com.example.ajira.activities.DashBoardActivity;
 import com.example.ajira.activities.SearchActivity;
 import com.example.ajira.adapter.NearbyJobsAdapter;
-import com.example.ajira.adapter.PopularJobsAdapter;
+import com.example.ajira.adapter.AllJobsAdapter;
+import com.example.ajira.model.AllJobsResponse;
 import com.example.ajira.model.JobsResponse;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
@@ -40,10 +40,10 @@ import static androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL;
 public class HomeFragment extends Fragment {
 
     private ApiService apiService;
-    PopularJobsAdapter popularJobsAdapter;
+    AllJobsAdapter allJobsAdapter;
     NearbyJobsAdapter nearbyJobsAdapter;
     RecyclerView rv_popular_jobs,rv_nearby;
-    List<JobsResponse> jobsResponseList = null;
+    List<AllJobsResponse> jobsResponseList = null;
     List<JobsResponse> jobsList = null;
     LinearLayout l1;
     ProgressDialog progressDialog;
@@ -79,15 +79,14 @@ public class HomeFragment extends Fragment {
         rv_popular_jobs.setLayoutManager(new LinearLayoutManager(getActivity(), HORIZONTAL, false));
         rv_nearby.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
 
-        popularJobsAdapter = new PopularJobsAdapter(jobsResponseList, getActivity());
-        nearbyJobsAdapter = new NearbyJobsAdapter(jobsResponseList, getActivity());
-        rv_popular_jobs.setAdapter(popularJobsAdapter);
+        allJobsAdapter = new AllJobsAdapter(jobsResponseList, getActivity());
+        //nearbyJobsAdapter = new NearbyJobsAdapter(jobsResponseList, getActivity());
+        rv_popular_jobs.setAdapter(allJobsAdapter);
         rv_nearby.setAdapter(nearbyJobsAdapter);
 
         Utils.runAsyncTask(this::getPopularJobs);
 
         return rootView;
-
 
     }
 
@@ -103,7 +102,7 @@ public class HomeFragment extends Fragment {
                     Log.e("TAG", "Response successful" +response.code() + response.message());
 
                     jobsResponseList = response.body();
-                    popularJobsAdapter.setCartModelList(jobsResponseList);
+                    allJobsAdapter.setCartModelList(jobsResponseList);
                     nearbyJobsAdapter.setJobsResponseList(jobsResponseList);
 
                 }else {
@@ -122,19 +121,20 @@ public class HomeFragment extends Fragment {
 
     }
 
-    //fetching data for counter values
-    public void getJobs() {
-        Call<List<JobsResponse>> call = apiService.getJobPopular();
-        call.enqueue(new Callback<List<JobsResponse>>() {
+
+    //fetching all displayed jobs
+    public void getAllJobs() {
+        Call<List<AllJobsResponse>> call = apiService.getAllJobs();
+        call.enqueue(new Callback<List<AllJobsResponse>>() {
             @Override
-            public void onResponse(Call<List<JobsResponse>> call, Response<List<JobsResponse>> response) {
+            public void onResponse(Call<List<AllJobsResponse>> call, Response<List<AllJobsResponse>> response) {
                 if (response.isSuccessful()){
                     progressDialog.dismiss();
 
                     Log.e("TAG", "Response successful" +response.code() + response.message());
 
                     jobsResponseList = response.body();
-                    popularJobsAdapter.setCartModelList(jobsResponseList);
+                    allJobsAdapter.setCartModelList(jobsResponseList);
                     nearbyJobsAdapter.setJobsResponseList(jobsResponseList);
 
                 }else {
@@ -144,7 +144,7 @@ public class HomeFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<List<JobsResponse>> call, Throwable t) {
+            public void onFailure(Call<List<AllJobsResponse>> call, Throwable t) {
                 progressDialog.dismiss();
                 Log.e("TAG", "Failed " + t.getMessage());
             }

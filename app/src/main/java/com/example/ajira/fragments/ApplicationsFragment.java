@@ -12,14 +12,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import com.example.ajira.R;
 import com.example.ajira.Utils.Utils;
 import com.example.ajira.adapter.ApplicationAdapter;
-import com.example.ajira.adapter.PopularJobsAdapter;
 import com.example.ajira.model.ApplicationResponse;
-import com.example.ajira.model.JobsResponse;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
 
@@ -29,8 +26,6 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-import static androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL;
 
 public class ApplicationsFragment extends Fragment {
 

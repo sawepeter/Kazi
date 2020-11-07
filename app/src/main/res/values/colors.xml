@@ -13,4 +13,6 @@
     <color name="background">#EFEFEF</color>
     <color name="background2">#f3f4f8</color>
     <color name="grey">#808080</color>
+    <color name="dashboard">#4A4A4A</color>
+    <color name="divider">#b99e9e9e</color>
 </resources>

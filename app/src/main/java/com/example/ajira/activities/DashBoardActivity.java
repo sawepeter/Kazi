@@ -2,36 +2,17 @@ package com.example.ajira.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.LinearLayout;
 
 import com.example.ajira.R;
-import com.example.ajira.Utils.Utils;
-import com.example.ajira.adapter.PopularJobsAdapter;
 import com.example.ajira.fragments.ApplicationsFragment;
 import com.example.ajira.fragments.HomeFragment;
 import com.example.ajira.fragments.ProfileFragment;
 import com.example.ajira.fragments.SettingsFragment;
-import com.example.ajira.model.JobsResponse;
-import com.example.ajira.network.ApiService;
-import com.example.ajira.network.RetrofitBuilder;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
-import static androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL;
 
 public class DashBoardActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 

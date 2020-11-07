@@ -1,5 +1,6 @@
 package com.example.ajira.network;
 
+import com.example.ajira.model.AllJobsResponse;
 import com.example.ajira.model.ApplicationResponse;
 import com.example.ajira.model.JobPostRequest;
 import com.example.ajira.model.JobPostResponse;
@@ -67,7 +68,7 @@ public interface ApiService {
     Call<List<JobPostResponse>> getNearbyJobs(@Query("location") String location);
 
     @GET("/jobs")
-    Call<List<JobPostResponse>> getAllJobs();
+    Call<List<AllJobsResponse>> getAllJobs();
 
 
 }

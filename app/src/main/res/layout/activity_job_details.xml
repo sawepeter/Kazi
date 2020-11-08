@@ -57,8 +57,8 @@
                 android:padding="@dimen/padding_normal">
 
                 <ImageView
-                    android:layout_width="152dp"
-                    android:layout_height="152dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
                     app:srcCompat="@drawable/ic_suitcase"
                     tools:ignore="VectorDrawableCompat" />
@@ -108,7 +108,7 @@
 
                     <TextView
                         style="@style/successDataDetailsRows"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/margin_normal"
                         android:layout_weight="0.5"

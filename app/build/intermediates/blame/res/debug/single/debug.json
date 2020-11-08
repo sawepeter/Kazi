@@ -732,6 +732,10 @@
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_share.xml"
     },
     {
+        "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/font_oxygen_bold.ttf.flat",
+        "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/font/oxygen_bold.ttf"
+    },
+    {
         "merged": "/home/devsawe/AndroidStudioProjects/Ajira/app/build/intermediates/res/merged/debug/layout_workers_item.xml.flat",
         "source": "/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/res/layout/workers_item.xml"
     },

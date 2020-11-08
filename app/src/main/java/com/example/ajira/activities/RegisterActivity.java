@@ -95,6 +95,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     Log.e("TAG", "token" + name);
                                 } else {
                                     dialog.dismiss();
+                                    Toast.makeText(RegisterActivity.this, "UserName already exists !!!", Toast.LENGTH_SHORT).show();
                                     Log.e("TAG", "Response unsuccessful" + response.errorBody().toString() + response.code() + response.message());
                                 }
                             }
@@ -127,6 +128,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 } else {
                                     dialog.dismiss();
                                     Log.e("TAG", "Response unsuccessful" + response.errorBody().toString() + response.code() + response.message());
+                                    Toast.makeText(RegisterActivity.this, "UserName already exists !!!", Toast.LENGTH_SHORT).show();
                                 }
                             }
 

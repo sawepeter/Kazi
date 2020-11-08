@@ -74,7 +74,7 @@ public class AllJobsAdapter extends RecyclerView.Adapter<AllJobsAdapter.MyViewHo
             textViewLocation = view.findViewById(R.id.textViewLocation);
             textViewPay = view.findViewById(R.id.textViewPay);
             //passes data to the next step
-          /*  view.setOnClickListener(v -> {
+            view.setOnClickListener(v -> {
                 int pos = getAdapterPosition();
                 if (pos != RecyclerView.NO_POSITION){
                     AllJobsResponse clickedData = jobsResponseList.get(pos);
@@ -86,7 +86,7 @@ public class AllJobsAdapter extends RecyclerView.Adapter<AllJobsAdapter.MyViewHo
                     Log.i("TAG", "item position" +clickedData.getJobTitle());
 
                 }
-            });*/
+            });
         }
     }
 

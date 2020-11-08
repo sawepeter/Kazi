@@ -1056,6 +1056,7 @@ color colorExtra
 color colorH
 color colorPrimary
 color colorPrimaryDark
+color colorPrimaryDark1
 color colorS
 color colorShape
 color dashboard
@@ -1217,6 +1218,7 @@ color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
+color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -1381,6 +1383,7 @@ dimen item_touch_helper_swipe_escape_velocity
 dimen line_width
 dimen margin_normal
 dimen margin_small
+dimen margin_top
 dimen material_emphasis_disabled
 dimen material_emphasis_high_type
 dimen material_emphasis_medium
@@ -1796,6 +1799,7 @@ font dmsansboldmedium
 font dmsansboldmediumitalic
 font dmsansboldregular
 font dmsansitalic
+font oxygen_bold
 font oxygen_regular
 id ALT
 id Applications
@@ -1913,10 +1917,6 @@ id chip
 id chip1
 id chip2
 id chip3
-id chip6
-id chip7
-id chip8
-id chipGroup
 id chip_group
 id chronometer
 id circle
@@ -2017,7 +2017,6 @@ id image
 id imageLogo
 id image_back
 id image_bg
-id image_logo
 id image_share
 id img_filter
 id info
@@ -2027,7 +2026,6 @@ id item_touch_helper_previous_elevation
 id jobName
 id job_age
 id job_companyName
-id job_desc
 id job_description
 id job_location
 id job_salary
@@ -2133,9 +2131,6 @@ id progress_circular
 id progress_horizontal
 id project_completed
 id project_number
-id qualification1
-id qualification2
-id qualification3
 id radio
 id rating_count
 id ratio
@@ -2246,7 +2241,11 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textViewEmployerName
+id textViewJobDeadline
+id textViewJobPay
 id textViewJobTitle
+id textViewJobType
 id textViewLocation
 id textViewPay
 id textViewPhone
@@ -3383,6 +3382,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style successDataDetailsRows
 style textViewJobs
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity

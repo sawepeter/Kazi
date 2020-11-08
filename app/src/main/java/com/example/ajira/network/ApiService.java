@@ -1,7 +1,9 @@
 package com.example.ajira.network;
 
 import com.example.ajira.model.AllJobsResponse;
+import com.example.ajira.model.ApplicationModel;
 import com.example.ajira.model.ApplicationResponse;
+import com.example.ajira.model.JobApplicationResponse;
 import com.example.ajira.model.JobPostRequest;
 import com.example.ajira.model.JobPostResponse;
 import com.example.ajira.model.JobsResponse;
@@ -54,6 +56,11 @@ public interface ApiService {
     @POST("/create/jobs")
     @Headers("content-type: application/json")
     Call<JobPostResponse> createJobList(@Header("Authorization") String token, @Body JobPostResponse jobPostResponse);
+
+    //api to add to do list
+    @POST("/apply/jobs")
+    @Headers("content-type: application/json")
+    Call<JobApplicationResponse> applyJobs(@Header("Authorization") String token, @Body ApplicationModel applicationModel);
 
     @GET("/user/profiles")
     Call<List<WorkerProfile>> getUserProfiles();

@@ -12,6 +12,7 @@ import com.example.ajira.R;
 import com.example.ajira.Utils.Utils;
 import com.example.ajira.adapter.AllJobsAdapter;
 import com.example.ajira.adapter.PendingAdapter;
+import com.example.ajira.adapter.UsersAdapter;
 import com.example.ajira.model.AllJobsResponse;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
@@ -42,12 +43,12 @@ public class AdminHome extends AppCompatActivity {
 
         apiService = RetrofitBuilder.getRetrofitInstance().create(ApiService.class);
 
-        jobsResponseList = new ArrayList<>();
+       // jobsResponseList = new ArrayList<>();
 
         rv_pending_jobs = findViewById(R.id.rv_pending_jobs);
-
+/*
         rv_pending_jobs.setLayoutManager(new LinearLayoutManager(AdminHome.this, RecyclerView.VERTICAL, false));
-        pendingAdapter = new PendingAdapter(jobsResponseList, getApplicationContext());
+        pendingAdapter = new PendingAdapter(jobsResponseList, getApplicationContext());*/
 
         rv_pending_jobs.setAdapter(pendingAdapter);
 
@@ -66,6 +67,14 @@ public class AdminHome extends AppCompatActivity {
                     Log.e("TAG", "Response successful" +response.code() + response.message());
 
                     jobsResponseList = response.body();
+
+                    LinearLayoutManager layoutManager = new LinearLayoutManager(AdminHome.this);
+                    layoutManager.setOrientation(RecyclerView.VERTICAL);
+                    rv_pending_jobs.setLayoutManager(layoutManager);
+
+                    pendingAdapter = new PendingAdapter(jobsResponseList, AdminHome.this);
+                    rv_pending_jobs.setAdapter(pendingAdapter);
+
                     pendingAdapter.setJobsResponseList(jobsResponseList);
 
                 }else {

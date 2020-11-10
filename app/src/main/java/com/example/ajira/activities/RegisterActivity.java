@@ -64,9 +64,9 @@ public class RegisterActivity extends AppCompatActivity {
         dialog.setMessage("Register here ...");
 
         link_register.setOnClickListener(v -> {
-            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-            editor.putString("userType", UserType);
-            editor.apply();
+            Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+            intent.putExtra("userType", UserType);
+            startActivity(intent);
         });
 
         btn_register.setOnClickListener(new View.OnClickListener() {

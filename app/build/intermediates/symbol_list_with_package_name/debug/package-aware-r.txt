@@ -221,6 +221,7 @@ attr civ_border_overlay
 attr civ_border_width
 attr civ_circle_background_color
 attr clickAction
+attr clickable
 attr closeIcon
 attr closeIconEnabled
 attr closeIconEndPadding
@@ -442,6 +443,7 @@ attr framePosition
 attr gapBetweenBars
 attr gestureInsetBottomIgnored
 attr goIcon
+attr halfstart
 attr haloColor
 attr haloRadius
 attr headerLayout
@@ -804,6 +806,15 @@ attr splitTrack
 attr srcCompat
 attr stackFromEnd
 attr staggered
+attr starCount
+attr starEmpty
+attr starFill
+attr starHalf
+attr starImageHeight
+attr starImagePadding
+attr starImageSize
+attr starImageWidth
+attr starNum
 attr startIconCheckable
 attr startIconContentDescription
 attr startIconDrawable
@@ -1808,7 +1819,6 @@ id BOTTOM_START
 id CTRL
 id FUNCTION
 id Home
-id Job_description
 id Job_location
 id META
 id NO_DEBUG
@@ -1876,6 +1886,7 @@ id actions
 id active_applications
 id activity_chooser_view_content
 id add
+id admin_login
 id alertTitle
 id aligned
 id all
@@ -1889,6 +1900,7 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id automatic
+id balance_txt
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -1901,6 +1913,7 @@ id btn_Post
 id btn_Recruiter
 id btn_Start
 id btn_apply
+id btn_complete
 id btn_hire
 id btn_login
 id btn_register
@@ -1921,7 +1934,6 @@ id chip_group
 id chronometer
 id circle
 id clear_text
-id clients_number
 id clip_horizontal
 id clip_vertical
 id collapseActionView
@@ -1970,7 +1982,9 @@ id easeInOut
 id easeOut
 id edit_query
 id edt_search
+id employerPhone
 id end
+id end_date
 id enterAlways
 id enterAlwaysCollapsed
 id error_container
@@ -2019,13 +2033,14 @@ id image_back
 id image_bg
 id image_share
 id img_filter
+id img_hide
+id img_privacy
 id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
 id jobName
-id job_age
-id job_companyName
+id job_EmployerName
 id job_description
 id job_location
 id job_salary
@@ -2037,20 +2052,19 @@ id jumpToStart
 id l1
 id labeled
 id largeLabel
+id lay1
 id layout
 id layout1
-id layout_experience
-id layout_experiences
 id layout_nav
 id layout_qualification
 id layout_search
-id layout_skills
-id layout_top
+id layout_wallet
 id left
 id lin_item_background
 id line1
 id line3
 id linear
+id linearlayout
 id link_register
 id listMode
 id list_item
@@ -2102,10 +2116,11 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id number_of_applicants
 id nyumbani
 id off
 id on
+id order_no
+id order_status
 id outline
 id packed
 id parallax
@@ -2123,16 +2138,17 @@ id pin
 id position
 id postJob
 id postLayout
-id profile_Name
+id privacy
+id pro_settings
+id profile
 id profile_image
-id profile_job_title
+id profile_settings
 id progress_bar
 id progress_circular
 id progress_horizontal
-id project_completed
-id project_number
 id radio
 id rating_count
+id ratingbar
 id ratio
 id recruiter_navigation
 id recruiter_profile
@@ -2149,8 +2165,8 @@ id row_index_key
 id rv_applications
 id rv_my_jobs
 id rv_nearby
+id rv_pending_jobs
 id rv_popular_jobs
-id rv_skills
 id rv_users
 id save_non_transition_alpha
 id save_overlay_view
@@ -2208,6 +2224,7 @@ id star_button
 id start
 id startHorizontal
 id startVertical
+id start_date
 id staticLayout
 id staticPostLayout
 id step_content
@@ -2282,21 +2299,24 @@ id txt_jobs_count
 id txt_location
 id txt_sub_category
 id txt_title
+id txt_wallet
 id txt_welcome
 id unchecked
 id uniform
 id unlabeled
 id up
 id useLogo
+id userName
 id userType
 id user_Name
 id vertical
 id vertical_line
 id vertical_line_subtitle
-id vertical_stepper_form
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
+id wallet_amount
+id wallet_balance
 id withText
 id withinBounds
 id work_period
@@ -2365,6 +2385,8 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout active_jobs
+layout activity_admin_home
 layout activity_dash_board
 layout activity_job_details
 layout activity_login
@@ -2390,6 +2412,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_rate
 layout expand_button
 layout filter_layout
 layout fragment_application
@@ -2483,8 +2506,17 @@ layout vertical_stepper_form_layout
 layout workers_item
 menu bottom_navigation_menu
 menu recruiter_navigation_menu
+mipmap ic_home_empty
+mipmap ic_home_fill
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap ic_love_empty
+mipmap ic_love_fill
+mipmap ic_star_empty
+mipmap ic_star_fill
+mipmap star_empty
+mipmap star_full
+mipmap star_half
 plurals mtrl_badge_content_description
 string _2_active
 string _32
@@ -2515,7 +2547,10 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_settings
 string active_applications
+string admin_home_page
+string admin_login
 string amount
 string app
 string app_name
@@ -2546,9 +2581,11 @@ string experiences
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string finish
 string flower_gardener
 string full_name
 string gardener
+string hello_world
 string hide_bottom_view_on_scroll_behavior
 string hire
 string hired
@@ -2610,12 +2647,14 @@ string myjobs
 string no
 string not_set
 string nyeri
+string order_number
 string password
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string pending_jobs
 string popular_jobs
 string post_job
 string preference_copied
@@ -2623,10 +2662,13 @@ string product_designer
 string profile
 string projects
 string qualification1
+string rate
+string rate_here
 string recruiter
 string register
 string register_here
 string reviews
+string s
 string search
 string search_menu_title
 string settings
@@ -2656,6 +2698,7 @@ string vertical_form_stepper_form_down_previous
 string vertical_form_stepper_form_info_will_be_lost
 string vertical_form_stepper_form_last_step
 string vertical_form_stepper_form_sending_data_message
+string worker_profiles
 string years_old
 string your_applications
 style AlertDialog_AppCompat
@@ -3492,6 +3535,7 @@ styleable PreferenceImageView android_maxWidth android_maxHeight maxHeight maxWi
 styleable PreferenceTheme checkBoxPreferenceStyle dialogPreferenceStyle dropdownPreferenceStyle editTextPreferenceStyle preferenceCategoryStyle preferenceCategoryTitleTextAppearance preferenceFragmentCompatStyle preferenceFragmentListStyle preferenceFragmentStyle preferenceInformationStyle preferenceScreenStyle preferenceStyle preferenceTheme seekBarPreferenceStyle switchPreferenceCompatStyle switchPreferenceStyle
 styleable PropertySet android_visibility android_alpha layout_constraintTag motionProgress visibilityMode
 styleable RangeSlider values
+styleable RatingBar clickable halfstart starCount starEmpty starFill starHalf starImageHeight starImagePadding starImageSize starImageWidth starNum
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
 styleable RecyclerView android_orientation android_clipToPadding android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
 styleable ScrimInsetsFrameLayout insetForeground

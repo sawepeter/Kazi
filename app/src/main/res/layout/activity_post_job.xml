@@ -85,7 +85,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/job_companyName"
+                android:id="@+id/job_EmployerName"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
@@ -102,7 +102,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/Job_description"
+                android:id="@+id/employerPhone"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
@@ -136,7 +136,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/job_age"
+                android:id="@+id/job_salary"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"

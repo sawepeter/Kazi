@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.ajira.activities.DashBoardActivity;
+import com.example.ajira.activities.LoginActivity;
 import com.example.ajira.activities.RecruiterDashBoard;
 import com.example.ajira.activities.RegisterActivity;
 
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn_Start;
     Button btn_Recruiter;
+    TextView admin_login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,16 @@ public class MainActivity extends AppCompatActivity {
 
         btn_Start = findViewById(R.id.btn_Start);
         btn_Recruiter = findViewById(R.id.btn_Recruiter);
+        admin_login = findViewById(R.id.admin_login);
+
+        admin_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                intent.putExtra("userType", "admin");
+                startActivity(intent);
+            }
+        });
 
         btn_Start.setOnClickListener(new View.OnClickListener() {
             @Override

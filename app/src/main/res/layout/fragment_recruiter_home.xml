@@ -38,7 +38,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/dmsansboldregular"
                 android:text="@string/text_hello"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:layout_toEndOf="@+id/image_back"
                 android:layout_marginLeft="30dp" />
@@ -64,10 +64,19 @@
                 android:layout_marginBottom="10dp"
                 android:orientation="vertical">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dmsansbold"
+                    android:text="@string/worker_profiles"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_users"
                     android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
                     android:layout_height="match_parent"/>
 
             </LinearLayout>

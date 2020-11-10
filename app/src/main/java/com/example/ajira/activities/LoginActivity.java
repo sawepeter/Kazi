@@ -55,9 +55,11 @@ public class LoginActivity extends AppCompatActivity {
         dialog.setMessage("Logging ...");
 
         userType = sharedpreferences.getString("userType", "");
+        userType = getIntent().getStringExtra("userType");
         user_Name.setText(sharedpreferences.getString("userName", ""));
         password.setText(sharedpreferences.getString("password", ""));
         Log.e("TAG", "UserType :" + userType);
+        Toast.makeText(this, ""+userType, Toast.LENGTH_SHORT).show();
 
         layout_nav.setOnClickListener(v -> {
             finish();
@@ -137,6 +139,35 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     });
 
+                } else if (userType.equals("admin")){
+
+                    apiService.LoginUser(credentials).enqueue(new Callback<User>() {
+                        @Override
+                        public void onResponse(Call<User> call, Response<User> response) {
+                            if (response.isSuccessful()) {
+                                String token = response.body().getJwt();
+                                String username = response.body().getUsername();
+
+                                //add to sharedpreferences
+                                editor.clear();
+                                editor.putString("token", token);
+                                editor.putString("username", username);
+                                editor.apply();
+
+                                startActivity(new Intent(LoginActivity.this, AdminHome.class));
+
+                                Toast.makeText(LoginActivity.this, "Successful Login", Toast.LENGTH_SHORT).show();
+
+                            } else {
+                                Log.e("TAG", "Response unsuccessful" + response.errorBody().toString() + response.code() + response.message());
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<User> call, Throwable t) {
+                            Log.e("TAG", "Failed " + t.getMessage());
+                        }
+                    });
                 }
             }
         });

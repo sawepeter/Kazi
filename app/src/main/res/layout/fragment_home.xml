@@ -39,7 +39,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginStart="20dp"
             android:text="@string/text_hello"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:layout_marginLeft="20dp"
             android:layout_toEndOf="@+id/image_back" />

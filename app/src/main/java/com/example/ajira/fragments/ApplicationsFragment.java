@@ -1,22 +1,24 @@
 package com.example.ajira.fragments;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.ajira.R;
 import com.example.ajira.Utils.Utils;
 import com.example.ajira.adapter.ApplicationAdapter;
-import com.example.ajira.model.ApplicationResponse;
+import com.example.ajira.model.ApplicationModel;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
 
@@ -32,8 +34,11 @@ public class ApplicationsFragment extends Fragment {
     private ApiService apiService;
     ApplicationAdapter applicationAdapter;
     RecyclerView rv_applications;
-    List<ApplicationResponse> applicationResponseList = null;
+    List<ApplicationModel> applicationResponseList = null;
     ProgressDialog progressDialog;
+    SharedPreferences sharedpreferences;
+    public static final String MyPREFERENCES = "MyPrefs";
+    String token;
 
     @Nullable
     @Override
@@ -41,12 +46,15 @@ public class ApplicationsFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_application,container,false);
 
         progressDialog  = new ProgressDialog(getActivity());
-        progressDialog.setMessage("Loading Applications Data");
+        progressDialog.setMessage("Loading My Applications");
         progressDialog.show();
 
         applicationResponseList = new ArrayList<>();
 
         apiService = RetrofitBuilder.getRetrofitInstance().create(ApiService.class);
+        sharedpreferences = getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        token = sharedpreferences.getString("token", "");
+        Log.e("TAG", "token" + token);
 
         rv_applications = rootView.findViewById(R.id.rv_applications);
         rv_applications.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
@@ -61,15 +69,14 @@ public class ApplicationsFragment extends Fragment {
 
     //fetching data for counter values
     public void getApplications() {
-        Call<List<ApplicationResponse>> call = apiService.getMyApplications();
-        call.enqueue(new Callback<List<ApplicationResponse>>() {
+        Call<List<ApplicationModel>> call = apiService.getMyActiveJobs("Bearer " +token);
+        call.enqueue(new Callback<List<ApplicationModel>>() {
             @Override
-            public void onResponse(Call<List<ApplicationResponse>> call, Response<List<ApplicationResponse>> response) {
+            public void onResponse(Call<List<ApplicationModel>> call, Response<List<ApplicationModel>> response) {
                 if (response.isSuccessful()){
                     progressDialog.dismiss();
 
                     Log.e("TAG", "Response successful" +response.code() + response.message());
-
                     applicationResponseList = response.body();
                     applicationAdapter.setApplicationResponseList(applicationResponseList);
 
@@ -80,7 +87,7 @@ public class ApplicationsFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<List<ApplicationResponse>> call, Throwable t) {
+            public void onFailure(Call<List<ApplicationModel>> call, Throwable t) {
                 progressDialog.dismiss();
                 Log.e("TAG", "Failed " + t.getMessage());
             }

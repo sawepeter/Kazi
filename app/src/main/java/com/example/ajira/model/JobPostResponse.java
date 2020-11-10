@@ -14,30 +14,48 @@ public class JobPostResponse {
     @SerializedName("id")
     @Expose
     private Integer id;
+
     @SerializedName("employerId")
     @Expose
     private Integer employerId;
+
     @SerializedName("jobTitle")
     @Expose
     private String jobTitle;
     @SerializedName("jobLocation")
     @Expose
     private String jobLocation;
-    @SerializedName("companyName")
+    @SerializedName("jobAmount")
     @Expose
-    private String companyName;
-    @SerializedName("companyInfo")
+    private String jobAmount;
+
+    @SerializedName("employerPhone")
     @Expose
-    private String companyInfo;
-    @SerializedName("qualifications")
+    private String employerPhone;
+
+    @SerializedName("employerName")
     @Expose
-    private String qualifications;
-    @SerializedName("salary")
+    private String employerName;
+
+    @SerializedName("jobType")
     @Expose
-    private String salary;
-    @SerializedName("jobLevel")
+    private String jobType;
+
     @Expose
-    private String jobLevel;
+    @SerializedName("status")
+    private String status;
+
+    @SerializedName("jobDeadline")
+    @Expose
+    private String jobDeadline;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     public String getCreatedAt() {
         return createdAt;
@@ -87,43 +105,43 @@ public class JobPostResponse {
         this.jobLocation = jobLocation;
     }
 
-    public String getCompanyName() {
-        return companyName;
+    public String getJobAmount() {
+        return jobAmount;
     }
 
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
+    public void setJobAmount(String jobAmount) {
+        this.jobAmount = jobAmount;
     }
 
-    public String getCompanyInfo() {
-        return companyInfo;
+    public String getEmployerPhone() {
+        return employerPhone;
     }
 
-    public void setCompanyInfo(String companyInfo) {
-        this.companyInfo = companyInfo;
+    public void setEmployerPhone(String employerPhone) {
+        this.employerPhone = employerPhone;
     }
 
-    public String getQualifications() {
-        return qualifications;
+    public String getEmployerName() {
+        return employerName;
     }
 
-    public void setQualifications(String qualifications) {
-        this.qualifications = qualifications;
+    public void setEmployerName(String employerName) {
+        this.employerName = employerName;
     }
 
-    public String getSalary() {
-        return salary;
+    public String getJobType() {
+        return jobType;
     }
 
-    public void setSalary(String salary) {
-        this.salary = salary;
+    public void setJobType(String jobType) {
+        this.jobType = jobType;
     }
 
-    public String getJobLevel() {
-        return jobLevel;
+    public String getJobDeadline() {
+        return jobDeadline;
     }
 
-    public void setJobLevel(String jobLevel) {
-        this.jobLevel = jobLevel;
+    public void setJobDeadline(String jobDeadline) {
+        this.jobDeadline = jobDeadline;
     }
 }

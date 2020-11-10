@@ -34,12 +34,25 @@ public class AllJobsResponse implements Serializable {
     @SerializedName("employerName")
     @Expose
     private String employerName;
+
+    @Expose
+    @SerializedName("status")
+    private String status;
+
     @SerializedName("jobType")
     @Expose
     private String jobType;
     @SerializedName("jobDeadline")
     @Expose
     private String jobDeadline;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     public String getCreatedAt() {
         return createdAt;

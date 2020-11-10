@@ -53,6 +53,7 @@ public class MyJobsFragment extends Fragment {
         //jobPostResponseList = new ArrayList<>();
         rv_my_jobs = rootView.findViewById(R.id.rv_my_jobs);
 
+
         dialog = new ProgressDialog(getActivity());
         dialog.setMessage("Loading Data ...");
         dialog.show();
@@ -71,6 +72,7 @@ public class MyJobsFragment extends Fragment {
                     dialog.dismiss();
 
                     jobPostResponseList = response.body();
+                    Log.e("TAG", "Response successful" + response.code() + response.message());
 
                     LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
                     layoutManager.setOrientation(RecyclerView.VERTICAL);

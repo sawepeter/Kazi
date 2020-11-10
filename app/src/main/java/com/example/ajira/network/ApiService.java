@@ -2,9 +2,7 @@ package com.example.ajira.network;
 
 import com.example.ajira.model.AllJobsResponse;
 import com.example.ajira.model.ApplicationModel;
-import com.example.ajira.model.ApplicationResponse;
 import com.example.ajira.model.JobApplicationResponse;
-import com.example.ajira.model.JobPostRequest;
 import com.example.ajira.model.JobPostResponse;
 import com.example.ajira.model.JobsResponse;
 import com.example.ajira.model.User;
@@ -22,7 +20,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
-import retrofit2.http.Path;
+import retrofit2.http.PUT;
 import retrofit2.http.Query;
 
 public interface ApiService {
@@ -38,9 +36,6 @@ public interface ApiService {
 
     @GET()
     Call<JobsResponse> getSearchedJobs();
-
-    @GET("applications")
-    Call<List<ApplicationResponse>> getMyApplications();
 
     @POST("users/register")
     @FormUrlEncoded
@@ -62,8 +57,20 @@ public interface ApiService {
     @Headers("content-type: application/json")
     Call<JobApplicationResponse> applyJobs(@Header("Authorization") String token, @Body ApplicationModel applicationModel);
 
-    @GET("/user/profiles")
+    @GET("/worker/profiles")
     Call<List<WorkerProfile>> getUserProfiles();
+
+    @GET("/jobs/Active")
+    Call<List<ApplicationModel>> getMyActiveJobs(@Header("Authorization") String token);
+
+    @GET("/jobs/complete")
+    Call<List<ApplicationModel>> getCompleteJobs(@Header("Authorization") String token);
+
+    @PUT("my-jobs/status/{id}")
+    Call<JobPostResponse> changeJobVisibility(@Header("Authorization") String token);
+
+    @PUT("my-jobs/completed/{id}")
+    Call<JobPostResponse> changeJobStatus(@Header("Authorization") String token);
 
     @POST("/workers/new")
     Call<WorkerProfile> createWorkerProfile(@Body WorkerRequest workerRequest);
@@ -76,6 +83,12 @@ public interface ApiService {
 
     @GET("/jobs")
     Call<List<AllJobsResponse>> getAllJobs();
+
+    @GET("/jobs-pending")
+    Call<List<AllJobsResponse>> getPendingJobs();
+
+    @GET("/jobs-done")
+    Call<List<AllJobsResponse>> getApprovedJobs();
 
 
 }

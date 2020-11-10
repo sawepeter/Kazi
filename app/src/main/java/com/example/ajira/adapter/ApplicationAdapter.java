@@ -1,17 +1,20 @@
 package com.example.ajira.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
-import com.example.ajira.model.ApplicationResponse;
+import com.example.ajira.model.ApplicationModel;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -19,16 +22,16 @@ import java.util.List;
 
 public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.MyViewHolder> {
 
-    List<ApplicationResponse> applicationResponseList = new ArrayList<>();
+    List<ApplicationModel> applicationResponseList = new ArrayList<>();
     private Context context;
-    ApplicationResponse applications;
+    ApplicationModel applications;
 
-    public ApplicationAdapter(List<ApplicationResponse> applicationResponseList, Context context) {
+    public ApplicationAdapter(List<ApplicationModel> applicationResponseList, Context context) {
         this.applicationResponseList = applicationResponseList;
         this.context = context;
     }
 
-    public void setApplicationResponseList(List<ApplicationResponse> applicationResponseList) {
+    public void setApplicationResponseList(List<ApplicationModel> applicationResponseList) {
         this.applicationResponseList = applicationResponseList;
         notifyDataSetChanged();
     }
@@ -37,20 +40,25 @@ public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.application_item,parent,false);
+                .inflate(R.layout.active_jobs, parent, false);
         context = parent.getContext();
         return new ApplicationAdapter.MyViewHolder(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         applications = applicationResponseList.get(position);
-        holder.jobName.setText(applications.getJob());
-        holder.companyName.setText(applications.getCompany());
-        holder.job_salary.setText(applications.getSalary());
-        holder.job_status.setText(applications.getStatus());
-        Picasso.get().load(applications.getLogo()).placeholder(R.drawable.placeholder).fit().centerCrop().into(holder.logoImage);
-
+        holder.order_no.setText("Order No: " + applications.getJobId());
+        holder.order_status.setText(applications.getStatus());
+        holder.start_date.setText(applications.getApplyDate());
+        holder.end_date.setText(applications.getDueDate());
+        holder.btn_complete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Wip!!!!", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -59,29 +67,17 @@ public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
-        private TextView companyName, jobName,job_salary,job_status;
-        private ImageView logoImage;
+
+        private TextView order_no, order_status, start_date, end_date;
+        private Button btn_complete;
 
         public MyViewHolder(@NonNull View view) {
             super(view);
-            logoImage = view.findViewById(R.id.logoImage);
-            companyName = view.findViewById(R.id.companyName);
-            jobName = view.findViewById(R.id.jobName);
-            job_salary = view.findViewById(R.id.job_salary);
-            job_status = view.findViewById(R.id.job_status);
-            /*view.setOnClickListener(v -> {
-                int pos = getAdapterPosition();
-                if (pos != RecyclerView.NO_POSITION){
-                    JobsResponse clickedData = jobsResponseList.get(pos);
-                    Intent intent = new Intent(v.getContext(), JobDetailsActivity.class);
-                    intent.putExtra("pos", pos);
-                    intent.putExtra("data", (Serializable) jobsResponseList);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    v.getContext().startActivity(intent);
-                    Log.i("TAG", "item position" +clickedData.getJob());
-
-                }
-            });*/
+            order_no = view.findViewById(R.id.order_no);
+            order_status = view.findViewById(R.id.order_status);
+            start_date = view.findViewById(R.id.start_date);
+            end_date = view.findViewById(R.id.end_date);
+            btn_complete = view.findViewById(R.id.btn_complete);
         }
     }
 }

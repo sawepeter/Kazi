@@ -44,9 +44,10 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.MyViewHolder
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.profile_item, null);
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.profile_item, parent, false);
         context = parent.getContext();
-        return new MyViewHolder(view);
+        return new UsersAdapter.MyViewHolder(view);
     }
 
     @Override
@@ -57,12 +58,12 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.MyViewHolder
         holder.worker_age.setText(workerProfileList.get(position).getAge());
         holder.worker_location.setText(workerProfileList.get(position).getLocation());
         /*Picasso.get().load(workerProfile.getLogo()).placeholder(R.drawable.placeholder).fit().centerCrop().into(holder.logo_image);*/
-      /*  holder.btn_hire.setOnClickListener(new View.OnClickListener() {
+        holder.btn_hire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "Under Development!!!", Toast.LENGTH_SHORT).show();
             }
-        });*/
+        });
 
     }
 

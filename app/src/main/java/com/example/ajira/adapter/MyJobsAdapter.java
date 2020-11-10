@@ -37,19 +37,19 @@ public class MyJobsAdapter extends RecyclerView.Adapter<MyJobsAdapter.MyViewHold
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.kazi_item, null);
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.kazi_item, parent, false);
         context = parent.getContext();
-        return new MyViewHolder(view);
+        return new MyJobsAdapter.MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         jobPostResponse = jobPostResponseList.get(position);
-        holder.job_title.setText(jobPostResponse.getJobTitle());
-        holder.job_description.setText(jobPostResponse.getQualifications());
-        holder.job_salary.setText(jobPostResponse.getSalary());
-        holder.job_location.setText(jobPostResponse.getJobLocation());
-
+        holder.textViewJobTitle.setText(jobPostResponse.getJobTitle());
+        holder.textViewPhone.setText(jobPostResponse.getEmployerPhone());
+        holder.textViewPay.setText(jobPostResponse.getJobAmount());
+        holder.textViewLocation.setText(jobPostResponse.getJobLocation());
     }
 
     @Override
@@ -59,15 +59,14 @@ public class MyJobsAdapter extends RecyclerView.Adapter<MyJobsAdapter.MyViewHold
 
     class MyViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView job_title, job_description, job_salary, job_location,number_of_applicants;
+        private TextView textViewJobTitle, textViewPhone, textViewPay, textViewLocation;
 
         public MyViewHolder(@NonNull View view) {
             super(view);
-            job_title = view.findViewById(R.id.job_title);
-            job_description = view.findViewById(R.id.job_description);
-            job_location = view.findViewById(R.id.job_location);
-            job_salary = view.findViewById(R.id.job_salary);
-            number_of_applicants = view.findViewById(R.id.number_of_applicants);
+            textViewJobTitle = view.findViewById(R.id.textViewJobTitle);
+            textViewPhone = view.findViewById(R.id.textViewPhone);
+            textViewPay = view.findViewById(R.id.textViewPay);
+            textViewLocation = view.findViewById(R.id.textViewLocation);
 
           /*  view.setOnClickListener(v -> {
                 int pos = getAdapterPosition();

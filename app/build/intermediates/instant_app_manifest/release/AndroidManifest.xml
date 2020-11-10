@@ -20,6 +20,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.ajira.activities.AdminHome" />
+        <activity android:name="com.example.ajira.activities.LoginActivity" />
+        <activity android:name="com.example.ajira.activities.PostJobActivity" />
+        <activity android:name="com.example.ajira.activities.RecruiterDashBoard" />
         <activity android:name="com.example.ajira.activities.RegisterActivity" />
         <activity android:name="com.example.ajira.activities.SearchActivity" />
         <activity android:name="com.example.ajira.activities.JobDetailsActivity" />

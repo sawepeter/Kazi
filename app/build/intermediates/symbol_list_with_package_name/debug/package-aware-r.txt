@@ -2043,6 +2043,7 @@ id jobName
 id job_EmployerName
 id job_description
 id job_location
+id job_pending
 id job_salary
 id job_status
 id job_title
@@ -2422,7 +2423,6 @@ layout fragment_profile
 layout fragment_recruiter_home
 layout fragment_settings
 layout image_frame
-layout job_item
 layout kazi_item
 layout layout_experience
 layout layout_skills
@@ -2462,6 +2462,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout pending_job_item
 layout preference
 layout preference_category
 layout preference_category_material

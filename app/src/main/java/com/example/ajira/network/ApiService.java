@@ -4,7 +4,7 @@ import com.example.ajira.model.AllJobsResponse;
 import com.example.ajira.model.ApplicationModel;
 import com.example.ajira.model.JobApplicationResponse;
 import com.example.ajira.model.JobPostResponse;
-import com.example.ajira.model.JobsResponse;
+import com.example.ajira.model.JobUpdateResponse;
 import com.example.ajira.model.User;
 import com.example.ajira.model.WorkerProfile;
 import com.example.ajira.model.WorkerRequest;
@@ -19,21 +19,22 @@ import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface ApiService {
 
     @GET("jobs")
-    Call<List<JobsResponse>> getJobPopular();
+    Call<List<JobUpdateResponse>> getJobPopular();
 
     @GET()
-    Call<JobsResponse> getNearbyJobs();
+    Call<JobUpdateResponse> getNearbyJobs();
 
     @GET()
-    Call<JobsResponse> getFilteredJobs();
+    Call<JobUpdateResponse> getFilteredJobs();
 
     @GET()
-    Call<JobsResponse> getSearchedJobs();
+    Call<JobUpdateResponse> getSearchedJobs();
 
     @POST("users/register")
     @FormUrlEncoded
@@ -87,6 +88,9 @@ public interface ApiService {
 
     @GET("/jobs-done")
     Call<List<AllJobsResponse>> getApprovedJobs(@Header("Authorization") String token);
+
+    @PUT("my-jobs/status/{id}")
+    Call<JobUpdateResponse> approveJob(@Header("Authorization") String token, @Path("id") long id);
 
 
 }

@@ -2,18 +2,14 @@ package com.example.ajira.fragments;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,11 +19,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
 import com.example.ajira.Utils.Utils;
-import com.example.ajira.activities.SearchActivity;
 import com.example.ajira.adapter.NearbyJobsAdapter;
 import com.example.ajira.adapter.AllJobsAdapter;
 import com.example.ajira.model.AllJobsResponse;
-import com.example.ajira.model.JobsResponse;
+import com.example.ajira.model.JobUpdateResponse;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
 
@@ -38,8 +33,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL;
-
 public class HomeFragment extends Fragment {
 
     private ApiService apiService;
@@ -47,7 +40,7 @@ public class HomeFragment extends Fragment {
     NearbyJobsAdapter nearbyJobsAdapter;
     RecyclerView rv_popular_jobs,rv_nearby;
     List<AllJobsResponse> jobsResponseList = null;
-    List<JobsResponse> jobsList = null;
+    List<JobUpdateResponse> jobsList = null;
     LinearLayout l1;
     ProgressDialog progressDialog;
     TextView txt_welcome;

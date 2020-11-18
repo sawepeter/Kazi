@@ -1,17 +1,20 @@
 package com.example.ajira.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
+import com.example.ajira.activities.AdminHomeActivity;
 import com.example.ajira.activities.JobDetailsActivity;
 import com.example.ajira.model.AllJobsResponse;
 
@@ -23,12 +26,15 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
     List<AllJobsResponse> jobsResponseList = new ArrayList<>();
     private Context context;
+    private Activity activity;
     AllJobsResponse jobs;
+    AdminHomeActivity adminHomeActivity;
 
-    public PendingAdapter(List<AllJobsResponse> jobsResponseList, Context context) {
-        Log.i("autolog", "PopularJobsAdapter");
+    public PendingAdapter(List<AllJobsResponse> jobsResponseList, Context context,Activity activity) {
+        Log.i("autolog", "PendingAdapter");
         this.jobsResponseList = jobsResponseList;
         this.context = context;
+        this.activity =activity;
     }
 
     public void setJobsResponseList(List<AllJobsResponse> jobsResponseList) {
@@ -40,29 +46,40 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
     @Override
     public PendingAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.row_all_jobs, parent, false);
+                .inflate(R.layout.pending_job_item, parent, false);
         context = parent.getContext();
         return new PendingAdapter.MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull PendingAdapter.MyViewHolder holder, int position) {
+        adminHomeActivity = (AdminHomeActivity) activity;
         jobs = jobsResponseList.get(position);
         holder.textViewJobTitle.setText(jobs.getJobTitle());
         holder.textViewPhone.setText(jobs.getEmployerPhone());
         holder.textViewLocation.setText(jobs.getJobLocation());
         holder.textViewPay.setText(jobs.getJobAmount());
+        holder.job_pending.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                adminHomeActivity.approveJob(jobs.getId());
+                notifyDataSetChanged();
+
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        Log.i("autolog", "getItemCount");
+        Log.i("autolog", "getItemCount" +jobsResponseList.size());
         return jobsResponseList.size();
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
 
         private TextView textViewJobTitle, textViewPhone, textViewLocation, textViewPay;
+        private CheckBox job_pending;
 
         public MyViewHolder(@NonNull View view) {
             super(view);
@@ -70,6 +87,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
             textViewPhone = view.findViewById(R.id.textViewPhone);
             textViewLocation = view.findViewById(R.id.textViewLocation);
             textViewPay = view.findViewById(R.id.textViewPay);
+            job_pending = view.findViewById(R.id.job_pending);
             //passes data to the next step
             view.setOnClickListener(v -> {
                 int pos = getAdapterPosition();

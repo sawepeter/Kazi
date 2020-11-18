@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
 import com.example.ajira.activities.JobDetailsActivity;
-import com.example.ajira.model.JobsResponse;
+import com.example.ajira.model.JobUpdateResponse;
 import com.squareup.picasso.Picasso;
 
 import java.io.Serializable;
@@ -23,42 +23,38 @@ import java.util.List;
 
 public class NearbyJobsAdapter extends  RecyclerView.Adapter<NearbyJobsAdapter.MyViewHolder> {
 
-    List<JobsResponse> jobsResponseList = new ArrayList<>();
+    List<JobUpdateResponse> jobUpdateResponseList = new ArrayList<>();
     private Context context;
-    JobsResponse jobs;
+    JobUpdateResponse jobs;
 
-    public NearbyJobsAdapter(List<JobsResponse> jobsResponseList, Context context) {
-        this.jobsResponseList = jobsResponseList;
+    public NearbyJobsAdapter(List<JobUpdateResponse> jobUpdateResponseList, Context context) {
+        this.jobUpdateResponseList = jobUpdateResponseList;
         this.context = context;
     }
 
-    public void setJobsResponseList(List<JobsResponse> jobsResponseList) {
-        this.jobsResponseList = jobsResponseList;
+    public void setJobUpdateResponseList(List<JobUpdateResponse> jobUpdateResponseList) {
+        this.jobUpdateResponseList = jobUpdateResponseList;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.job_item,parent,false);
+                .inflate(R.layout.pending_job_item,parent,false);
         context = parent.getContext();
         return new NearbyJobsAdapter.MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        jobs = jobsResponseList.get(position);
-        holder.jobName.setText(jobs.getJob());
-        holder.companyName.setText(jobs.getCompany());
-        holder.job_salary.setText(jobs.getSalary());
-        holder.job_location.setText(jobs.getLocation());
-        Picasso.get().load(jobs.getLogo()).placeholder(R.drawable.placeholder).fit().centerCrop().into(holder.logo_image);
+        jobs = jobUpdateResponseList.get(position);
+        holder.jobName.setText(jobs.getState());
 
     }
 
     @Override
     public int getItemCount() {
-        return jobsResponseList.size();
+        return jobUpdateResponseList.size();
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
@@ -76,13 +72,13 @@ public class NearbyJobsAdapter extends  RecyclerView.Adapter<NearbyJobsAdapter.M
             view.setOnClickListener(v -> {
                 int pos = getAdapterPosition();
                 if (pos != RecyclerView.NO_POSITION){
-                    JobsResponse clickedData = jobsResponseList.get(pos);
+                    JobUpdateResponse clickedData = jobUpdateResponseList.get(pos);
                     Intent intent = new Intent(v.getContext(), JobDetailsActivity.class);
                     intent.putExtra("pos", pos);
-                    intent.putExtra("data", (Serializable) jobsResponseList);
+                    intent.putExtra("data", (Serializable) jobUpdateResponseList);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     v.getContext().startActivity(intent);
-                    Log.i("TAG", "item position" +clickedData.getJob());
+                    Log.i("TAG", "item position" +clickedData.getMsg());
 
                 }
             });

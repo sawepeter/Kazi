@@ -11,23 +11,23 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
-import com.example.ajira.model.JobsResponse;
+import com.example.ajira.model.JobUpdateResponse;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHolder> {
 
-    List<JobsResponse> cartModelList = new ArrayList<>();
+    List<JobUpdateResponse> cartModelList = new ArrayList<>();
     private Context context;
-    JobsResponse jobs;
+    JobUpdateResponse jobs;
 
-    public SearchAdapter(List<JobsResponse> cartModelList, Context context) {
+    public SearchAdapter(List<JobUpdateResponse> cartModelList, Context context) {
         this.cartModelList = cartModelList;
         this.context = context;
     }
 
-    public void setCartModelList(List<JobsResponse> cartModelList) {
+    public void setCartModelList(List<JobUpdateResponse> cartModelList) {
         this.cartModelList = cartModelList;
     }
 
@@ -35,7 +35,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.job_item,parent,false);
+                .inflate(R.layout.pending_job_item,parent,false);
         context = parent.getContext();
         return new MyViewHolder(view);
     }

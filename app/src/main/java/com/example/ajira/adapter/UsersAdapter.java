@@ -1,7 +1,6 @@
 package com.example.ajira.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,15 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
-import com.example.ajira.activities.JobDetailsActivity;
-import com.example.ajira.model.JobPostResponse;
-import com.example.ajira.model.JobsResponse;
 import com.example.ajira.model.WorkerProfile;
-import com.example.ajira.model.WorkerRequest;
-import com.squareup.picasso.Picasso;
 
-import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.MyViewHolder> {

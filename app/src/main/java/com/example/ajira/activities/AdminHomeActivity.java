@@ -5,39 +5,46 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.ajira.R;
 import com.example.ajira.Utils.Utils;
-import com.example.ajira.adapter.AllJobsAdapter;
 import com.example.ajira.adapter.PendingAdapter;
-import com.example.ajira.adapter.UsersAdapter;
 import com.example.ajira.model.AllJobsResponse;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class AdminHome extends AppCompatActivity {
+public class AdminHomeActivity extends AppCompatActivity {
 
     RecyclerView rv_pending_jobs;
     PendingAdapter pendingAdapter;
     List<AllJobsResponse> jobsResponseList = null;
     ProgressDialog progressDialog;
     private ApiService apiService;
+    SharedPreferences sharedpreferences;
+    public static final String MyPREFERENCES = "MyPrefs";
+    String token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_home);
 
-        progressDialog  = new ProgressDialog(AdminHome.this);
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        token = sharedpreferences.getString("token", "");
+
+        Log.e("Admin DashBoard", "token" + token);
+
+        progressDialog  = new ProgressDialog(AdminHomeActivity.this);
         progressDialog.setMessage("Loading Pending Jobs");
         progressDialog.show();
 
@@ -50,14 +57,14 @@ public class AdminHome extends AppCompatActivity {
         rv_pending_jobs.setLayoutManager(new LinearLayoutManager(AdminHome.this, RecyclerView.VERTICAL, false));
         pendingAdapter = new PendingAdapter(jobsResponseList, getApplicationContext());*/
 
-        rv_pending_jobs.setAdapter(pendingAdapter);
+      //  rv_pending_jobs.setAdapter(pendingAdapter);
 
         Utils.runAsyncTask(this::getPendingJobs);
     }
 
     //fetching all displayed jobs
     public void getPendingJobs() {
-        Call<List<AllJobsResponse>> call = apiService.getPendingJobs();
+        Call<List<AllJobsResponse>> call = apiService.getApprovedJobs("Bearer " +token);
         call.enqueue(new Callback<List<AllJobsResponse>>() {
             @Override
             public void onResponse(Call<List<AllJobsResponse>> call, Response<List<AllJobsResponse>> response) {
@@ -68,18 +75,18 @@ public class AdminHome extends AppCompatActivity {
 
                     jobsResponseList = response.body();
 
-                    LinearLayoutManager layoutManager = new LinearLayoutManager(AdminHome.this);
+                    LinearLayoutManager layoutManager = new LinearLayoutManager(AdminHomeActivity.this);
                     layoutManager.setOrientation(RecyclerView.VERTICAL);
                     rv_pending_jobs.setLayoutManager(layoutManager);
 
-                    pendingAdapter = new PendingAdapter(jobsResponseList, AdminHome.this);
+                    pendingAdapter = new PendingAdapter(jobsResponseList, AdminHomeActivity.this);
                     rv_pending_jobs.setAdapter(pendingAdapter);
 
                     pendingAdapter.setJobsResponseList(jobsResponseList);
 
                 }else {
                     progressDialog.dismiss();
-                    Log.e("TAG", "response unsuccessful" + response.code() + response.message());
+                    Log.e("TAG", "response unsuccessful " + response.code() + response.message());
                 }
             }
 

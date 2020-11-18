@@ -35,9 +35,9 @@
 22        android:testOnly="true"
 23        android:theme="@style/AppTheme" >
 23-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:14:9-40
-24        <activity android:name="com.example.ajira.activities.AdminHome" />
-24-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:15:9-67
-24-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:15:19-55
+24        <activity android:name="com.example.ajira.activities.AdminHomeActivity" />
+24-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:15:9-75
+24-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:15:19-63
 25        <activity android:name="com.example.ajira.activities.LoginActivity" />
 25-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:16:9-62
 25-->/home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:16:19-59

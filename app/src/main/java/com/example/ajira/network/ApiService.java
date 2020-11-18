@@ -8,10 +8,8 @@ import com.example.ajira.model.JobsResponse;
 import com.example.ajira.model.User;
 import com.example.ajira.model.WorkerProfile;
 import com.example.ajira.model.WorkerRequest;
-
 import java.util.HashMap;
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
@@ -85,10 +83,10 @@ public interface ApiService {
     Call<List<AllJobsResponse>> getAllJobs();
 
     @GET("/jobs-pending")
-    Call<List<AllJobsResponse>> getPendingJobs();
+    Call<List<AllJobsResponse>> getPendingJobs(@Header("Authorization") String token);
 
     @GET("/jobs-done")
-    Call<List<AllJobsResponse>> getApprovedJobs();
+    Call<List<AllJobsResponse>> getApprovedJobs(@Header("Authorization") String token);
 
 
 }

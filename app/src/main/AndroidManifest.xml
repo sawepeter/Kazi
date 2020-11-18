@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.AdminHome"></activity>
+        <activity android:name=".activities.AdminHomeActivity"></activity>
         <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.PostJobActivity" />
         <activity android:name=".activities.RecruiterDashBoard" />

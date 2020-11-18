@@ -154,7 +154,7 @@ public class LoginActivity extends AppCompatActivity {
                                 editor.putString("username", username);
                                 editor.apply();
 
-                                startActivity(new Intent(LoginActivity.this, AdminHome.class));
+                                startActivity(new Intent(LoginActivity.this, AdminHomeActivity.class));
 
                                 Toast.makeText(LoginActivity.this, "Successful Login", Toast.LENGTH_SHORT).show();
 

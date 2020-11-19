@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
 import com.example.ajira.Utils.Utils;
+import com.example.ajira.adapter.ApprovedAdapter;
 import com.example.ajira.adapter.PendingAdapter;
 import com.example.ajira.model.AllJobsResponse;
 import com.example.ajira.network.ApiService;
@@ -31,7 +32,7 @@ import retrofit2.Response;
 public class StatisticsFragment extends Fragment {
 
     RecyclerView rv_approved_jobs;
-    PendingAdapter pendingAdapter;
+    ApprovedAdapter approvedAdapter;
     List<AllJobsResponse> jobsResponseList = null;
     ProgressDialog progressDialog;
     private ApiService apiService;
@@ -80,10 +81,10 @@ public class StatisticsFragment extends Fragment {
                     layoutManager.setOrientation(RecyclerView.VERTICAL);
                     rv_approved_jobs.setLayoutManager(layoutManager);
 
-                    pendingAdapter = new PendingAdapter(jobsResponseList, getActivity(), StatisticsFragment.this);
-                    rv_approved_jobs.setAdapter(pendingAdapter);
+                    approvedAdapter = new ApprovedAdapter(jobsResponseList, getActivity(), StatisticsFragment.this);
+                    rv_approved_jobs.setAdapter(approvedAdapter);
 
-                    pendingAdapter.setJobsResponseList(jobsResponseList);
+                    approvedAdapter.setJobsResponseList(jobsResponseList);
 
                 }else {
                     progressDialog.dismiss();

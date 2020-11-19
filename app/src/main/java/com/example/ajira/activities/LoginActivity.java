@@ -15,6 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.ajira.R;
+import com.example.ajira.fragments.AdminHomeFragment;
 import com.example.ajira.model.User;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
@@ -154,7 +155,7 @@ public class LoginActivity extends AppCompatActivity {
                                 editor.putString("username", username);
                                 editor.apply();
 
-                                startActivity(new Intent(LoginActivity.this, AdminHomeActivity.class));
+                                startActivity(new Intent(LoginActivity.this, AdminDashBoard.class));
 
                                 Toast.makeText(LoginActivity.this, "Successful Login", Toast.LENGTH_SHORT).show();
 

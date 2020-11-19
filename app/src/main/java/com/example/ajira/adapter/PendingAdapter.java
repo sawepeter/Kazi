@@ -11,10 +11,11 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
-import com.example.ajira.activities.AdminHomeActivity;
+import com.example.ajira.fragments.AdminHomeFragment;
 import com.example.ajira.activities.JobDetailsActivity;
 import com.example.ajira.model.AllJobsResponse;
 
@@ -26,15 +27,15 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
     List<AllJobsResponse> jobsResponseList = new ArrayList<>();
     private Context context;
-    private Activity activity;
+    private Fragment fragment;
     AllJobsResponse jobs;
-    AdminHomeActivity adminHomeActivity;
+    AdminHomeFragment adminHomeFragment;
 
-    public PendingAdapter(List<AllJobsResponse> jobsResponseList, Context context,Activity activity) {
+    public PendingAdapter(List<AllJobsResponse> jobsResponseList, Context context,Fragment fragment) {
         Log.i("autolog", "PendingAdapter");
         this.jobsResponseList = jobsResponseList;
         this.context = context;
-        this.activity =activity;
+        this.fragment = fragment;
     }
 
     public void setJobsResponseList(List<AllJobsResponse> jobsResponseList) {
@@ -53,7 +54,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull PendingAdapter.MyViewHolder holder, int position) {
-        adminHomeActivity = (AdminHomeActivity) activity;
+      //  adminHomeFragment = (AdminHomeFragment) fragment;
         jobs = jobsResponseList.get(position);
         holder.textViewJobTitle.setText(jobs.getJobTitle());
         holder.textViewPhone.setText(jobs.getEmployerPhone());
@@ -63,7 +64,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
             @Override
             public void onClick(View v) {
 
-                adminHomeActivity.approveJob(jobs.getId());
+                adminHomeFragment.approveJob(jobs.getId());
                 notifyDataSetChanged();
 
             }

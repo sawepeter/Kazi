@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-32:12
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-33:12
 MERGED from [com.github.sangcomz:StickyTimeLine:v0.1.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/969316eb3d4bbbcabbcf7330bb19468a/jetified-StickyTimeLine-v0.1.0/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/86e1e5d883ec66c1063a0d9a82a27792/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.jd-alexander:LikeButton:0.2.3] /home/devsawe/.gradle/caches/transforms-2/files-2.1/f521893a32ee88b95bf09e31e4160a70/jetified-LikeButton-0.2.3/AndroidManifest.xml:2:1-14:12
@@ -42,20 +42,20 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/devsawe/.gradle/
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/336e4d7f5d818582899034e03216341f/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/e737982ea91fdf7ea321d344c75db0be/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/devsawe/.gradle/caches/transforms-2/files-2.1/1e0614212b25f4ae67724a3587ed8129/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-32:12
-INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-33:12
 	package
 		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:3:5-32
 		INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml
 		INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-32:12
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-33:12
 		INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-32:12
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:1-33:12
 		INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:2:11-69
@@ -68,7 +68,7 @@ ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifes
 	android:name
 		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:6:22-64
 application
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:8:5-30:19
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:8:5-31:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/86e1e5d883ec66c1063a0d9a82a27792/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/devsawe/.gradle/caches/transforms-2/files-2.1/86e1e5d883ec66c1063a0d9a82a27792/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
 MERGED from [com.github.jd-alexander:LikeButton:0.2.3] /home/devsawe/.gradle/caches/transforms-2/files-2.1/f521893a32ee88b95bf09e31e4160a70/jetified-LikeButton-0.2.3/AndroidManifest.xml:11:5-12:19
@@ -103,52 +103,56 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/devsa
 		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:9:9-35
 	android:theme
 		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:14:9-40
-activity#com.example.ajira.activities.AdminHomeActivity
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:15:9-75
+activity#com.example.ajira.activities.AdminDashBoard
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:15:9-72
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:15:19-63
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:15:19-60
+activity#com.example.ajira.fragments.AdminHomeFragment
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:16:9-65
+	android:name
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:16:19-62
 activity#com.example.ajira.activities.LoginActivity
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:16:9-62
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:17:9-62
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:16:19-59
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:17:19-59
 activity#com.example.ajira.activities.PostJobActivity
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:17:9-64
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:18:9-64
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:17:19-61
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:18:19-61
 activity#com.example.ajira.activities.RecruiterDashBoard
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:18:9-67
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:19:9-67
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:18:19-64
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:19:19-64
 activity#com.example.ajira.activities.RegisterActivity
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:19:9-65
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:20:9-65
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:19:19-62
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:20:19-62
 activity#com.example.ajira.activities.SearchActivity
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:20:9-63
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:21:9-63
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:20:19-60
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:21:19-60
 activity#com.example.ajira.activities.JobDetailsActivity
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:21:9-67
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:22:9-67
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:21:19-64
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:22:19-64
 activity#com.example.ajira.activities.DashBoardActivity
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:22:9-66
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:23:9-66
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:22:19-63
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:23:19-63
 activity#com.example.ajira.MainActivity
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:23:9-29:20
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:24:9-30:20
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:23:19-47
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:24:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:24:13-28:29
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:25:13-29:29
 action#android.intent.action.MAIN
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:25:17-69
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:26:17-69
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:25:25-66
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:26:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:27:17-77
+ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:28:17-77
 	android:name
-		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:27:27-74
+		ADDED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml:28:27-74
 uses-sdk
 INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/devsawe/AndroidStudioProjects/Ajira/app/src/main/AndroidManifest.xml

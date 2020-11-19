@@ -46,12 +46,18 @@ public class HomeFragment extends Fragment {
     TextView txt_welcome;
     public static final String MyPREFERENCES = "MyPrefs";
     SharedPreferences sharedpreferences;
+    String token;
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_home,container,false);
+
+        sharedpreferences = getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        token = sharedpreferences.getString("token", "");
+
+        Log.e("Admin DashBoard", "token" + token);
 
         progressDialog  = new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading jobs Data");
@@ -85,7 +91,7 @@ public class HomeFragment extends Fragment {
 
     //fetching all displayed jobs
     public void getAllJobs() {
-        Call<List<AllJobsResponse>> call = apiService.getAllJobs();
+        Call<List<AllJobsResponse>> call = apiService.getApprovedJobs("Bearer " +token);
         call.enqueue(new Callback<List<AllJobsResponse>>() {
             @Override
             public void onResponse(Call<List<AllJobsResponse>> call, Response<List<AllJobsResponse>> response) {

@@ -21,7 +21,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.ajira.activities.AdminHomeActivity" />
+        <activity android:name="com.example.ajira.activities.AdminDashBoard" />
+        <activity android:name="com.example.ajira.fragments.AdminHomeFragment" />
         <activity android:name="com.example.ajira.activities.LoginActivity" />
         <activity android:name="com.example.ajira.activities.PostJobActivity" />
         <activity android:name="com.example.ajira.activities.RecruiterDashBoard" />

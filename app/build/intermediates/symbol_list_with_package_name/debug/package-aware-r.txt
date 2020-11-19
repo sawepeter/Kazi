@@ -1908,6 +1908,7 @@ id beginning
 id blocking
 id bottom
 id bottom_navigation
+id bottom_navigation_admin
 id bounce
 id btn_Post
 id btn_Recruiter
@@ -2004,6 +2005,7 @@ id flip
 id floating
 id forever
 id fragment_container
+id fragment_container_admin
 id fragment_container_view_tag
 id fragment_recruiter
 id full
@@ -2164,6 +2166,7 @@ id right_side
 id rounded
 id row_index_key
 id rv_applications
+id rv_approved_jobs
 id rv_my_jobs
 id rv_nearby
 id rv_pending_jobs
@@ -2387,7 +2390,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout active_jobs
-layout activity_admin_home
+layout activity_admin_dash_board
 layout activity_dash_board
 layout activity_job_details
 layout activity_login
@@ -2416,12 +2419,13 @@ layout design_text_input_start_icon
 layout dialog_rate
 layout expand_button
 layout filter_layout
+layout fragment_admin_home
 layout fragment_application
 layout fragment_home
 layout fragment_my_jobs
 layout fragment_profile
 layout fragment_recruiter_home
-layout fragment_settings
+layout fragment_statistics
 layout image_frame
 layout kazi_item
 layout layout_experience
@@ -2558,6 +2562,7 @@ string app_name
 string appbar_scrolling_view_behavior
 string applicants
 string applications
+string approved_jobs
 string available_users
 string bottom_sheet_behavior
 string character_counter_content_description

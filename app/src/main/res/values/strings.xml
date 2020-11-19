@@ -77,4 +77,5 @@
     <string name="admin_login">Admin Login</string>
     <string name="admin_home_page">Admin Home Page</string>
     <string name="pending_jobs">Pending Jobs</string>
+    <string name="approved_jobs">Approved Jobs</string>
 </resources>

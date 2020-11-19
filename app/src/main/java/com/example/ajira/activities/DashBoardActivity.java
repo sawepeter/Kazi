@@ -11,7 +11,7 @@ import com.example.ajira.R;
 import com.example.ajira.fragments.ApplicationsFragment;
 import com.example.ajira.fragments.HomeFragment;
 import com.example.ajira.fragments.ProfileFragment;
-import com.example.ajira.fragments.SettingsFragment;
+import com.example.ajira.fragments.StatisticsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class DashBoardActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -33,7 +33,7 @@ public class DashBoardActivity extends AppCompatActivity implements BottomNaviga
     HomeFragment homeFragment = new HomeFragment();
     ProfileFragment profileFragment = new ProfileFragment();
     ApplicationsFragment applicationsFragment = new ApplicationsFragment();
-    SettingsFragment settingsFragment = new SettingsFragment();
+    StatisticsFragment statisticsFragment = new StatisticsFragment();
 
 
 

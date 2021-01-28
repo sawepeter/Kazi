@@ -78,4 +78,9 @@
     <string name="admin_home_page">Admin Home Page</string>
     <string name="pending_jobs">Pending Jobs</string>
     <string name="approved_jobs">Approved Jobs</string>
+    <string name="unpaid_jobs">UnPaid Jobs</string>
+    <string name="paid_jobs">Paid Jobs</string>
+    <string name="inactive_jobs">Jobs</string>
+    <string name="active_jobs">Applications</string>
+    <string name="phone_number">Phone Number</string>
 </resources>

@@ -26,7 +26,9 @@ import com.example.ajira.model.WorkerProfile;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import retrofit2.Call;
@@ -35,11 +37,10 @@ import retrofit2.Response;
 
 public class RecruiterHomeFragment extends Fragment {
 
-    TextView txt_welcome;
+    TextView txt_top;
     SharedPreferences sharedpreferences;
     public static final String MyPREFERENCES = "MyPrefs";
-    String username;
-    ImageView image_back;
+    String username,currentTime,token;
     RecyclerView rv_users;
     UsersAdapter usersAdapter;
     private List<WorkerProfile> workerProfileList = null;
@@ -52,6 +53,11 @@ public class RecruiterHomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_recruiter_home, container, false);
 
+        sharedpreferences = getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        token = sharedpreferences.getString("token", "");
+
+        Log.e("Admin DashBoard", "token" + token);
+
         progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading jobs Data");
         progressDialog.show();
@@ -59,21 +65,13 @@ public class RecruiterHomeFragment extends Fragment {
         /*workerProfileList = new ArrayList<>();*/
 
         apiService = RetrofitBuilder.getAjiraBackendInstance().create(ApiService.class);
+        currentTime = DateFormat.getDateTimeInstance().format(new Date());
 
-        txt_welcome = rootView.findViewById(R.id.txt_welcome);
+        txt_top = rootView.findViewById(R.id.txt_top);
         rv_users = rootView.findViewById(R.id.rv_users);
-        image_back = rootView.findViewById(R.id.image_back);
 
 
-        sharedpreferences = getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-        username = sharedpreferences.getString("userName", "");
-        Log.e("TAG", "userName" + username);
-
-        image_back.setOnClickListener(v -> {
-            getActivity().finish();
-        });
-
-        txt_welcome.setText("Hello " + username);
+        txt_top.setText("Welcome " +sharedpreferences.getString("username", ""));
 
 
         Utils.runAsyncTask(this::getWorkerProfile);

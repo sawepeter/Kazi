@@ -19,9 +19,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
 import com.example.ajira.Utils.Utils;
-import com.example.ajira.adapter.NearbyJobsAdapter;
+import com.example.ajira.activities.MpesaPayDialog;
 import com.example.ajira.adapter.AllJobsAdapter;
 import com.example.ajira.model.AllJobsResponse;
+import com.example.ajira.model.JobPostResponse;
 import com.example.ajira.model.JobUpdateResponse;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
@@ -37,8 +38,7 @@ public class HomeFragment extends Fragment {
 
     private ApiService apiService;
     AllJobsAdapter allJobsAdapter;
-    NearbyJobsAdapter nearbyJobsAdapter;
-    RecyclerView rv_popular_jobs,rv_nearby;
+    RecyclerView rv_popular_jobs;
     List<AllJobsResponse> jobsResponseList = null;
     List<JobUpdateResponse> jobsList = null;
     LinearLayout l1;
@@ -47,6 +47,7 @@ public class HomeFragment extends Fragment {
     public static final String MyPREFERENCES = "MyPrefs";
     SharedPreferences sharedpreferences;
     String token;
+    public static final String TAG = HomeFragment.class.getSimpleName();
 
 
     @Nullable
@@ -54,8 +55,6 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_home,container,false);
 
-        sharedpreferences = getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-        token = sharedpreferences.getString("token", "");
 
         Log.e("Admin DashBoard", "token" + token);
 
@@ -73,15 +72,8 @@ public class HomeFragment extends Fragment {
         rv_popular_jobs = rootView.findViewById(R.id.rv_popular_jobs);
         txt_welcome = rootView.findViewById(R.id.txt_welcome);
         txt_welcome.setText("Hello " +sharedpreferences.getString("username", ""));
-        rv_nearby = rootView.findViewById(R.id.rv_nearby);
 
-        rv_popular_jobs.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
-        rv_nearby.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
 
-        allJobsAdapter = new AllJobsAdapter(jobsResponseList, getActivity());
-        //nearbyJobsAdapter = new NearbyJobsAdapter(jobsResponseList, getActivity());
-        rv_popular_jobs.setAdapter(allJobsAdapter);
-       // rv_nearby.setAdapter(nearbyJobsAdapter);
 
         Utils.runAsyncTask(this::getAllJobs);
 
@@ -91,7 +83,7 @@ public class HomeFragment extends Fragment {
 
     //fetching all displayed jobs
     public void getAllJobs() {
-        Call<List<AllJobsResponse>> call = apiService.getApprovedJobs("Bearer " +token);
+        Call<List<AllJobsResponse>> call = apiService.getAllJobs();
         call.enqueue(new Callback<List<AllJobsResponse>>() {
             @Override
             public void onResponse(Call<List<AllJobsResponse>> call, Response<List<AllJobsResponse>> response) {
@@ -101,11 +93,20 @@ public class HomeFragment extends Fragment {
                     Log.e("TAG", "Response successful" +response.code() + response.message());
 
                     jobsResponseList = response.body();
+
+                    LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+                    layoutManager.setOrientation(RecyclerView.VERTICAL);
+                    rv_popular_jobs.setLayoutManager(layoutManager);
+
+                    allJobsAdapter = new AllJobsAdapter(jobsResponseList, getActivity(), HomeFragment.this);
+                    rv_popular_jobs.setAdapter(allJobsAdapter);
+
                     allJobsAdapter.setJobsResponseList(jobsResponseList);
+
 
                 }else {
                     progressDialog.dismiss();
-                    Log.e("TAG", "response unsuccessful" + response.code() + response.message());
+                    Log.e(TAG, "response unsuccessful" + response.code() + response.message());
                 }
             }
 

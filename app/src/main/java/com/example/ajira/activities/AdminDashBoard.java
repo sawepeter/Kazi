@@ -8,7 +8,6 @@ import android.view.MenuItem;
 
 import com.example.ajira.R;
 import com.example.ajira.fragments.AdminHomeFragment;
-import com.example.ajira.fragments.ApplicationsFragment;
 import com.example.ajira.fragments.ProfileFragment;
 import com.example.ajira.fragments.StatisticsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;

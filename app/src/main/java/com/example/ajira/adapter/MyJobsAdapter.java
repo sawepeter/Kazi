@@ -1,6 +1,8 @@
 package com.example.ajira.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +15,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
+import com.example.ajira.activities.Activation;
 import com.example.ajira.model.JobPostResponse;
 import com.example.ajira.model.WorkerProfile;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,19 +72,19 @@ public class MyJobsAdapter extends RecyclerView.Adapter<MyJobsAdapter.MyViewHold
             textViewPay = view.findViewById(R.id.textViewPay);
             textViewLocation = view.findViewById(R.id.textViewLocation);
 
-          /*  view.setOnClickListener(v -> {
+            view.setOnClickListener(v -> {
                 int pos = getAdapterPosition();
                 if (pos != RecyclerView.NO_POSITION){
-                    WorkerProfile clickedData = workerProfileList.get(pos);
-                    Intent intent = new Intent(v.getContext(), JobDetailsActivity.class);
+                    JobPostResponse clickedData = jobPostResponseList.get(pos);
+                    Intent intent = new Intent(v.getContext(), Activation.class);
                     intent.putExtra("pos", pos);
-                    intent.putExtra("data", (Serializable) workerProfileList);
+                    intent.putExtra("data", (Serializable) jobPostResponseList);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     v.getContext().startActivity(intent);
-                    Log.i("TAG", "item position" +clickedData.getSkillName());
+                    Log.i("TAG", "item position" +clickedData.getJobTitle());
 
                 }
-            });*/
+            });
         }
     }
 }

@@ -7,8 +7,8 @@
         android:id="@+id/image_bg"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:paddingBottom="10dp"
-        android:background="@drawable/profile_background"/>
+        android:background="@drawable/profile_background"
+        android:paddingBottom="10dp" />
 
     <RelativeLayout
         android:id="@+id/layout_nav"
@@ -23,9 +23,9 @@
             android:id="@+id/image_back"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_marginTop="8dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
+            android:layout_marginTop="8dp"
             android:background="@drawable/details_background"
             android:scaleType="centerInside"
             android:src="@drawable/ic_arrow_back" />
@@ -34,15 +34,15 @@
             android:id="@+id/txt_welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/dmsansboldregular"
-            android:layout_toRightOf="@+id/image_back"
-            android:layout_marginTop="8dp"
             android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/image_back"
+            android:layout_toRightOf="@+id/image_back"
+            android:fontFamily="@font/dmsansboldregular"
             android:text="@string/text_hello"
             android:textColor="@color/white"
-            android:textSize="16sp"
-            android:layout_marginLeft="20dp"
-            android:layout_toEndOf="@+id/image_back" />
+            android:textSize="16sp" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
@@ -50,10 +50,10 @@
             android:layout_height="30dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:visibility="gone"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
-            android:src="@drawable/ic_profile" />
+            android:src="@drawable/ic_profile"
+            android:visibility="gone" />
 
     </RelativeLayout>
 
@@ -61,67 +61,34 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="8dp"
-        android:layout_below="@+id/image_bg">
+        android:layout_below="@+id/image_bg"
+        android:layout_marginTop="8dp">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
             android:orientation="vertical">
 
-
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginEnd="10dp"
-                android:orientation="vertical">
+                android:fontFamily="@font/dmsansbold"
+                android:text="@string/popular_jobs"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/dmsansbold"
-                    android:text="@string/popular_jobs"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="16sp" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_popular_jobs"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_popular_jobs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:visibility="gone"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/dmsansbold"
-                    android:text="Nearby Jobs"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="16sp" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_nearby"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp" />
-
-            </LinearLayout>
+                android:layout_marginTop="5dp" />
 
         </LinearLayout>
+
 
     </ScrollView>
 

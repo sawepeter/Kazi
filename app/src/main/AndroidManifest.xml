@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.ajira">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -11,16 +12,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".activities.AdminDashBoard"></activity>
-        <activity android:name=".fragments.AdminHomeFragment" />
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="UnusedAttribute"
+        tools:replace="android:icon">
+        <activity android:name=".activities.Activation"></activity>
+        <activity android:name=".activities.MpesaPayDialog" />
+        <activity android:name=".activities.AdminDashBoard" /> <!-- <activity android:name=".fragments.AdminHomeFragment" /> -->
         <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.PostJobActivity" />
         <activity android:name=".activities.RecruiterDashBoard" />
         <activity android:name=".activities.RegisterActivity" />
         <activity android:name=".activities.SearchActivity" />
         <activity android:name=".activities.JobDetailsActivity" />
-        <activity android:name=".activities.DashBoardActivity" />
+        <activity android:name=".activities.JobSeekerDashBoard" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

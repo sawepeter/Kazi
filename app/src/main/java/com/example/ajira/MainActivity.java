@@ -10,9 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.ajira.activities.DashBoardActivity;
 import com.example.ajira.activities.LoginActivity;
-import com.example.ajira.activities.RecruiterDashBoard;
 import com.example.ajira.activities.RegisterActivity;
 
 public class MainActivity extends AppCompatActivity {

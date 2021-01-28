@@ -9,11 +9,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
+import com.example.ajira.activities.Activation;
 import com.example.ajira.activities.JobDetailsActivity;
 import com.example.ajira.model.AllJobsResponse;
+import com.example.ajira.model.JobPostResponse;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -24,11 +27,14 @@ public class AllJobsAdapter extends RecyclerView.Adapter<AllJobsAdapter.MyViewHo
     List<AllJobsResponse> jobsResponseList = new ArrayList<>();
     private Context context;
     AllJobsResponse jobs;
+    private Fragment fragment;
 
-    public AllJobsAdapter(List<AllJobsResponse> jobsResponseList, Context context) {
+
+    public AllJobsAdapter(List<AllJobsResponse> jobsResponseList, Context context, Fragment fragment) {
         Log.i("autolog", "PopularJobsAdapter");
         this.jobsResponseList = jobsResponseList;
         this.context = context;
+        this.fragment = fragment;
     }
 
     public void setJobsResponseList(List<AllJobsResponse> jobsResponseList) {
@@ -75,7 +81,7 @@ public class AllJobsAdapter extends RecyclerView.Adapter<AllJobsAdapter.MyViewHo
                 int pos = getAdapterPosition();
                 if (pos != RecyclerView.NO_POSITION){
                     AllJobsResponse clickedData = jobsResponseList.get(pos);
-                    Intent intent = new Intent(v.getContext(), JobDetailsActivity.class);
+                    Intent intent = new Intent(v.getContext(), Activation.class);
                     intent.putExtra("pos", pos);
                     intent.putExtra("data", (Serializable) jobsResponseList);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

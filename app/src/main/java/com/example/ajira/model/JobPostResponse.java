@@ -3,7 +3,9 @@ package com.example.ajira.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class JobPostResponse {
+import java.io.Serializable;
+
+public class JobPostResponse implements Serializable {
 
     @SerializedName("createdAt")
     @Expose

@@ -15,7 +15,6 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.ajira.R;
-import com.example.ajira.fragments.AdminHomeFragment;
 import com.example.ajira.model.User;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
@@ -53,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
         layout_nav = findViewById(R.id.layout_nav);
 
         dialog = new ProgressDialog(LoginActivity.this);
-        dialog.setMessage("Logging ...");
+        dialog.setMessage("Please Wait ...");
 
         userType = sharedpreferences.getString("userType", "");
         userType = getIntent().getStringExtra("userType");
@@ -70,6 +69,7 @@ public class LoginActivity extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                dialog.show();
                 userName = user_Name.getText().toString().trim();
                 userPassword = password.getText().toString().trim();
                 //HashMap data
@@ -83,6 +83,7 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<User> call, Response<User> response) {
                             if (response.isSuccessful()) {
+                                dialog.dismiss();
                                 String token = response.body().getJwt();
                                 String username = response.body().getUsername();
 
@@ -94,17 +95,19 @@ public class LoginActivity extends AppCompatActivity {
 
                                 Log.e("TAG", "token" + token);
 
-                                startActivity(new Intent(LoginActivity.this, DashBoardActivity.class));
+                                startActivity(new Intent(LoginActivity.this, JobSeekerDashBoard.class));
 
                                 Toast.makeText(LoginActivity.this, "Successful Login", Toast.LENGTH_SHORT).show();
 
                             } else {
+                                dialog.dismiss();
                                 Log.e("TAG", "Response unsuccessful" + response.errorBody().toString() + response.code() + response.message());
                             }
                         }
 
                         @Override
                         public void onFailure(Call<User> call, Throwable t) {
+                            dialog.dismiss();
                             Log.e("TAG", "Failed " + t.getMessage());
                         }
                     });
@@ -116,6 +119,7 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<User> call, Response<User> response) {
                             if (response.isSuccessful()) {
+                                dialog.dismiss();
                                 String token = response.body().getJwt();
                                 String username = response.body().getUsername();
 
@@ -130,22 +134,24 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "Successful Login", Toast.LENGTH_SHORT).show();
 
                             } else {
+                                dialog.dismiss();
                                 Log.e("TAG", "Response unsuccessful" + response.errorBody().toString() + response.code() + response.message());
                             }
                         }
 
                         @Override
                         public void onFailure(Call<User> call, Throwable t) {
+                            dialog.dismiss();
                             Log.e("TAG", "Failed " + t.getMessage());
                         }
                     });
 
                 } else if (userType.equals("admin")){
-
                     apiService.LoginUser(credentials).enqueue(new Callback<User>() {
                         @Override
                         public void onResponse(Call<User> call, Response<User> response) {
                             if (response.isSuccessful()) {
+                                dialog.dismiss();
                                 String token = response.body().getJwt();
                                 String username = response.body().getUsername();
 
@@ -160,12 +166,14 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "Successful Login", Toast.LENGTH_SHORT).show();
 
                             } else {
+                                dialog.dismiss();
                                 Log.e("TAG", "Response unsuccessful" + response.errorBody().toString() + response.code() + response.message());
                             }
                         }
 
                         @Override
                         public void onFailure(Call<User> call, Throwable t) {
+                            dialog.dismiss();
                             Log.e("TAG", "Failed " + t.getMessage());
                         }
                     });

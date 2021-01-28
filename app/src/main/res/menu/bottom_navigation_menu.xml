@@ -4,13 +4,13 @@
         android:id="@+id/Home"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_home_24"
-        android:title="@string/home"/>
+        android:title="@string/inactive_jobs"/>
 
     <item
         android:id="@+id/Applications"
         android:enabled="true"
         android:icon="@drawable/ic_work"
-        android:title="@string/applications"/>
+        android:title="@string/active_jobs"/>
 
     <item
         android:id="@+id/Profile"

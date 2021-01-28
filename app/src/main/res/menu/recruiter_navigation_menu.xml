@@ -3,14 +3,14 @@
     <item
         android:id="@+id/nyumbani"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_home_24"
-        android:title="@string/home" />
+        android:icon="@drawable/ic_paid"
+        android:title="@string/paid_jobs" />
 
     <item
         android:id="@+id/active_applications"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_insert_drive_file_24"
-        android:title="@string/myjobs" />
+        android:title="@string/unpaid_jobs" />
 
     <item
         android:id="@+id/recruiter_profile"

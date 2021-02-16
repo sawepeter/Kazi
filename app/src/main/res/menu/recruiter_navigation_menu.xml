@@ -4,7 +4,7 @@
         android:id="@+id/nyumbani"
         android:enabled="true"
         android:icon="@drawable/ic_paid"
-        android:title="@string/paid_jobs" />
+        android:title="@string/my_jobs" />
 
     <item
         android:id="@+id/active_applications"

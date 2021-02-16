@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,14 +22,25 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
 import com.example.ajira.Utils.Utils;
+import com.example.ajira.adapter.AllJobsAdapter;
+import com.example.ajira.adapter.MyJobsAdapter;
+import com.example.ajira.adapter.UnpaidJobsAdapter;
 import com.example.ajira.adapter.UsersAdapter;
+import com.example.ajira.model.JobModelResponse;
+import com.example.ajira.model.JobUpdateResponse;
 import com.example.ajira.model.WorkerProfile;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 import retrofit2.Call;
@@ -41,11 +53,14 @@ public class RecruiterHomeFragment extends Fragment {
     SharedPreferences sharedpreferences;
     public static final String MyPREFERENCES = "MyPrefs";
     String username,currentTime,token;
+    private ApiService apiService;
+    UnpaidJobsAdapter allJobsAdapter;
     RecyclerView rv_users;
-    UsersAdapter usersAdapter;
-    private List<WorkerProfile> workerProfileList = null;
+    List<JobModelResponse> jobsResponseList = null;
+    List<JobUpdateResponse> jobsList = null;
+    LinearLayout l1;
     ProgressDialog progressDialog;
-    ApiService apiService;
+    public static final String TAG = HomeFragment.class.getSimpleName();
 
     @SuppressLint("SetTextI18n")
     @Nullable
@@ -58,14 +73,18 @@ public class RecruiterHomeFragment extends Fragment {
 
         Log.e("Admin DashBoard", "token" + token);
 
-        progressDialog = new ProgressDialog(getActivity());
+
+        progressDialog  = new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading jobs Data");
         progressDialog.show();
+        sharedpreferences = getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
 
-        /*workerProfileList = new ArrayList<>();*/
 
-        apiService = RetrofitBuilder.getAjiraBackendInstance().create(ApiService.class);
-        currentTime = DateFormat.getDateTimeInstance().format(new Date());
+        jobsResponseList = new ArrayList<>();
+        jobsList = new ArrayList<>();
+
+        apiService = RetrofitBuilder.getRetrofitInstance().create(ApiService.class);
+
 
         txt_top = rootView.findViewById(R.id.txt_top);
         rv_users = rootView.findViewById(R.id.rv_users);
@@ -74,38 +93,64 @@ public class RecruiterHomeFragment extends Fragment {
         txt_top.setText("Welcome " +sharedpreferences.getString("username", ""));
 
 
-        Utils.runAsyncTask(this::getWorkerProfile);
+        Utils.runAsyncTask(this::getPaidJobs);
+
         return rootView;
     }
 
-    //fetching data for counter values
-    public void getWorkerProfile() {
-        Call<List<WorkerProfile>> call = apiService.getUserProfiles();
-        call.enqueue(new Callback<List<WorkerProfile>>() {
+    //fetching all displayed jobs
+    public void getPaidJobs() {
+        Call<List<JobModelResponse>> call = apiService.getPaidJobs("unpaid");
+        call.enqueue(new Callback<List<JobModelResponse>>() {
             @Override
-            public void onResponse(Call<List<WorkerProfile>> call, Response<List<WorkerProfile>> response) {
-                if (response.isSuccessful()) {
+            public void onResponse(Call<List<JobModelResponse>> call, Response<List<JobModelResponse>> response) {
+                if (response.isSuccessful()){
                     progressDialog.dismiss();
 
-                    workerProfileList = response.body();
+                    Log.e("TAG", "Response successful" +response.code() + response.message());
+
+                    jobsResponseList = response.body();
 
                     LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
                     layoutManager.setOrientation(RecyclerView.VERTICAL);
                     rv_users.setLayoutManager(layoutManager);
 
-                    usersAdapter = new UsersAdapter(getActivity(),workerProfileList);
-                    rv_users.setAdapter(usersAdapter);
+                    allJobsAdapter = new UnpaidJobsAdapter(jobsResponseList, getActivity(), RecruiterHomeFragment.this);
+                    rv_users.setAdapter(allJobsAdapter);
 
-                    Log.e("TAG  successful", "Response successful " + workerProfileList.size() + response.code() + response.message());
+                    allJobsAdapter.setJobsResponseList(jobsResponseList);
 
-                } else {
+
+                }else {
                     progressDialog.dismiss();
-                    Log.e("TAG", "response unsuccessful" + response.code() + response.message());
+                    try {
+
+                        String errorBody = response.errorBody().string();
+
+                        JSONObject jsonObject = new JSONObject(errorBody.trim());
+
+                        jsonObject = jsonObject.getJSONObject("error");
+
+                        jsonObject = jsonObject.getJSONObject("message");
+
+                        Iterator<String> keys = jsonObject.keys();
+                        String errors = "";
+                        while (keys.hasNext()){
+                            String key = keys.next();
+                            JSONArray arr = jsonObject.getJSONArray(key);
+                            for (int i = 0; i <  arr.length(); i++){
+                                errors += key + " : " +arr.getString(i) + "\n";
+                            }
+                        }
+                    } catch (JSONException | IOException e){
+                        e.printStackTrace();
+                    }
+                    Log.e(TAG, "response unsuccessful" + response.code() + response.message());
                 }
             }
 
             @Override
-            public void onFailure(Call<List<WorkerProfile>> call, Throwable t) {
+            public void onFailure(Call<List<JobModelResponse>> call, Throwable t) {
                 progressDialog.dismiss();
                 Log.e("TAG", "Failed " + t.getMessage());
             }

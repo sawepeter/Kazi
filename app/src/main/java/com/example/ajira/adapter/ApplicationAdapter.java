@@ -2,6 +2,7 @@ package com.example.ajira.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
+import com.example.ajira.activities.RateDialog;
+import com.example.ajira.activities.RatingActivity;
 import com.example.ajira.model.ApplicationModel;
 import com.squareup.picasso.Picasso;
 
@@ -56,7 +59,9 @@ public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.
         holder.btn_complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Wip!!!!", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(context, "Wip!!!!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, RatingActivity.class);
+                context.startActivity(intent);
             }
         });
     }

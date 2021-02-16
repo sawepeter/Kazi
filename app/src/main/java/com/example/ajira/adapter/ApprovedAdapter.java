@@ -17,6 +17,7 @@ import com.example.ajira.R;
 import com.example.ajira.activities.JobDetailsActivity;
 import com.example.ajira.fragments.StatisticsFragment;
 import com.example.ajira.model.AllJobsResponse;
+import com.example.ajira.model.JobModelResponse;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -24,20 +25,20 @@ import java.util.List;
 
 public class ApprovedAdapter extends RecyclerView.Adapter<ApprovedAdapter.MyViewHolder>{
 
-    List<AllJobsResponse> jobsResponseList = new ArrayList<>();
+    List<JobModelResponse> jobsResponseList = new ArrayList<>();
     private Context context;
     private Fragment fragment;
-    AllJobsResponse jobs;
+    JobModelResponse jobs;
     StatisticsFragment statisticsFragment;
 
-    public ApprovedAdapter(List<AllJobsResponse> jobsResponseList, Context context, Fragment fragment) {
+    public ApprovedAdapter(List<JobModelResponse> jobsResponseList, Context context, Fragment fragment) {
         Log.i("autolog", "PendingAdapter");
         this.jobsResponseList = jobsResponseList;
         this.context = context;
         this.fragment = fragment;
     }
 
-    public void setJobsResponseList(List<AllJobsResponse> jobsResponseList) {
+    public void setJobsResponseList(List<JobModelResponse> jobsResponseList) {
         this.jobsResponseList = jobsResponseList;
         notifyDataSetChanged();
     }
@@ -59,6 +60,7 @@ public class ApprovedAdapter extends RecyclerView.Adapter<ApprovedAdapter.MyView
         holder.textViewPhone.setText(jobs.getEmployerPhone());
         holder.textViewLocation.setText(jobs.getJobLocation());
         holder.textViewPay.setText(jobs.getJobAmount());
+        holder.textPayment.setText(jobs.getPaymentStatus());
         holder.job_pending.setChecked(true);
         holder.job_pending.setText("Approved");
         holder.job_pending.setEnabled(false);
@@ -72,7 +74,7 @@ public class ApprovedAdapter extends RecyclerView.Adapter<ApprovedAdapter.MyView
 
     class MyViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView textViewJobTitle, textViewPhone, textViewLocation, textViewPay;
+        private TextView textViewJobTitle, textViewPhone, textViewLocation, textViewPay,textPayment;
         private CheckBox job_pending;
 
         public MyViewHolder(@NonNull View view) {
@@ -81,12 +83,13 @@ public class ApprovedAdapter extends RecyclerView.Adapter<ApprovedAdapter.MyView
             textViewPhone = view.findViewById(R.id.textViewPhone);
             textViewLocation = view.findViewById(R.id.textViewLocation);
             textViewPay = view.findViewById(R.id.textViewPay);
+            textPayment = view.findViewById(R.id.textPayment);
             job_pending = view.findViewById(R.id.job_pending);
             //passes data to the next step
             view.setOnClickListener(v -> {
                 int pos = getAdapterPosition();
                 if (pos != RecyclerView.NO_POSITION){
-                    AllJobsResponse clickedData = jobsResponseList.get(pos);
+                    JobModelResponse clickedData = jobsResponseList.get(pos);
                     Intent intent = new Intent(v.getContext(), JobDetailsActivity.class);
                     intent.putExtra("pos", pos);
                     intent.putExtra("data", (Serializable) jobsResponseList);

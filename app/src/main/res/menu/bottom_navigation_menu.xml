@@ -10,7 +10,7 @@
         android:id="@+id/Applications"
         android:enabled="true"
         android:icon="@drawable/ic_work"
-        android:title="@string/active_jobs"/>
+        android:title="@string/applications"/>
 
     <item
         android:id="@+id/Profile"

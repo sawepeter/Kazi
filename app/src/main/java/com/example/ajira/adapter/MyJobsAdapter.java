@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
 import com.example.ajira.activities.Activation;
+import com.example.ajira.activities.JobDetailsActivity;
+import com.example.ajira.model.JobModelResponse;
 import com.example.ajira.model.JobPostResponse;
 import com.example.ajira.model.WorkerProfile;
 
@@ -26,15 +28,15 @@ import java.util.List;
 public class MyJobsAdapter extends RecyclerView.Adapter<MyJobsAdapter.MyViewHolder> {
 
     private Context context;
-    private List<JobPostResponse> jobPostResponseList;
-    JobPostResponse jobPostResponse;
+    private List<JobModelResponse> jobPostResponseList;
+    JobModelResponse jobPostResponse;
 
-    public MyJobsAdapter(Context context, List<JobPostResponse> jobPostResponseList) {
+    public MyJobsAdapter(Context context, List<JobModelResponse> jobPostResponseList) {
         this.context = context;
         this.jobPostResponseList = jobPostResponseList;
     }
 
-    public void setJobPostResponseList(List<JobPostResponse> jobPostResponseList) {
+    public void setJobPostResponseList(List<JobModelResponse> jobPostResponseList) {
         this.jobPostResponseList = jobPostResponseList;
     }
 
@@ -72,11 +74,11 @@ public class MyJobsAdapter extends RecyclerView.Adapter<MyJobsAdapter.MyViewHold
             textViewPay = view.findViewById(R.id.textViewPay);
             textViewLocation = view.findViewById(R.id.textViewLocation);
 
-            view.setOnClickListener(v -> {
+           /* view.setOnClickListener(v -> {
                 int pos = getAdapterPosition();
                 if (pos != RecyclerView.NO_POSITION){
-                    JobPostResponse clickedData = jobPostResponseList.get(pos);
-                    Intent intent = new Intent(v.getContext(), Activation.class);
+                    JobModelResponse clickedData = jobPostResponseList.get(pos);
+                    Intent intent = new Intent(v.getContext(), JobDetailsActivity.class);
                     intent.putExtra("pos", pos);
                     intent.putExtra("data", (Serializable) jobPostResponseList);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -84,7 +86,7 @@ public class MyJobsAdapter extends RecyclerView.Adapter<MyJobsAdapter.MyViewHold
                     Log.i("TAG", "item position" +clickedData.getJobTitle());
 
                 }
-            });
+            });*/
         }
     }
 }

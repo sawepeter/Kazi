@@ -108,11 +108,11 @@ public class AdminHomeFragment extends Fragment {
 
     //approving jobs to make the visible
     public void approveJob(long id){
-        apiService.approveJob("Bearer " +token, id).enqueue(new Callback<JobUpdateResponse>() {
+        apiService.adminApproveJob("Bearer " +token, id).enqueue(new Callback<JobUpdateResponse>() {
             @Override
             public void onResponse(Call<JobUpdateResponse> call, Response<JobUpdateResponse> response) {
                 if (response.isSuccessful()){
-                    Log.e("TAG", "Status changed !!!" +response.body().getState());
+                    Log.e("TAG", "Status changed !!!" +response.body().getState() + response.body().getMsg());
                     Toast.makeText(getActivity(), " "+response.body().getMsg(), Toast.LENGTH_SHORT).show();
                 } else {
                     Log.e("TAG", "response unsuccessful " + response.code() + response.message());

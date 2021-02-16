@@ -107,8 +107,8 @@ public class MpesaPayDialog extends BottomSheetDialogFragment implements TokenLi
         stkPush.setPartyB(PARTYB);
         stkPush.setPhoneNumber(STKPush.sanitizePhoneNumber(number));
         stkPush.setCallBackURL(CALLBACK_URL);
-        stkPush.setAccountReference("Ajira test");
-        stkPush.setTransactionDesc("some description");
+        stkPush.setAccountReference("Ajira Test");
+        stkPush.setTransactionDesc("Activating Sucbscription");
 
         mpesa.startStkPush(token, stkPush, new STKListener() {
             @Override
@@ -118,6 +118,7 @@ public class MpesaPayDialog extends BottomSheetDialogFragment implements TokenLi
                 sweetAlertDialog.changeAlertType(SweetAlertDialog.SUCCESS_TYPE);
                 sweetAlertDialog.setTitleText("Transaction started");
                 sweetAlertDialog.setContentText(message);
+                sweetAlertDialog.dismissWithAnimation();
             }
 
             @Override
@@ -126,6 +127,7 @@ public class MpesaPayDialog extends BottomSheetDialogFragment implements TokenLi
                 sweetAlertDialog.changeAlertType(SweetAlertDialog.ERROR_TYPE);
                 sweetAlertDialog.setTitleText("Error");
                 sweetAlertDialog.setContentText(throwable.getMessage());
+                sweetAlertDialog.dismissWithAnimation();
             }
         });
     }
@@ -136,5 +138,6 @@ public class MpesaPayDialog extends BottomSheetDialogFragment implements TokenLi
         sweetAlertDialog.changeAlertType(SweetAlertDialog.ERROR_TYPE);
         sweetAlertDialog.setTitleText("Error");
         sweetAlertDialog.setContentText(throwable.getMessage());
+        sweetAlertDialog.dismissWithAnimation();
     }
 }

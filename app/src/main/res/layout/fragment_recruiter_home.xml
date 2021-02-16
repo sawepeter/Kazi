@@ -51,42 +51,6 @@
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/college_menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layout_nav"
-        android:orientation="vertical">
-
-        <ImageButton
-            android:id="@+id/btn_college"
-            android:layout_width="59dp"
-            android:layout_height="59dp"
-            android:src="@drawable/ic_baseline_add_24"
-            android:background="@drawable/menu_background"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="11dp"
-            android:layout_gravity="center"
-            android:textSize="11sp"
-            android:fontFamily="@font/oxygen_bold"
-            android:textColor="@android:color/black"
-            android:text="Post"/>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="11sp"
-            android:fontFamily="@font/oxygen_bold"
-            android:textColor="@android:color/black"
-            android:text="Job"/>
-
-    </LinearLayout>
-
 
     <ScrollView
         android:layout_width="match_parent"
@@ -109,7 +73,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dmsansbold"
-                    android:text="@string/worker_profiles"
+                    android:text="@string/unpaid_jobs"
                     android:textColor="@color/colorPrimary"
                     android:textSize="16sp" />
 

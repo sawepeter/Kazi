@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.ajira.R;
 import com.example.ajira.Utils.Utils;
 import com.example.ajira.adapter.MyJobsAdapter;
+import com.example.ajira.model.JobModelResponse;
 import com.example.ajira.model.JobPostResponse;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
@@ -35,7 +36,7 @@ public class MyJobsFragment extends Fragment {
     SharedPreferences sharedpreferences;
     public static final String MyPREFERENCES = "MyPrefs";
     String token;
-    private List<JobPostResponse> jobPostResponseList;
+    private List<JobModelResponse> jobPostResponseList;
     MyJobsAdapter myJobsAdapter;
     private LinearLayoutManager linearLayoutManager;
     ProgressDialog dialog;
@@ -64,10 +65,10 @@ public class MyJobsFragment extends Fragment {
     }
 
     private void getMyJobs() {
-        Call<List<JobPostResponse>> call = apiService.getMyJobs("Bearer " + token);
-        call.enqueue(new Callback<List<JobPostResponse>>() {
+        Call<List<JobModelResponse>> call = apiService.getMyJobs("Bearer " + token);
+        call.enqueue(new Callback<List<JobModelResponse>>() {
             @Override
-            public void onResponse(Call<List<JobPostResponse>> call, Response<List<JobPostResponse>> response) {
+            public void onResponse(Call<List<JobModelResponse>> call, Response<List<JobModelResponse>> response) {
                 if (response.isSuccessful()) {
                     dialog.dismiss();
 
@@ -88,7 +89,7 @@ public class MyJobsFragment extends Fragment {
 
             }
             @Override
-            public void onFailure(Call<List<JobPostResponse>> call, Throwable t) {
+            public void onFailure(Call<List<JobModelResponse>> call, Throwable t) {
                 dialog.dismiss();
                 Log.e("TAG", "Failed " + t.getMessage());
             }

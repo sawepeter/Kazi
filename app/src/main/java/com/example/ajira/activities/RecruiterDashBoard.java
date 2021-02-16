@@ -44,12 +44,12 @@ public class RecruiterDashBoard extends AppCompatActivity implements BottomNavig
         switch (item.getItemId()) {
             case R.id.nyumbani:
                 postJob.setVisibility(View.VISIBLE);
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_recruiter, recruiterHomeFragment).commitAllowingStateLoss();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_recruiter, myJobsFragment).commit();
                 return true;
 
             case R.id.active_applications:
                 postJob.setVisibility(View.GONE);
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_recruiter, myJobsFragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_recruiter, recruiterHomeFragment).commitAllowingStateLoss();
                 return true;
 
             case R.id.recruiter_profile:

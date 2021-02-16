@@ -16,6 +16,7 @@ import com.example.ajira.R;
 import com.example.ajira.activities.Activation;
 import com.example.ajira.activities.JobDetailsActivity;
 import com.example.ajira.model.AllJobsResponse;
+import com.example.ajira.model.JobModelResponse;
 import com.example.ajira.model.JobPostResponse;
 
 import java.io.Serializable;
@@ -24,20 +25,20 @@ import java.util.List;
 
 public class AllJobsAdapter extends RecyclerView.Adapter<AllJobsAdapter.MyViewHolder> {
 
-    List<AllJobsResponse> jobsResponseList = new ArrayList<>();
+    List<JobModelResponse> jobsResponseList = new ArrayList<>();
     private Context context;
-    AllJobsResponse jobs;
+    JobModelResponse jobs;
     private Fragment fragment;
 
 
-    public AllJobsAdapter(List<AllJobsResponse> jobsResponseList, Context context, Fragment fragment) {
+    public AllJobsAdapter(List<JobModelResponse> jobsResponseList, Context context, Fragment fragment) {
         Log.i("autolog", "PopularJobsAdapter");
         this.jobsResponseList = jobsResponseList;
         this.context = context;
         this.fragment = fragment;
     }
 
-    public void setJobsResponseList(List<AllJobsResponse> jobsResponseList) {
+    public void setJobsResponseList(List<JobModelResponse> jobsResponseList) {
         this.jobsResponseList = jobsResponseList;
         notifyDataSetChanged();
     }
@@ -80,8 +81,8 @@ public class AllJobsAdapter extends RecyclerView.Adapter<AllJobsAdapter.MyViewHo
             view.setOnClickListener(v -> {
                 int pos = getAdapterPosition();
                 if (pos != RecyclerView.NO_POSITION){
-                    AllJobsResponse clickedData = jobsResponseList.get(pos);
-                    Intent intent = new Intent(v.getContext(), Activation.class);
+                    JobModelResponse clickedData = jobsResponseList.get(pos);
+                    Intent intent = new Intent(v.getContext(), JobDetailsActivity.class);
                     intent.putExtra("pos", pos);
                     intent.putExtra("data", (Serializable) jobsResponseList);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

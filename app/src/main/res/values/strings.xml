@@ -83,4 +83,7 @@
     <string name="inactive_jobs">Jobs</string>
     <string name="active_jobs">Applications</string>
     <string name="phone_number">Phone Number</string>
+    <string name="payment">Payment :</string>
+    <string name="job_applications">Job Applications</string>
+    <string name="enter_comment">Enter Comment</string>
 </resources>

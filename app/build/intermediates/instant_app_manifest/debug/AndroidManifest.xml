@@ -23,6 +23,7 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity android:name="com.example.ajira.activities.RatingActivity" />
         <activity android:name="com.example.ajira.activities.Activation" />
         <activity android:name="com.example.ajira.activities.MpesaPayDialog" />
         <activity android:name="com.example.ajira.activities.AdminDashBoard" /> <!-- <activity android:name=".fragments.AdminHomeFragment" /> -->

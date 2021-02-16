@@ -120,6 +120,7 @@
             android:padding="@dimen/padding_small">
 
             <LinearLayout
+                android:id="@+id/location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -144,14 +145,48 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/location"
+                android:layout_marginStart="50dp"
+                android:layout_toLeftOf="@+id/job_pending"
+                android:layout_toEndOf="@+id/location"
+                android:orientation="horizontal"
+                android:layout_marginLeft="50dp"
+                android:layout_toStartOf="@+id/job_pending">
+
+                <TextView
+                    android:id="@+id/textPay"
+                    style="@style/textViewJobs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                   android:text="@string/payment"
+                    android:layout_marginLeft="@dimen/margin_small" />
+
+                <TextView
+                    android:id="@+id/textPayment"
+                    style="@style/textViewJobs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    tools:text="4 Times"
+                    android:layout_marginLeft="@dimen/margin_small" />
+
+            </LinearLayout>
+
+
 
             <CheckBox
                 android:id="@+id/job_pending"
                 android:layout_width="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_height="wrap_content"
+                android:clickable="true"
                 android:layout_alignParentRight="true"
-                android:text="Approve" />
+                android:text="Approve"
+                android:focusable="true" />
 
         </RelativeLayout>
 

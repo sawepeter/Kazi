@@ -94,6 +94,7 @@
                 android:drawableRight="@drawable/ic_baseline_person_24"
                 android:fontFamily="@font/dmsansbold"
                 android:hint="@string/company_name"
+                android:visibility="gone"
                 android:paddingStart="20dp"
                 android:paddingLeft="20dp"
                 android:paddingEnd="20dp"

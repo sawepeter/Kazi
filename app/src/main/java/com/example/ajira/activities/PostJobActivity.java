@@ -68,7 +68,7 @@ public class PostJobActivity extends AppCompatActivity {
             dialog.show();
 
             jobTitle = job_title.getText().toString().trim();
-            EmployerName = job_EmployerName.getText().toString().trim();
+           // EmployerName = job_EmployerName.getText().toString().trim();
             EmployerPhone = employerPhone.getText().toString().trim();
             JobLocation = Job_location.getText().toString().trim();
             Job_salary = job_salary.getText().toString().trim();
@@ -77,7 +77,7 @@ public class PostJobActivity extends AppCompatActivity {
 
             JobPostResponse jobPostResponse = new JobPostResponse();
             jobPostResponse.setJobTitle(jobTitle);
-            jobPostResponse.setEmployerName(EmployerName);
+           // jobPostResponse.setEmployerName(EmployerName);
             jobPostResponse.setEmployerPhone(EmployerPhone);
             jobPostResponse.setJobAmount(Job_salary);
             jobPostResponse.setJobLocation(JobLocation);

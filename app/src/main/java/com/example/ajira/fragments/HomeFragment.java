@@ -22,12 +22,19 @@ import com.example.ajira.Utils.Utils;
 import com.example.ajira.activities.MpesaPayDialog;
 import com.example.ajira.adapter.AllJobsAdapter;
 import com.example.ajira.model.AllJobsResponse;
+import com.example.ajira.model.JobModelResponse;
 import com.example.ajira.model.JobPostResponse;
 import com.example.ajira.model.JobUpdateResponse;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import retrofit2.Call;
@@ -39,7 +46,7 @@ public class HomeFragment extends Fragment {
     private ApiService apiService;
     AllJobsAdapter allJobsAdapter;
     RecyclerView rv_popular_jobs;
-    List<AllJobsResponse> jobsResponseList = null;
+    List<JobModelResponse> jobsResponseList = null;
     List<JobUpdateResponse> jobsList = null;
     LinearLayout l1;
     ProgressDialog progressDialog;
@@ -75,18 +82,18 @@ public class HomeFragment extends Fragment {
 
 
 
-        Utils.runAsyncTask(this::getAllJobs);
+        Utils.runAsyncTask(this::getPaidJobs);
 
         return rootView;
 
     }
 
     //fetching all displayed jobs
-    public void getAllJobs() {
-        Call<List<AllJobsResponse>> call = apiService.getAllJobs();
-        call.enqueue(new Callback<List<AllJobsResponse>>() {
+    public void getPaidJobs() {
+        Call<List<JobModelResponse>> call = apiService.getPaidJobs("paid");
+        call.enqueue(new Callback<List<JobModelResponse>>() {
             @Override
-            public void onResponse(Call<List<AllJobsResponse>> call, Response<List<AllJobsResponse>> response) {
+            public void onResponse(Call<List<JobModelResponse>> call, Response<List<JobModelResponse>> response) {
                 if (response.isSuccessful()){
                     progressDialog.dismiss();
 
@@ -106,12 +113,34 @@ public class HomeFragment extends Fragment {
 
                 }else {
                     progressDialog.dismiss();
+                    try {
+
+                        String errorBody = response.errorBody().string();
+
+                        JSONObject jsonObject = new JSONObject(errorBody.trim());
+
+                        jsonObject = jsonObject.getJSONObject("error");
+
+                        jsonObject = jsonObject.getJSONObject("message");
+
+                        Iterator<String> keys = jsonObject.keys();
+                        String errors = "";
+                        while (keys.hasNext()){
+                            String key = keys.next();
+                            JSONArray arr = jsonObject.getJSONArray(key);
+                            for (int i = 0; i <  arr.length(); i++){
+                                errors += key + " : " +arr.getString(i) + "\n";
+                            }
+                        }
+                    } catch (JSONException | IOException e){
+                        e.printStackTrace();
+                    }
                     Log.e(TAG, "response unsuccessful" + response.code() + response.message());
                 }
             }
 
             @Override
-            public void onFailure(Call<List<AllJobsResponse>> call, Throwable t) {
+            public void onFailure(Call<List<JobModelResponse>> call, Throwable t) {
                 progressDialog.dismiss();
                 Log.e("TAG", "Failed " + t.getMessage());
             }

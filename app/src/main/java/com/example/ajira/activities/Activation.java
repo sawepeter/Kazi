@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.ajira.R;
 import com.example.ajira.model.AllJobsResponse;
+import com.example.ajira.model.JobModelResponse;
 import com.example.ajira.model.JobPostResponse;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
@@ -27,7 +28,7 @@ import java.util.List;
 public class Activation extends AppCompatActivity {
 
     Button btn_apply;
-    List<JobPostResponse> jobsResponseList = new ArrayList<>();
+    List<JobModelResponse> jobsResponseList = new ArrayList<>();
     String jobTitle, jobSalary, jobLocation, EmployerName, Phone, status, type,token,currentTime;
     int position = 0, jobId;
     TextView job_title, job_location, textViewEmployerName, textViewJobType, textViewPhone, textViewJobPay, textViewJobStatus;
@@ -60,7 +61,7 @@ public class Activation extends AppCompatActivity {
         Date date = new Date();
         currentTime = sdf.format(date);
 
-        jobsResponseList = (List<JobPostResponse>) getIntent().getSerializableExtra("data");
+        jobsResponseList = (List<JobModelResponse>) getIntent().getSerializableExtra("data");
         position = getIntent().getIntExtra("pos", 0);
 
         //getData()

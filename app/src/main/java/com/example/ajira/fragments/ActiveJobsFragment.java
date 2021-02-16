@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
 import com.example.ajira.Utils.Utils;
+import com.example.ajira.activities.RateDialog;
 import com.example.ajira.adapter.ApplicationAdapter;
 import com.example.ajira.model.ApplicationModel;
 import com.example.ajira.network.ApiService;

@@ -21,6 +21,7 @@ import com.example.ajira.R;
 import com.example.ajira.model.AllJobsResponse;
 import com.example.ajira.model.ApplicationModel;
 import com.example.ajira.model.JobApplicationResponse;
+import com.example.ajira.model.JobModelResponse;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
 import com.squareup.picasso.Picasso;
@@ -39,7 +40,7 @@ import retrofit2.Response;
 
 public class JobDetailsActivity extends AppCompatActivity {
 
-    List<AllJobsResponse> jobsResponseList = new ArrayList<>();
+    List<JobModelResponse> jobsResponseList = new ArrayList<>();
     String jobTitle, jobSalary, jobLocation, EmployerName, Phone, deadline, type,token,currentTime;
     int position = 0, jobId;
     TextView job_title, job_location, textViewEmployerName, textViewJobType, textViewPhone, textViewJobPay, textViewJobDeadline;
@@ -78,7 +79,7 @@ public class JobDetailsActivity extends AppCompatActivity {
         Date date = new Date();
         currentTime = sdf.format(date);
 
-        jobsResponseList = (List<AllJobsResponse>) getIntent().getSerializableExtra("data");
+        jobsResponseList = (List<JobModelResponse>) getIntent().getSerializableExtra("data");
         position = getIntent().getIntExtra("pos", 0);
 
         //getData()

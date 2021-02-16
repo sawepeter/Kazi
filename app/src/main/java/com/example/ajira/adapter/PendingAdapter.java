@@ -1,6 +1,6 @@
 package com.example.ajira.adapter;
 
-import android.app.Activity;
+
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -54,7 +55,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull PendingAdapter.MyViewHolder holder, int position) {
-      //  adminHomeFragment = (AdminHomeFragment) fragment;
+        adminHomeFragment = (AdminHomeFragment) fragment;
         jobs = jobsResponseList.get(position);
         holder.textViewJobTitle.setText(jobs.getJobTitle());
         holder.textViewPhone.setText(jobs.getEmployerPhone());
@@ -64,6 +65,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
             @Override
             public void onClick(View v) {
 
+                Toast.makeText(context, "Its works!!!"+jobs.getId(), Toast.LENGTH_SHORT).show();
                 adminHomeFragment.approveJob(jobs.getId());
                 notifyDataSetChanged();
 
@@ -90,7 +92,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
             textViewPay = view.findViewById(R.id.textViewPay);
             job_pending = view.findViewById(R.id.job_pending);
             //passes data to the next step
-            view.setOnClickListener(v -> {
+            /*view.setOnClickListener(v -> {
                 int pos = getAdapterPosition();
                 if (pos != RecyclerView.NO_POSITION){
                     AllJobsResponse clickedData = jobsResponseList.get(pos);
@@ -102,7 +104,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
                     Log.i("TAG", "item position" +clickedData.getJobTitle());
 
                 }
-            });
+            });*/
         }
     }
 }

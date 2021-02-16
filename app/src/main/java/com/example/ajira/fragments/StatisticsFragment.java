@@ -20,6 +20,7 @@ import com.example.ajira.Utils.Utils;
 import com.example.ajira.adapter.ApprovedAdapter;
 import com.example.ajira.adapter.PendingAdapter;
 import com.example.ajira.model.AllJobsResponse;
+import com.example.ajira.model.JobModelResponse;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
 
@@ -33,7 +34,7 @@ public class StatisticsFragment extends Fragment {
 
     RecyclerView rv_approved_jobs;
     ApprovedAdapter approvedAdapter;
-    List<AllJobsResponse> jobsResponseList = null;
+    List<JobModelResponse> jobsResponseList = null;
     ProgressDialog progressDialog;
     private ApiService apiService;
     SharedPreferences sharedpreferences;
@@ -59,17 +60,17 @@ public class StatisticsFragment extends Fragment {
 
         rv_approved_jobs = rootView.findViewById(R.id.rv_approved_jobs);
 
-        Utils.runAsyncTask(this::getPendingJobs);
+        Utils.runAsyncTask(this::getPaidJobs);
 
         return rootView;
     }
 
     //fetching all displayed jobs
-    public void getPendingJobs() {
-        Call<List<AllJobsResponse>> call = apiService.getApprovedJobs("Bearer " +token);
-        call.enqueue(new Callback<List<AllJobsResponse>>() {
+    public void getPaidJobs() {
+        Call<List<JobModelResponse>> call = apiService.getPaidJobs("paid");
+        call.enqueue(new Callback<List<JobModelResponse>>() {
             @Override
-            public void onResponse(Call<List<AllJobsResponse>> call, Response<List<AllJobsResponse>> response) {
+            public void onResponse(Call<List<JobModelResponse>> call, Response<List<JobModelResponse>> response) {
                 if (response.isSuccessful()){
                     progressDialog.dismiss();
 
@@ -93,7 +94,7 @@ public class StatisticsFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<List<AllJobsResponse>> call, Throwable t) {
+            public void onFailure(Call<List<JobModelResponse>> call, Throwable t) {
                 progressDialog.dismiss();
                 Log.e("TAG", "Failed " + t.getMessage());
             }

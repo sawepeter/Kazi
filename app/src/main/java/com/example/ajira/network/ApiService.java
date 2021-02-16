@@ -3,8 +3,10 @@ package com.example.ajira.network;
 import com.example.ajira.model.AllJobsResponse;
 import com.example.ajira.model.ApplicationModel;
 import com.example.ajira.model.JobApplicationResponse;
+import com.example.ajira.model.JobModelResponse;
 import com.example.ajira.model.JobPostResponse;
 import com.example.ajira.model.JobUpdateResponse;
+import com.example.ajira.model.RatingModel;
 import com.example.ajira.model.User;
 import com.example.ajira.model.WorkerProfile;
 import com.example.ajira.model.WorkerRequest;
@@ -51,6 +53,10 @@ public interface ApiService {
     @Headers("content-type: application/json")
     Call<JobPostResponse> createJobList(@Header("Authorization") String token, @Body JobPostResponse jobPostResponse);
 
+    @POST("/rating")
+    @Headers("content-type: application/json")
+    Call<JobUpdateResponse> submitRating(@Header("Authorization") String token, @Body RatingModel ratingModel);
+
     //api to add to do list
     @POST("/apply/jobs")
     @Headers("content-type: application/json")
@@ -75,7 +81,7 @@ public interface ApiService {
     Call<WorkerProfile> createWorkerProfile(@Body WorkerRequest workerRequest);
 
     @GET("/my-jobs")
-    Call<List<JobPostResponse>> getMyJobs(@Header("Authorization") String token);
+    Call<List<JobModelResponse>> getMyJobs(@Header("Authorization") String token);
 
     @GET("/nearby-jobs")
     Call<List<JobPostResponse>> getNearbyJobs(@Query("location") String location);
@@ -86,11 +92,17 @@ public interface ApiService {
     @GET("/jobs-pending")
     Call<List<AllJobsResponse>> getPendingJobs(@Header("Authorization") String token);
 
+    @GET("/paid-jobs")
+    Call<List<JobModelResponse>> getPaidJobs(@Query("payment_status") String payment_status);
+
     @GET("/jobs-done")
     Call<List<AllJobsResponse>> getApprovedJobs(@Header("Authorization") String token);
 
     @PUT("my-jobs/status/{id}")
     Call<JobUpdateResponse> approveJob(@Header("Authorization") String token, @Path("id") long id);
+
+    @PUT("my-jobs/payment/{id}")
+    Call<JobUpdateResponse> adminApproveJob(@Header("Authorization") String token, @Path("id") long id);
 
 
 }

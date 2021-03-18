@@ -37,6 +37,7 @@ public class AddNewWorkerProfile extends AppCompatActivity {
     SharedPreferences sharedpreferences;
     public static final String MyPREFERENCES = "MyPrefs";
     ProgressDialog dialog;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,7 @@ public class AddNewWorkerProfile extends AppCompatActivity {
         apiService = RetrofitBuilder.getAjiraBackendInstance().create(ApiService.class);
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        editor = sharedpreferences.edit();
         token = sharedpreferences.getString("token", "");
 
         dialog = new ProgressDialog(AddNewWorkerProfile.this);
@@ -78,6 +80,13 @@ public class AddNewWorkerProfile extends AppCompatActivity {
             workerRequest.setAge(Age);
             workerRequest.setSkillName(Skill_name);
             workerRequest.setPhoneNumber(PhoneNumber);
+
+            //add profile to shared perferences
+            editor.putString("Location", Location);
+            editor.putString("Age", Age);
+            editor.putString("Skill_name", Skill_name);
+            editor.putString("PhoneNumber", PhoneNumber);
+            editor.apply();
 
 
 

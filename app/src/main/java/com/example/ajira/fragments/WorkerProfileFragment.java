@@ -17,7 +17,7 @@ import com.example.ajira.R;
 
 public class WorkerProfileFragment extends Fragment {
 
-    TextView txt_earnings,text_user_name;
+    TextView txt_earnings,text_user_name,skill_name,phoneNumber,location,age;
     public static final String MyPREFERENCES = "MyPrefs";
     SharedPreferences sharedpreferences;
     String token;
@@ -35,8 +35,16 @@ public class WorkerProfileFragment extends Fragment {
 
         txt_earnings = rootView.findViewById(R.id.txt_earnings);
         text_user_name = rootView.findViewById(R.id.text_user_name);
+        skill_name = rootView.findViewById(R.id.skill_name);
+        phoneNumber = rootView.findViewById(R.id.phoneNumber);
+        location = rootView.findViewById(R.id.location);
+        age = rootView.findViewById(R.id.age);
 
         text_user_name.setText(sharedpreferences.getString("username", ""));
+        skill_name.setText(sharedpreferences.getString("Skill_name", ""));
+        phoneNumber.setText(sharedpreferences.getString("PhoneNumber", ""));
+        location.setText(sharedpreferences.getString("Location", ""));
+        age.setText(sharedpreferences.getString("Age", ""));
 
         return rootView;
     }

@@ -1,6 +1,7 @@
 package com.example.ajira.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,8 +13,10 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
+import com.example.ajira.activities.JobDetailsActivity;
 import com.example.ajira.model.JobModelResponse;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -72,11 +75,11 @@ public class JobsAdapter extends RecyclerView.Adapter<JobsAdapter.MyViewHolder> 
             textViewLocation = view.findViewById(R.id.textViewLocation);
             textViewPay = view.findViewById(R.id.textViewPay);
             //passes data to the next step
-           /* view.setOnClickListener(v -> {
+            view.setOnClickListener(v -> {
                 int pos = getAdapterPosition();
                 if (pos != RecyclerView.NO_POSITION){
                     JobModelResponse clickedData = jobsResponseList.get(pos);
-                    Intent intent = new Intent(v.getContext(), Activation.class);
+                    Intent intent = new Intent(v.getContext(), JobDetailsActivity.class);
                     intent.putExtra("pos", pos);
                     intent.putExtra("data", (Serializable) jobsResponseList);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -84,7 +87,7 @@ public class JobsAdapter extends RecyclerView.Adapter<JobsAdapter.MyViewHolder> 
                     Log.i("TAG", "item position" +clickedData.getJobTitle());
 
                 }
-            });*/
+            });
         }
     }
 

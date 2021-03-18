@@ -60,6 +60,8 @@ public class HomeFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_home,container,false);
 
 
+        sharedpreferences = getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        token = sharedpreferences.getString("token", "");
         Log.e("Admin DashBoard", "token" + token);
 
         progressDialog  = new ProgressDialog(getActivity());

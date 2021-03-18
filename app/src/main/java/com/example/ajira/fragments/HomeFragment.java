@@ -8,8 +8,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -38,27 +42,27 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     private ApiService apiService;
     JobsAdapter allJobsAdapter;
     RecyclerView rv_popular_jobs;
     List<JobModelResponse> jobsResponseList = null;
     List<JobUpdateResponse> jobsList = null;
-    LinearLayout l1;
     ProgressDialog progressDialog;
     TextView txt_welcome;
     public static final String MyPREFERENCES = "MyPrefs";
     SharedPreferences sharedpreferences;
     String token,payment,status;
     public static final String TAG = HomeFragment.class.getSimpleName();
+    Spinner spinner;
+    String[] job_status = {"Available", "InProgress", "Delivered", "Completed"};;
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_home,container,false);
-
 
         sharedpreferences = getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         token = sharedpreferences.getString("token", "");
@@ -76,10 +80,18 @@ public class HomeFragment extends Fragment {
         apiService = RetrofitBuilder.getRetrofitInstance().create(ApiService.class);
 
         rv_popular_jobs = rootView.findViewById(R.id.rv_popular_jobs);
+        spinner = rootView.findViewById(R.id.spinner);
         txt_welcome = rootView.findViewById(R.id.txt_welcome);
         txt_welcome.setText("Hello " +sharedpreferences.getString("username", ""));
 
 
+        spinner.setOnItemSelectedListener(this);
+
+        ArrayAdapter aa = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_item, job_status);
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spinner.setAdapter(aa);
+        
         status = "Available";
         payment = "paid";
 
@@ -110,7 +122,6 @@ public class HomeFragment extends Fragment {
                     rv_popular_jobs.setAdapter(allJobsAdapter);
 
                     allJobsAdapter.setJobsResponseList(jobsResponseList);
-
 
                 }else {
                     progressDialog.dismiss();
@@ -150,4 +161,16 @@ public class HomeFragment extends Fragment {
 
     }
 
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+        Toast.makeText(getActivity(), job_status[position], Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }

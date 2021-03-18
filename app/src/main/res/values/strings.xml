@@ -91,4 +91,5 @@
     <string name="dashboard">DashBoard</string>
     <string name="earnings">Earnings</string>
     <string name="jobs">Jobs</string>
+    <string name="available_jobs">Available Jobs</string>
 </resources>

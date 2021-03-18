@@ -129,7 +129,7 @@ public interface ApiService {
     Call<List<JobModelResponse>> getStatusJobs(@Header("Authorization") String token,@Query("payment_status") String payment_status, @Query("job_status") String job_status);
 
     @PUT("my-jobs/status/{id}")
-    Call<JobUpdateResponse> approveJob(@Header("Authorization") String token, @Path("id") long id);
+    Call<JobUpdateResponse> approveJob(@Header("Authorization") String token, @Path("id") long id, @Query("status") String status);
 
     @PUT("my-jobs/payment/{id}")
     Call<JobUpdateResponse> adminApproveJob(@Header("Authorization") String token, @Path("id") long id);

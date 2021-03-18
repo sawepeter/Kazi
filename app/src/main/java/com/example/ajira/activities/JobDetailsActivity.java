@@ -22,6 +22,7 @@ import com.example.ajira.model.AllJobsResponse;
 import com.example.ajira.model.ApplicationModel;
 import com.example.ajira.model.JobApplicationResponse;
 import com.example.ajira.model.JobModelResponse;
+import com.example.ajira.model.JobUpdateResponse;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
 import com.squareup.picasso.Picasso;
@@ -123,8 +124,8 @@ public class JobDetailsActivity extends AppCompatActivity {
                             progressDialog.dismiss();
                             Log.e("TAG", "Response successful" + response.body().getMsg());
                             Toast.makeText(JobDetailsActivity.this, ""+response.body().getMsg(), Toast.LENGTH_SHORT).show();
-                           // startActivity(new Intent(JobDetailsActivity.this,));
 
+                            updateJobsStatus(jobId);
                         }else {
                             progressDialog.dismiss();
                             Log.e("TAG", "Response unsuccessful" + response.code() + response.message());
@@ -138,6 +139,27 @@ public class JobDetailsActivity extends AppCompatActivity {
                     }
                 });
 
+            }
+        });
+
+
+    }
+
+    public void updateJobsStatus(long id){
+        apiService.approveJob("Bearer " +token, id, "InProgress").enqueue(new Callback<JobUpdateResponse>() {
+            @Override
+            public void onResponse(Call<JobUpdateResponse> call, Response<JobUpdateResponse> response) {
+                if (response.isSuccessful()){
+                    Log.e("TAG", "Status changed !!!" +response.body().getState() + response.body().getMsg());
+                    Toast.makeText(JobDetailsActivity.this, " "+response.body().getMsg(), Toast.LENGTH_SHORT).show();
+                } else {
+                    Log.e("TAG", "response unsuccessful " + response.code() + response.message());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JobUpdateResponse> call, Throwable t) {
+                Log.e("TAG", "Failed " + t.getMessage());
             }
         });
 

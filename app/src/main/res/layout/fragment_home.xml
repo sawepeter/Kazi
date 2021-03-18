@@ -57,11 +57,26 @@
 
     </RelativeLayout>
 
+    <Spinner
+        android:id = "@+id/spinner"
+        android:layout_width = "match_parent"
+        android:layout_height = "40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:tooltipText="Select Job status"
+        android:layout_below="@+id/image_bg"
+        android:prompt = "@string/app_name"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:gravity="center_horizontal" />
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/image_bg"
+        android:layout_below="@+id/spinner"
         android:layout_marginTop="8dp">
 
 
@@ -79,7 +94,9 @@
                 android:fontFamily="@font/dmsansbold"
                 android:text="@string/popular_jobs"
                 android:textColor="@color/colorPrimary"
+                android:visibility="gone"
                 android:textSize="16sp" />
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_popular_jobs"

@@ -8,10 +8,10 @@ import android.view.MenuItem;
 import android.widget.LinearLayout;
 
 import com.example.ajira.R;
-import com.example.ajira.fragments.ActiveJobsFragment;
+import com.example.ajira.fragments.EarningsFragment;
 import com.example.ajira.fragments.HomeFragment;
-import com.example.ajira.fragments.AdminDashBoardFragment;
 import com.example.ajira.fragments.AdminUnpaidFragment;
+import com.example.ajira.fragments.WorkerProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class JobSeekerDashBoard extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -31,9 +31,8 @@ public class JobSeekerDashBoard extends AppCompatActivity implements BottomNavig
     }
 
     HomeFragment homeFragment = new HomeFragment();
-    AdminDashBoardFragment adminDashBoardFragment = new AdminDashBoardFragment();
-    ActiveJobsFragment activeJobsFragment = new ActiveJobsFragment();
-    AdminUnpaidFragment adminUnpaidFragment = new AdminUnpaidFragment();
+    EarningsFragment earningsFragment = new EarningsFragment();
+    WorkerProfileFragment workerProfileFragment = new WorkerProfileFragment();
 
 
 
@@ -45,11 +44,11 @@ public class JobSeekerDashBoard extends AppCompatActivity implements BottomNavig
                 return true;
 
             case R.id.Applications:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, activeJobsFragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, earningsFragment).commit();
                 return true;
 
             case R.id.Profile:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, adminDashBoardFragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, workerProfileFragment).commit();
                 return true;
         }
         return false;

@@ -82,7 +82,7 @@ public class PostJobActivity extends AppCompatActivity {
             jobPostResponse.setJobAmount(Job_salary);
             jobPostResponse.setJobLocation(JobLocation);
             jobPostResponse.setJobDeadline(currentDateTimeString);
-            jobPostResponse.setJobType("Temporary");
+            jobPostResponse.setJobType("temporary");
 
             Log.e("TAG", "Request is: " + new Gson().toJson(jobPostResponse));
 

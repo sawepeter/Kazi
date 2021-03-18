@@ -1797,6 +1797,7 @@ drawable gray_button_background
 drawable green_button_background
 drawable heart_off
 drawable heart_on
+drawable ic_age
 drawable ic_age_limit
 drawable ic_alarm
 drawable ic_arrow_back
@@ -1833,6 +1834,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_paid
 drawable ic_person
+drawable ic_phone_call
 drawable ic_profile
 drawable ic_right
 drawable ic_share
@@ -1982,6 +1984,7 @@ id active_applications
 id activity_chooser_view_content
 id add
 id admin_login
+id age
 id alertTitle
 id aligned
 id all
@@ -2018,6 +2021,11 @@ id button_rate
 id cache_measures
 id cancel_action
 id cancel_button
+id cardView11
+id cardView12
+id cardView13
+id cardView14
+id cardView15
 id center
 id center_horizontal
 id center_vertical
@@ -2144,6 +2152,11 @@ id imageLogo
 id image_back
 id image_bg
 id image_share
+id image_user
+id image_user1
+id image_user2
+id image_user3
+id image_user4
 id img_filter
 id info
 id invisible
@@ -2251,6 +2264,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id phoneNumber
 id pin
 id position
 id postJob
@@ -2281,6 +2295,7 @@ id row_index_key
 id rv_applications
 id rv_approved_jobs
 id rv_my_jobs
+id rv_paid_jobs
 id rv_pending_jobs
 id rv_popular_jobs
 id rv_users
@@ -2380,6 +2395,8 @@ id textPayment
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
+id textView5
 id textViewEmployerName
 id textViewJobDeadline
 id textViewJobPay
@@ -2392,6 +2409,7 @@ id textViewPhone
 id textViewThree
 id text_input_end_icon
 id text_input_start_icon
+id text_user_name
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -2420,6 +2438,7 @@ id triangle
 id txt1
 id txt_category
 id txt_desc
+id txt_earnings
 id txt_jobs_count
 id txt_location
 id txt_sub_category
@@ -2545,14 +2564,16 @@ layout design_text_input_start_icon
 layout dialog_rate
 layout expand_button
 layout filter_layout
+layout fragment_admin_dashboard
 layout fragment_admin_home
 layout fragment_application
 layout fragment_bank_transfer_demo
 layout fragment_home
 layout fragment_my_jobs
-layout fragment_profile
 layout fragment_recruiter_home
+layout fragment_recruiter_profile
 layout fragment_statistics
+layout fragment_worker_profile
 layout image_frame
 layout kazi_item
 layout layout_experience
@@ -2648,6 +2669,7 @@ layout vertical_stepper_form_layout
 layout workers_item
 menu bottom_navigation_menu
 menu recruiter_navigation_menu
+menu worker_navigation_menu
 mipmap ic_home_empty
 mipmap ic_home_fill
 mipmap ic_launcher
@@ -2721,6 +2743,7 @@ string description
 string dialog_cancel
 string dialog_default_title
 string dialog_ok
+string earnings
 string email_address
 string enter_comment
 string enter_job_location
@@ -2754,6 +2777,7 @@ string job_opportunity
 string job_pay
 string job_seeker
 string job_title
+string jobs
 string jobtitle
 string john_doe
 string lead_product_designer

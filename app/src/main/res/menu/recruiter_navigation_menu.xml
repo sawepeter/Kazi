@@ -16,6 +16,6 @@
         android:id="@+id/recruiter_profile"
         android:enabled="true"
         android:icon="@drawable/ic_person"
-        android:title="@string/profile" />
+        android:title="Paid Jobs" />
 
 </menu>

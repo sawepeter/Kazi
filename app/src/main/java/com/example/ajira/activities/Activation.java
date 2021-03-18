@@ -36,6 +36,7 @@ public class Activation extends AppCompatActivity {
     ApiService apiService;
     public static final String MyPREFERENCES = "MyPrefs";
     SharedPreferences sharedpreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,7 @@ public class Activation extends AppCompatActivity {
 
         apiService = RetrofitBuilder.getAjiraBackendInstance().create(ApiService.class);
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        editor = sharedpreferences.edit();
 
         token = sharedpreferences.getString("token", "");
 
@@ -74,6 +76,9 @@ public class Activation extends AppCompatActivity {
         type = jobsResponseList.get(position).getJobType();
         //this is the job id
         jobId = jobsResponseList.get(position).getId();
+
+        editor.putInt("jobId", jobId);
+        editor.apply();
 
         image_back.setOnClickListener(v -> {
             finish();

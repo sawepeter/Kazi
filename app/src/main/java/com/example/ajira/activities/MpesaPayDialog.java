@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +16,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.ajira.R;
+import com.example.ajira.model.JobUpdateResponse;
+import com.example.ajira.network.ApiService;
+import com.example.ajira.network.RetrofitBuilder;
 import com.freddygenicho.mpesa.stkpush.Mode;
 import com.freddygenicho.mpesa.stkpush.api.response.STKPushResponse;
 import com.freddygenicho.mpesa.stkpush.interfaces.STKListener;
@@ -29,6 +34,9 @@ import java.io.UnsupportedEncodingException;
 
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import static com.example.ajira.Utils.Constant.CALLBACK_URL;
 import static com.example.ajira.Utils.Constant.CONSUMER_KEY;
@@ -41,17 +49,28 @@ import static com.example.ajira.Utils.Constant.SHORT_CODE;
 public class MpesaPayDialog extends BottomSheetDialogFragment implements TokenListener {
 
     private Mpesa mpesa;
-    String number,amount;
+    String number,amount,token;
+    int jobId;
     private SweetAlertDialog sweetAlertDialog;
     public static final String TAG = MpesaPayDialog.class.getSimpleName();
     private Button button_Pay;
     private EditText edt_phone_number;
+    public static final String MyPREFERENCES = "MyPrefs";
+    SharedPreferences sharedpreferences;
+    ApiService apiService;
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.activity_mpesa_pay, container, false);
+
+
+        apiService = RetrofitBuilder.getAjiraBackendInstance().create(ApiService.class);
+        sharedpreferences = getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
+        token = sharedpreferences.getString("token", "");
+        jobId = sharedpreferences.getInt("jobId",0 );
 
         edt_phone_number = rootView.findViewById(R.id.edt_phone_number);
         button_Pay = rootView.findViewById(R.id.button_Pay);
@@ -60,8 +79,27 @@ public class MpesaPayDialog extends BottomSheetDialogFragment implements TokenLi
             @Override
             public void onClick(View v) {
                 startMpesa(v);
+
+                apiService.adminApproveJob(token,jobId).enqueue(new Callback<JobUpdateResponse>() {
+                    @Override
+                    public void onResponse(Call<JobUpdateResponse> call, Response<JobUpdateResponse> response) {
+                        if (response.isSuccessful()) {
+
+                            Log.e("TAG", "Status changed !!!" +response.body().getState() + response.body().getMsg());
+                            Toast.makeText(getActivity(), " "+response.body().getMsg(), Toast.LENGTH_SHORT).show();
+                        } else {
+                            Log.e("TAG", "response unsuccessful " + response.code() + response.message());
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<JobUpdateResponse> call, Throwable t) {
+                        Log.e("TAG", "Failed " + t.getMessage());
+                    }
+                });
             }
         });
+
 
         //create an instance of Mpesa
         mpesa = new Mpesa(CONSUMER_KEY, CONSUMER_SECRET, Mode.SANDBOX);

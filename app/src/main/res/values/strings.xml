@@ -89,4 +89,6 @@
     <string name="unpaid">Unpaid jobs</string>
     <string name="paid">Paid Jobs</string>
     <string name="dashboard">DashBoard</string>
+    <string name="earnings">Earnings</string>
+    <string name="jobs">Jobs</string>
 </resources>

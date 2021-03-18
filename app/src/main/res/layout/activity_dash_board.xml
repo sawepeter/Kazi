@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:background="@android:color/white"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/bottom_navigation_menu" />
+        app:menu="@menu/worker_navigation_menu" />
 
 
 

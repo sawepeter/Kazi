@@ -52,7 +52,7 @@ public class RecruiterHomeFragment extends Fragment {
     TextView txt_top;
     SharedPreferences sharedpreferences;
     public static final String MyPREFERENCES = "MyPrefs";
-    String username,currentTime,token;
+    String payment,status,token;
     private ApiService apiService;
     UnpaidJobsAdapter allJobsAdapter;
     RecyclerView rv_users;
@@ -91,6 +91,8 @@ public class RecruiterHomeFragment extends Fragment {
 
 
         txt_top.setText("Welcome " +sharedpreferences.getString("username", ""));
+        status = "Available";
+        payment = "unpaid";
 
 
         Utils.runAsyncTask(this::getPaidJobs);
@@ -100,7 +102,7 @@ public class RecruiterHomeFragment extends Fragment {
 
     //fetching all displayed jobs
     public void getPaidJobs() {
-        Call<List<JobModelResponse>> call = apiService.getPaidJobs("unpaid");
+        Call<List<JobModelResponse>> call = apiService.getStatusJobs("Bearer " +token, payment,status);
         call.enqueue(new Callback<List<JobModelResponse>>() {
             @Override
             public void onResponse(Call<List<JobModelResponse>> call, Response<List<JobModelResponse>> response) {

@@ -1271,6 +1271,7 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color splashColor
 color statusBackgroundColor
 color success_stroke_color
 color sweet_dialog_bg_color
@@ -1787,6 +1788,7 @@ drawable design_snackbar_background
 drawable details_background
 drawable dialog_background
 drawable dialog_background_dark
+drawable drawable_bottom_background
 drawable error_center_x
 drawable error_circle
 drawable figma
@@ -1801,16 +1803,20 @@ drawable ic_arrow_back
 drawable ic_arrow_down_24dp
 drawable ic_baseline_add_24
 drawable ic_baseline_attach_money_24
+drawable ic_baseline_dashboard_24
 drawable ic_baseline_email_24
 drawable ic_baseline_filter
 drawable ic_baseline_home_24
 drawable ic_baseline_insert_drive_file_24
 drawable ic_baseline_location_on_24
 drawable ic_baseline_lock_24
+drawable ic_baseline_money_off_24
 drawable ic_baseline_person_24
 drawable ic_baseline_settings_24
 drawable ic_baseline_star_24
 drawable ic_bull
+drawable ic_construction_worker
+drawable ic_debit_card
 drawable ic_desktop_pc
 drawable ic_done
 drawable ic_employee
@@ -1891,6 +1897,7 @@ drawable tooltip_frame_light
 drawable warning_circle
 drawable warning_sigh
 font calibri
+font circularstdbold
 font dmsansbold
 font dmsansbolditalic
 font dmsansboldmedium
@@ -2080,7 +2087,9 @@ id edit_query
 id edt_comment
 id edt_phone_number
 id edt_search
+id emp_no
 id employerPhone
+id employer_no
 id end
 id end_date
 id end_padder
@@ -2149,6 +2158,7 @@ id job_salary
 id job_status
 id job_title
 id job_type
+id jobsNumber
 id jumpToEnd
 id jumpToStart
 id l1
@@ -2229,6 +2239,7 @@ id order_no
 id order_status
 id outline
 id packed
+id paid_number
 id parallax
 id parent
 id parentPanel
@@ -2418,9 +2429,9 @@ id txt_welcome
 id unchecked
 id uniform
 id unlabeled
+id unpaidNumber
 id up
 id useLogo
-id userType
 id user_Name
 id vertical
 id vertical_line
@@ -2704,6 +2715,7 @@ string company_name
 string completed
 string contact
 string copy
+string dashboard
 string desc
 string description
 string dialog_cancel
@@ -2790,6 +2802,7 @@ string no
 string not_set
 string nyeri
 string order_number
+string paid
 string paid_jobs
 string password
 string password_toggle_content_description
@@ -2827,6 +2840,7 @@ string txt_company_name
 string txt_place_holder
 string txt_placeholder
 string txt_qualif
+string unpaid
 string unpaid_jobs
 string user_location
 string user_ratings

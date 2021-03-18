@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ajira.R;
@@ -19,7 +20,11 @@ import com.example.ajira.model.User;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -29,13 +34,13 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText user_Name, password;
     Button btn_login;
-    String userType, userName, userPassword;
+    String userType, userName, userPassword,day,time;
     SharedPreferences sharedpreferences;
     public static final String MyPREFERENCES = "MyPrefs";
     ApiService apiService;
     SharedPreferences.Editor editor;
-    RelativeLayout layout_nav;
     ProgressDialog dialog;
+    TextView link_register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +51,11 @@ public class LoginActivity extends AppCompatActivity {
         editor = sharedpreferences.edit();
         apiService = RetrofitBuilder.getAjiraBackendInstance().create(ApiService.class);
 
+
         user_Name = findViewById(R.id.user_Name);
         password = findViewById(R.id.password);
         btn_login = findViewById(R.id.btn_login);
-        layout_nav = findViewById(R.id.layout_nav);
+        link_register = findViewById(R.id.link_register);
 
         dialog = new ProgressDialog(LoginActivity.this);
         dialog.setMessage("Please Wait ...");
@@ -61,8 +67,10 @@ public class LoginActivity extends AppCompatActivity {
         Log.e("TAG", "UserType :" + userType);
         Toast.makeText(this, ""+userType, Toast.LENGTH_SHORT).show();
 
-        layout_nav.setOnClickListener(v -> {
-            finish();
+        link_register.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            intent.putExtra("userType", userType);
+            startActivity(intent);
         });
 
 

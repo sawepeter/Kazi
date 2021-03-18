@@ -86,4 +86,7 @@
     <string name="payment">Payment :</string>
     <string name="job_applications">Job Applications</string>
     <string name="enter_comment">Enter Comment</string>
+    <string name="unpaid">Unpaid jobs</string>
+    <string name="paid">Paid Jobs</string>
+    <string name="dashboard">DashBoard</string>
 </resources>

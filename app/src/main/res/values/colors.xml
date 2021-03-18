@@ -17,4 +17,5 @@
     <color name="divider">#b99e9e9e</color>
     <color name="white">#FFFFFF</color>
     <color name="colorPrimaryDark1">#29216A</color>
+    <color name="splashColor">#C7EAFA</color>
 </resources>

@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/Home"
-        android:enabled="true"
-        android:icon="@drawable/ic_baseline_home_24"
-        android:title="@string/inactive_jobs"/>
-
-    <item
-        android:id="@+id/Applications"
-        android:enabled="true"
-        android:icon="@drawable/ic_work"
-        android:title="@string/applications"/>
 
     <item
         android:id="@+id/Profile"
         android:enabled="true"
-        android:icon="@drawable/ic_person"
-        android:title="@string/profile"/>
+        android:icon="@drawable/ic_baseline_dashboard_24"
+        android:title="@string/dashboard"/>
+
+    <item
+        android:id="@+id/Home"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_attach_money_24"
+        android:title="@string/paid"/>
+
+    <item
+        android:id="@+id/Applications"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_money_off_24"
+        android:title="@string/unpaid"/>
+
 
 </menu>

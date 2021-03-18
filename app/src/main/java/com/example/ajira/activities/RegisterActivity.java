@@ -38,7 +38,6 @@ public class RegisterActivity extends AppCompatActivity {
     public static final String MyPREFERENCES = "MyPrefs";
     SharedPreferences.Editor editor;
     TextView link_register;
-    RelativeLayout layout_nav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,10 +51,7 @@ public class RegisterActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         btn_register = findViewById(R.id.btn_register);
         link_register = findViewById(R.id.link_register);
-        layout_nav = findViewById(R.id.layout_nav);
-        layout_nav.setOnClickListener(v -> {
-            finish();
-        });
+
 
         UserType = getIntent().getStringExtra("userType");
         editor = sharedpreferences.edit();

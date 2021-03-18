@@ -53,9 +53,7 @@ public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         applications = applicationResponseList.get(position);
         holder.order_no.setText("Order No: " + applications.getJobId());
-        holder.order_status.setText(applications.getStatus());
         holder.start_date.setText(applications.getApplyDate());
-        holder.end_date.setText(applications.getDueDate());
         holder.btn_complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

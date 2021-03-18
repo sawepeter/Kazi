@@ -2,7 +2,6 @@ package com.example.ajira.adapter;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,30 +15,28 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
-import com.example.ajira.fragments.AdminHomeFragment;
-import com.example.ajira.activities.JobDetailsActivity;
-import com.example.ajira.model.AllJobsResponse;
+import com.example.ajira.fragments.AdminPaidFragment;
+import com.example.ajira.model.JobModelResponse;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHolder>{
 
-    List<AllJobsResponse> jobsResponseList = new ArrayList<>();
+    List<JobModelResponse> jobsResponseList = new ArrayList<>();
     private Context context;
     private Fragment fragment;
-    AllJobsResponse jobs;
-    AdminHomeFragment adminHomeFragment;
+    JobModelResponse jobs;
+    AdminPaidFragment adminPaidFragment;
 
-    public PendingAdapter(List<AllJobsResponse> jobsResponseList, Context context,Fragment fragment) {
+    public PendingAdapter(List<JobModelResponse> jobsResponseList, Context context,Fragment fragment) {
         Log.i("autolog", "PendingAdapter");
         this.jobsResponseList = jobsResponseList;
         this.context = context;
         this.fragment = fragment;
     }
 
-    public void setJobsResponseList(List<AllJobsResponse> jobsResponseList) {
+    public void setJobsResponseList(List<JobModelResponse> jobsResponseList) {
         this.jobsResponseList = jobsResponseList;
         notifyDataSetChanged();
     }
@@ -55,7 +52,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull PendingAdapter.MyViewHolder holder, int position) {
-        adminHomeFragment = (AdminHomeFragment) fragment;
+        adminPaidFragment = (AdminPaidFragment) fragment;
         jobs = jobsResponseList.get(position);
         holder.textViewJobTitle.setText(jobs.getJobTitle());
         holder.textViewPhone.setText(jobs.getEmployerPhone());
@@ -66,7 +63,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.MyViewHo
             public void onClick(View v) {
 
                 Toast.makeText(context, "Its works!!!"+jobs.getId(), Toast.LENGTH_SHORT).show();
-                adminHomeFragment.approveJob(jobs.getId());
+                adminPaidFragment.approveJob(jobs.getId());
                 notifyDataSetChanged();
 
             }

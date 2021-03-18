@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.ajira.R;
-import com.example.ajira.fragments.AdminHomeFragment;
-import com.example.ajira.fragments.ProfileFragment;
-import com.example.ajira.fragments.StatisticsFragment;
+import com.example.ajira.fragments.AdminPaidFragment;
+import com.example.ajira.fragments.AdminDashBoardFragment;
+import com.example.ajira.fragments.AdminUnpaidFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class AdminDashBoard extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -23,13 +23,13 @@ public class AdminDashBoard extends AppCompatActivity implements BottomNavigatio
 
         bottom_navigation = findViewById(R.id.bottom_navigation_admin);
         bottom_navigation.setOnNavigationItemSelectedListener(this);
-        bottom_navigation.setSelectedItemId(R.id.Home);
+        bottom_navigation.setSelectedItemId(R.id.Profile);
 
     }
 
-    AdminHomeFragment homeFragment = new AdminHomeFragment();
-    ProfileFragment profileFragment = new ProfileFragment();
-    StatisticsFragment statisticsFragment = new StatisticsFragment();
+    AdminPaidFragment homeFragment = new AdminPaidFragment();
+    AdminDashBoardFragment adminDashBoardFragment = new AdminDashBoardFragment();
+    AdminUnpaidFragment adminUnpaidFragment = new AdminUnpaidFragment();
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -39,11 +39,11 @@ public class AdminDashBoard extends AppCompatActivity implements BottomNavigatio
                 return true;
 
             case R.id.Applications:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_admin, statisticsFragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_admin, adminUnpaidFragment).commit();
                 return true;
 
             case R.id.Profile:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_admin, profileFragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_admin, adminDashBoardFragment).commit();
                 return true;
         }
         return false;

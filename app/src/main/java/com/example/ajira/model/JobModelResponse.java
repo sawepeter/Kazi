@@ -37,9 +37,9 @@ public class JobModelResponse implements Serializable {
     @SerializedName("jobType")
     @Expose
     private String jobType;
-    @SerializedName("status")
+    @SerializedName("job_status")
     @Expose
-    private String status;
+    private String jobStatus;
     @SerializedName("jobDeadline")
     @Expose
     private String jobDeadline;
@@ -130,12 +130,12 @@ public class JobModelResponse implements Serializable {
         this.jobType = jobType;
     }
 
-    public String getStatus() {
-        return status;
+    public String getJobStatus() {
+        return jobStatus;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setJobStatus(String jobStatus) {
+        this.jobStatus = jobStatus;
     }
 
     public String getJobDeadline() {

@@ -90,7 +90,7 @@ public class RateDialog extends BottomSheetDialogFragment {
 
                 RatingModel ratingModel = new RatingModel();
                 ratingModel.setComment(review);
-                ratingModel.setRating(d);
+                ratingModel.setRating(String.valueOf(d));
 
                 sweetAlertDialog.show();
 

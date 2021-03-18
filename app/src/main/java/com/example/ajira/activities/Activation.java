@@ -70,7 +70,7 @@ public class Activation extends AppCompatActivity {
         jobLocation = jobsResponseList.get(position).getJobLocation();
         EmployerName = jobsResponseList.get(position).getEmployerName();
         Phone = jobsResponseList.get(position).getEmployerPhone();
-        status = jobsResponseList.get(position).getStatus();
+        status = jobsResponseList.get(position).getPaymentStatus();
         type = jobsResponseList.get(position).getJobType();
         //this is the job id
         jobId = jobsResponseList.get(position).getId();

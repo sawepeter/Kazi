@@ -4,59 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@color/splashColor"
     android:orientation="vertical"
     tools:context=".activities.JobDetailsActivity">
 
-    <RelativeLayout
-        android:id="@+id/image_bg"
-        android:layout_width="match_parent"
-        android:background="@drawable/profile_background"
-        android:layout_height="150dp"/>
 
-    <TextView
-        android:id="@+id/txt_title"
+    <ImageView
+        android:id="@+id/image"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
-        android:textAlignment="center"
-        android:fontFamily="@font/dmsansbold"
-        android:text="@string/register_here"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:gravity="center_horizontal" />
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_job_search" />
 
 
     <RelativeLayout
-        android:id="@+id/layout_nav"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="20dp">
-
-        <ImageView
-            android:id="@+id/image_back"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:background="@drawable/details_background"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_arrow_back" />
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/image_bg">
-
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/drawable_bottom_background"
+        android:layout_below="@+id/image">
 
 
         <LinearLayout
@@ -67,7 +33,6 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
-            android:background="@drawable/shape_background"
             android:orientation="vertical">
 
             <EditText
@@ -106,24 +71,6 @@
                 android:textStyle="bold"
                 tools:ignore="RtlSymmetry" />
 
-            <EditText
-                android:id="@+id/userType"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/details_background"
-                android:drawableEnd="@drawable/ic_baseline_lock_24"
-                android:drawableRight="@drawable/ic_baseline_lock_24"
-                android:fontFamily="@font/dmsansbold"
-                android:visibility="gone"
-                android:hint="UserType"
-                android:paddingStart="20dp"
-                android:paddingLeft="20dp"
-                android:paddingEnd="20dp"
-                android:textColor="@color/colorPrimary"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                tools:ignore="RtlSymmetry" />
 
         </LinearLayout>
 
@@ -132,10 +79,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layout_qualification"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
             android:background="@drawable/shape_button"
             android:text="@string/register"
             android:textColor="@android:color/white" />

@@ -68,7 +68,7 @@ public class RatingActivity extends AppCompatActivity {
 
                 RatingModel ratingModel = new RatingModel();
                 ratingModel.setComment(review);
-                ratingModel.setRating(d);
+                ratingModel.setRating(String.valueOf(d));
 
                 sweetAlertDialog.show();
 

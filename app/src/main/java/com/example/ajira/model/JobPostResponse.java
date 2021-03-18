@@ -35,10 +35,6 @@ public class JobPostResponse implements Serializable {
     @Expose
     private String employerPhone;
 
-    @SerializedName("employerName")
-    @Expose
-    private String employerName;
-
     @SerializedName("jobType")
     @Expose
     private String jobType;
@@ -123,13 +119,6 @@ public class JobPostResponse implements Serializable {
         this.employerPhone = employerPhone;
     }
 
-    public String getEmployerName() {
-        return employerName;
-    }
-
-    public void setEmployerName(String employerName) {
-        this.employerName = employerName;
-    }
 
     public String getJobType() {
         return jobType;

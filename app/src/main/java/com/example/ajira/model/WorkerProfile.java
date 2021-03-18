@@ -20,6 +20,12 @@ public class WorkerProfile {
     @SerializedName("skill_name")
     @Expose
     private String skillName;
+    @SerializedName("phone_number")
+    @Expose
+    private String phoneNumber;
+    @SerializedName("earnings")
+    @Expose
+    private Integer earnings;
 
     public Integer getId() {
         return id;
@@ -59,5 +65,21 @@ public class WorkerProfile {
 
     public void setSkillName(String skillName) {
         this.skillName = skillName;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public Integer getEarnings() {
+        return earnings;
+    }
+
+    public void setEarnings(Integer earnings) {
+        this.earnings = earnings;
     }
 }

@@ -5,19 +5,21 @@ import com.google.gson.annotations.SerializedName;
 
 public class RatingModel {
 
-    @Expose
     @SerializedName("rating")
-    private Double rating;
-
     @Expose
+    private String rating;
     @SerializedName("comment")
+    @Expose
     private String comment;
+    @SerializedName("jobId")
+    @Expose
+    private String jobId;
 
-    public Double getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public void setRating(Double rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 
@@ -27,5 +29,13 @@ public class RatingModel {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public String getJobId() {
+        return jobId;
+    }
+
+    public void setJobId(String jobId) {
+        this.jobId = jobId;
     }
 }

@@ -15,8 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
 import com.example.ajira.activities.JobDetailsActivity;
-import com.example.ajira.fragments.StatisticsFragment;
-import com.example.ajira.model.AllJobsResponse;
+import com.example.ajira.fragments.AdminUnpaidFragment;
 import com.example.ajira.model.JobModelResponse;
 
 import java.io.Serializable;
@@ -29,7 +28,7 @@ public class ApprovedAdapter extends RecyclerView.Adapter<ApprovedAdapter.MyView
     private Context context;
     private Fragment fragment;
     JobModelResponse jobs;
-    StatisticsFragment statisticsFragment;
+    AdminUnpaidFragment adminUnpaidFragment;
 
     public ApprovedAdapter(List<JobModelResponse> jobsResponseList, Context context, Fragment fragment) {
         Log.i("autolog", "PendingAdapter");
@@ -54,7 +53,7 @@ public class ApprovedAdapter extends RecyclerView.Adapter<ApprovedAdapter.MyView
 
     @Override
     public void onBindViewHolder(@NonNull ApprovedAdapter.MyViewHolder holder, int position) {
-        statisticsFragment = (StatisticsFragment) fragment;
+        adminUnpaidFragment = (AdminUnpaidFragment) fragment;
         jobs = jobsResponseList.get(position);
         holder.textViewJobTitle.setText(jobs.getJobTitle());
         holder.textViewPhone.setText(jobs.getEmployerPhone());

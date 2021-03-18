@@ -5,6 +5,8 @@ import com.google.gson.annotations.SerializedName;
 
 public class WorkerRequest {
 
+    @SerializedName("location")
+    @Expose
     private String location;
     @SerializedName("age")
     @Expose
@@ -12,6 +14,10 @@ public class WorkerRequest {
     @SerializedName("skill_name")
     @Expose
     private String skillName;
+    @SerializedName("phone_number")
+    @Expose
+    private String phoneNumber;
+
 
     public String getLocation() {
         return location;
@@ -35,5 +41,13 @@ public class WorkerRequest {
 
     public void setSkillName(String skillName) {
         this.skillName = skillName;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

@@ -113,9 +113,8 @@ public class JobDetailsActivity extends AppCompatActivity {
                 ApplicationModel applicationModel = new ApplicationModel();
                 String id_job = Integer.toString(jobId);
                 applicationModel.setJobId(id_job);
-                applicationModel.setDueDate(deadline);
+
                 applicationModel.setApplyDate(currentTime);
-                applicationModel.setStatus("Active");
 
                 apiService.applyJobs("Bearer " +token, applicationModel).enqueue(new Callback<JobApplicationResponse>() {
                     @Override

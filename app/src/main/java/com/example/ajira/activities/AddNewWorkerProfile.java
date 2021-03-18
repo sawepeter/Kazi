@@ -89,11 +89,13 @@ public class AddNewWorkerProfile extends AppCompatActivity {
                     if (response.isSuccessful()) {
                         dialog.dismiss();
                         String jobTitle = response.body().getMsg();
+                        Log.e("TAG", "Response successful" + response.code() + jobTitle);
                         Toast.makeText(AddNewWorkerProfile.this, "Worker profile updated!!!", Toast.LENGTH_SHORT).show();
                         finish();
                     } else {
                         dialog.dismiss();
                         Log.e("TAG", "Response Unsuccessful" + response.code() + response.message());
+                        finish();
                     }
                 }
 
@@ -101,6 +103,7 @@ public class AddNewWorkerProfile extends AppCompatActivity {
                 public void onFailure(Call<JobUpdateResponse> call, Throwable t) {
                     Log.e("TAG", "Failed " + t.getMessage());
                     dialog.dismiss();
+                    finish();
                 }
             });
 

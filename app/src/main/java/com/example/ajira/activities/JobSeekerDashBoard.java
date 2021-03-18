@@ -3,6 +3,7 @@ package com.example.ajira.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
@@ -31,6 +32,10 @@ public class JobSeekerDashBoard extends AppCompatActivity implements BottomNavig
         bottom_navigation.setOnNavigationItemSelectedListener(this);
         bottom_navigation.setSelectedItemId(R.id.Home);
         updateWorkerProfile = findViewById(R.id.updateWorkerProfile);
+
+        updateWorkerProfile.setOnClickListener(v -> {
+            startActivity(new Intent(JobSeekerDashBoard.this, AddNewWorkerProfile.class));
+        });
     }
 
     HomeFragment homeFragment = new HomeFragment();

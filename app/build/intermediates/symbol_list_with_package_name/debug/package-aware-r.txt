@@ -2450,6 +2450,7 @@ id uniform
 id unlabeled
 id unpaidNumber
 id up
+id updateWorkerProfile
 id useLogo
 id user_Name
 id vertical
@@ -2532,6 +2533,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout active_jobs
 layout activity_activation
+layout activity_add_new_worker_profile
 layout activity_admin_dash_board
 layout activity_dash_board
 layout activity_job_details

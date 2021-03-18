@@ -13,6 +13,12 @@
         android:title="@string/unpaid_jobs" />
 
     <item
+        android:id="@+id/delivered_jobs"
+        android:enabled="true"
+        android:icon="@drawable/ic_delivering"
+        android:title="Delivered Jobs" />
+
+    <item
         android:id="@+id/recruiter_profile"
         android:enabled="true"
         android:icon="@drawable/ic_person"

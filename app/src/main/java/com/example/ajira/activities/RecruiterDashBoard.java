@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.ajira.R;
+import com.example.ajira.fragments.DeliveredHomeFragment;
 import com.example.ajira.fragments.MyJobsFragment;
 import com.example.ajira.fragments.RecruiterHomeFragment;
 import com.example.ajira.fragments.RecruiterProfile;
@@ -38,6 +39,7 @@ public class RecruiterDashBoard extends AppCompatActivity implements BottomNavig
     RecruiterProfile recruiterProfile = new RecruiterProfile();
     RecruiterHomeFragment recruiterHomeFragment = new RecruiterHomeFragment();
     MyJobsFragment myJobsFragment = new MyJobsFragment();
+    DeliveredHomeFragment deliveredHomeFragment = new DeliveredHomeFragment();
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -50,6 +52,11 @@ public class RecruiterDashBoard extends AppCompatActivity implements BottomNavig
             case R.id.active_applications:
                 postJob.setVisibility(View.GONE);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_recruiter, recruiterHomeFragment).commitAllowingStateLoss();
+                return true;
+
+            case R.id.delivered_jobs:
+                postJob.setVisibility(View.GONE);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_recruiter, deliveredHomeFragment).commit();
                 return true;
 
             case R.id.recruiter_profile:

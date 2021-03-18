@@ -142,7 +142,6 @@ public class JobDetailsActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     public void updateJobsStatus(long id){

@@ -7,18 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
-import com.example.ajira.activities.RateDialog;
 import com.example.ajira.activities.RatingActivity;
 import com.example.ajira.model.ApplicationModel;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;

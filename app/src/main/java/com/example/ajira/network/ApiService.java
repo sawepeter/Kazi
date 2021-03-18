@@ -95,7 +95,7 @@ public interface ApiService {
     Call<JobPostResponse> changeJobStatus(@Header("Authorization") String token, @Path("id") long id);
 
     @PUT("worker/earnings/{id}")
-    Call<JobPostResponse> updateEarnings(@Header("Authorization") String token, @Path("id") long id);
+    Call<JobUpdateResponse> updateEarnings(@Header("Authorization") String token, @Path("id") long id);
 
     @PUT("my-jobs/favourite/{id}")
     Call<JobUpdateResponse> addJobFavourite(@Header("Authorization") String token, @Path("id") long id);

@@ -13,6 +13,8 @@ import android.widget.RatingBar;
 import android.widget.Toast;
 
 import com.example.ajira.R;
+import com.example.ajira.model.EarningModel;
+import com.example.ajira.model.JobPostResponse;
 import com.example.ajira.model.JobUpdateResponse;
 import com.example.ajira.model.RatingModel;
 import com.example.ajira.network.ApiService;
@@ -33,7 +35,8 @@ public class RatingActivity extends AppCompatActivity {
     private ApiService apiService;
     SharedPreferences sharedpreferences;
     public static final String MyPREFERENCES = "MyPrefs";
-    String token;
+    String token,jobAmount,job_id;
+    EarningModel earningModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,8 @@ public class RatingActivity extends AppCompatActivity {
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         token = sharedpreferences.getString("token", "");
+        jobAmount = sharedpreferences.getString("job_id", "");
+        job_id = sharedpreferences.getString("amount", "");
 
         Log.e("Rate Dialog", "token" + token);
 
@@ -78,6 +83,19 @@ public class RatingActivity extends AppCompatActivity {
                         if (response.isSuccessful()){
                            // sweetAlertDialog.dismissWithAnimation();
                             Toast.makeText(RatingActivity.this, ""+response.body().getMsg(), Toast.LENGTH_SHORT).show();
+                            Thread background = new Thread(){
+                                public void run(){
+                                    try {
+                                        sleep(5*1000);
+                                        PostEarnings();
+                                        updateWorkerEarnings();
+
+                                    } catch (Exception e){
+
+                                    }
+                                }
+                            };
+                            background.start();
                         }else {
                            // sweetAlertDialog.dismissWithAnimation();
                             Log.e("TAG", "Response Unsuccessful" + response.code() + response.message());
@@ -90,6 +108,51 @@ public class RatingActivity extends AppCompatActivity {
                        // sweetAlertDialog.dismiss();
                     }
                 });
+            }
+        });
+    }
+
+
+    public void PostEarnings(){
+
+        EarningModel earningModel = new EarningModel();
+        earningModel.setEarnings(jobAmount);
+        earningModel.setJobId(job_id);
+
+        apiService.postWorkerEarnings("Bearer "+token, earningModel).enqueue(new Callback<JobUpdateResponse>() {
+            @Override
+            public void onResponse(Call<JobUpdateResponse> call, Response<JobUpdateResponse> response) {
+                if (response.isSuccessful()){
+                    Log.e("TAG", "Response successful" + response.body().getMsg());
+                } else {
+                    Log.e("TAG", "Response unsuccessful" + response.code() + response.message());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JobUpdateResponse> call, Throwable t) {
+
+            }
+        });
+    }
+
+    public void updateWorkerEarnings(){
+
+        long id = Long.parseLong(job_id);
+
+        apiService.updateEarnings("Bearer " +token, id).enqueue(new Callback<JobUpdateResponse>() {
+            @Override
+            public void onResponse(Call<JobUpdateResponse> call, Response<JobUpdateResponse> response) {
+                if (response.isSuccessful()){
+                    Log.e("TAG", "Response successful" + response.body().getMsg());
+                } else {
+                    Log.e("TAG", "Response unsuccessful" + response.code() + response.message());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JobUpdateResponse> call, Throwable t) {
+                Log.e("TAG", "Failed api call" + t.getMessage());
             }
         });
     }

@@ -16,7 +16,8 @@
         android:usesCleartextTraffic="true"
         tools:ignore="UnusedAttribute"
         tools:replace="android:icon">
-        <activity android:name=".activities.RatingActivity"></activity>
+        <activity android:name=".activities.AddNewWorkerProfile"></activity>
+        <activity android:name=".activities.RatingActivity" />
         <activity android:name=".activities.Activation" />
         <activity android:name=".activities.MpesaPayDialog" />
         <activity android:name=".activities.AdminDashBoard" /> <!-- <activity android:name=".fragments.AdminHomeFragment" /> -->

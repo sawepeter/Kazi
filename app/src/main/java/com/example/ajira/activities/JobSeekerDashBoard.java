@@ -13,11 +13,13 @@ import com.example.ajira.fragments.HomeFragment;
 import com.example.ajira.fragments.AdminUnpaidFragment;
 import com.example.ajira.fragments.WorkerProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class JobSeekerDashBoard extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     LinearLayout l1;
     BottomNavigationView bottom_navigation;
+    FloatingActionButton updateWorkerProfile;
 
 
     @Override
@@ -28,6 +30,7 @@ public class JobSeekerDashBoard extends AppCompatActivity implements BottomNavig
         bottom_navigation = findViewById(R.id.bottom_navigation);
         bottom_navigation.setOnNavigationItemSelectedListener(this);
         bottom_navigation.setSelectedItemId(R.id.Home);
+        updateWorkerProfile = findViewById(R.id.updateWorkerProfile);
     }
 
     HomeFragment homeFragment = new HomeFragment();

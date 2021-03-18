@@ -19,11 +19,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
 import com.example.ajira.Utils.Utils;
-import com.example.ajira.activities.MpesaPayDialog;
-import com.example.ajira.adapter.AllJobsAdapter;
-import com.example.ajira.model.AllJobsResponse;
+import com.example.ajira.adapter.JobsAdapter;
 import com.example.ajira.model.JobModelResponse;
-import com.example.ajira.model.JobPostResponse;
 import com.example.ajira.model.JobUpdateResponse;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
@@ -44,7 +41,7 @@ import retrofit2.Response;
 public class HomeFragment extends Fragment {
 
     private ApiService apiService;
-    AllJobsAdapter allJobsAdapter;
+    JobsAdapter allJobsAdapter;
     RecyclerView rv_popular_jobs;
     List<JobModelResponse> jobsResponseList = null;
     List<JobUpdateResponse> jobsList = null;
@@ -53,7 +50,7 @@ public class HomeFragment extends Fragment {
     TextView txt_welcome;
     public static final String MyPREFERENCES = "MyPrefs";
     SharedPreferences sharedpreferences;
-    String token;
+    String token,payment,status;
     public static final String TAG = HomeFragment.class.getSimpleName();
 
 
@@ -81,6 +78,8 @@ public class HomeFragment extends Fragment {
         txt_welcome.setText("Hello " +sharedpreferences.getString("username", ""));
 
 
+        status = "Available";
+        payment = "paid";
 
         Utils.runAsyncTask(this::getPaidJobs);
 
@@ -90,7 +89,7 @@ public class HomeFragment extends Fragment {
 
     //fetching all displayed jobs
     public void getPaidJobs() {
-        Call<List<JobModelResponse>> call = apiService.getPaidJobs("paid");
+        Call<List<JobModelResponse>> call = apiService.getStatusJobs("Bearer " +token, payment,status);
         call.enqueue(new Callback<List<JobModelResponse>>() {
             @Override
             public void onResponse(Call<List<JobModelResponse>> call, Response<List<JobModelResponse>> response) {
@@ -105,7 +104,7 @@ public class HomeFragment extends Fragment {
                     layoutManager.setOrientation(RecyclerView.VERTICAL);
                     rv_popular_jobs.setLayoutManager(layoutManager);
 
-                    allJobsAdapter = new AllJobsAdapter(jobsResponseList, getActivity(), HomeFragment.this);
+                    allJobsAdapter = new JobsAdapter(jobsResponseList, getActivity(), HomeFragment.this);
                     rv_popular_jobs.setAdapter(allJobsAdapter);
 
                     allJobsAdapter.setJobsResponseList(jobsResponseList);

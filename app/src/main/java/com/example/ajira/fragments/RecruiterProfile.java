@@ -83,7 +83,7 @@ public class RecruiterProfile extends Fragment {
 
 
        // txt_top.setText("Welcome " +sharedpreferences.getString("username", ""));
-        status = "InProgress";
+        status = "Available";
         payment = "paid";
 
 

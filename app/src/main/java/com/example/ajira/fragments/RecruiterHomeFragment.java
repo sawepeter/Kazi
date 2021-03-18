@@ -4,13 +4,11 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.icu.text.ListFormatter;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -22,13 +20,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ajira.R;
 import com.example.ajira.Utils.Utils;
-import com.example.ajira.adapter.AllJobsAdapter;
-import com.example.ajira.adapter.MyJobsAdapter;
 import com.example.ajira.adapter.UnpaidJobsAdapter;
-import com.example.ajira.adapter.UsersAdapter;
 import com.example.ajira.model.JobModelResponse;
 import com.example.ajira.model.JobUpdateResponse;
-import com.example.ajira.model.WorkerProfile;
 import com.example.ajira.network.ApiService;
 import com.example.ajira.network.RetrofitBuilder;
 
@@ -37,9 +31,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
